@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HiRes.App.View.Maps.LocationView"
+			 xmlns:maps="clr-namespace:Xamarin.Forms.GoogleMaps;assembly=Xamarin.Forms.GoogleMaps">
+	<ContentPage.Content>
+
+		<Grid>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="3*" />
+				<ColumnDefinition Width="3*" />
+				<ColumnDefinition Width="3*" />
+			</Grid.ColumnDefinitions>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="1*"/>
+				<RowDefinition Height="9*"/>
+			</Grid.RowDefinitions>
+			<Button Grid.Column="0" Grid.Row="0" x:Name="btnNavToFoodShack" Clicked="btnMnzansiFoodShack_Clicked" Text="Food Shack"></Button>
+			<Button Grid.Column="1" Grid.Row="0" x:Name="btnNavToMeetingRoom" Clicked="btnRespublicaHeadOffice_Clicked" Text="Meeting Room"></Button>
+			<Button Grid.Column="2" Grid.Row="0" x:Name="btnNavTo" Clicked="btnNavTo_Clicked" Text="Navigate"></Button>
+			<maps:Map Grid.Row="1" Grid.ColumnSpan="3" x:Name="MyMap"
+                      InitialCameraUpdate="-25.854917, 28.191140,250"
+                      VerticalOptions="FillAndExpand" />
+		</Grid>
+
+	</ContentPage.Content>
+</ContentPage>

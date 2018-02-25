@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+	xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	x:Class="HiRes.App.View.Registrations.RegistrationView"
+	xmlns:converters="clr-namespace:HiRes.Infrastructure.Converters"
+    xmlns:local="clr-namespace:HiRes.App.Effects" >
+	<ContentPage.Resources>
+		<!--<converters:EnumConverter x:Key="enumConverter" />-->
+	</ContentPage.Resources>
+
+	<ContentPage.Content>
+		<ScrollView>
+			<StackLayout>
+				<Label FontSize="Small" >Fullname</Label>
+				<Entry
+				x:Name="NameEntry"
+				Text="{Binding Name}">
+					<Entry.Effects>
+						<local:CoreEntryShadowEffect Radius="5" DistanceX="5" DistanceY="5">
+							<local:CoreEntryShadowEffect.Color>
+								<OnPlatform x:TypeArguments="Color">
+									<On Platform="iOS" Value="Black" />
+									<On Platform="Android" Value="White" />
+									<On Platform="UWP" Value="Red" />
+								</OnPlatform>
+							</local:CoreEntryShadowEffect.Color>
+						</local:CoreEntryShadowEffect>
+					</Entry.Effects>
+				</Entry>
+
+				<Label FontSize="Small">Surname</Label>
+				<Entry
+				x:Name="SurnameEntry"
+				Text="{Binding Surname}">
+				</Entry>
+
+				<Label FontSize="Small">Gender</Label>
+				<Picker
+				x:Name="GenderEntry"
+				ItemsSource="{Binding Genders}" 
+				SelectedItem="{Binding Gender}"
+				ItemDisplayBinding="{Binding Name}"
+				>
+				</Picker>
+
+				<Label FontSize="Small" >Nationality</Label>
+				<Entry
+				x:Name="Nationality"
+				Text="{Binding Nationality}">
+				</Entry>
+
+				<Label FontSize="Small" >Id Number</Label>
+				<Entry
+				x:Name="IDNumber"
+				Text="{Binding IDNumber}">
+				</Entry>
+
+				<Label FontSize="Small" >Mobile Number</Label>
+				<Entry
+				x:Name="MobileNumber"
+				Text="{Binding MobileNumber}">
+				</Entry>
+
+				<Label FontSize="Small" >Email address</Label>
+				<Entry
+				x:Name="EmailAddress"
+				Text="{Binding EmailAddress}">
+				</Entry>
+
+				<Label FontSize="Small" >Confirm Email address</Label>
+				<Entry
+				x:Name="ConfirmEmailAddress"
+				Text="{Binding ConfirmEmailAddress}">
+				</Entry>
+
+				<Label FontSize="Small" >Birthday</Label>
+				<DatePicker
+				x:Name="BirthDate"
+				Date="{Binding BirthDate}">
+				</DatePicker>
+
+				<Label FontSize="Small" >Password</Label>
+				<Entry
+				x:Name="Password"
+				IsPassword="True"
+				Text="{Binding Password}">
+				</Entry>
+
+				<Label FontSize="Small" >Confirm Password</Label>
+				<Entry
+				x:Name="ConfirmPassword"
+				IsPassword="True"
+				Text="{Binding ConfirmPassword}">
+				</Entry>
+
+				<Label FontSize="Small" >Who Referred you?</Label>
+				<Entry
+				x:Name="WhoReferedYou"
+				Text="{Binding WhoReferedYou}">
+				</Entry>
+
+				<Button Text="Register"	Command="{Binding CompleteRegistrationCommand}" ></Button>
+			</StackLayout>
+		</ScrollView>
+	</ContentPage.Content>
+</ContentPage>

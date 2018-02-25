@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HiRes.App.View.Payments.ManualCaptureCreditCardView">
+	<ContentPage.Content>
+		<StackLayout>
+			<Button Clicked="Button_Clicked"  Text="Scan my Card" />
+			<Entry x:Name="CardNumber"
+				   Text="{Binding CardNumber}"
+				   Placeholder="Card Number...">
+			</Entry>
+			<Entry x:Name="ExpireMonth"
+				   Text="{Binding ExpiryMonth}"
+				   Placeholder="Expiry Month...">
+			</Entry>
+			<Entry x:Name="ExpiryYear"
+				   Text="{Binding ExpiryYear}"
+				   Placeholder="Expiry Year...">
+			</Entry>
+			<Entry x:Name="Name"
+				   Text="{Binding Name}"
+				   Placeholder="Card Holder...">
+			</Entry>
+			<Entry x:Name="CCV"
+				   Text="{Binding CardCCV}"
+				   Placeholder="CCV Number...">
+			</Entry>
+
+			<Entry x:Name="CardType"
+				   Text="{Binding CardType}"
+				   Placeholder="Card Type..."
+				   IsEnabled="False">
+			</Entry>
+
+
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

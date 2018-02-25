@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HiRes.App.View.Maps.MapsView"
+			 xmlns:maps="clr-namespace:Xamarin.Forms.GoogleMaps;assembly=Xamarin.Forms.GoogleMaps">
+	<ContentPage.Content>
+
+		<StackLayout HorizontalOptions="Fill"
+			  VerticalOptions="Fill">
+
+			<Button x:Name="btnNavToFoodShack" Clicked="btnMnzansiFoodShack_Clicked">Food Shack</Button>
+			<Button x:Name="btnNavToMeetingRoom" Clicked="btnRespublicaHeadOffice_Clicked">Respublica Meeting Room</Button>
+
+			<maps:Map Grid.Row="1" x:Name="MyMap"
+                      InitialCameraUpdate="-25.854917, 28.191140"
+                      VerticalOptions="FillAndExpand" />
+
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

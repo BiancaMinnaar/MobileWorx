@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+	xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	x:Class="HiRes.App.View.Residences.Residence_Detail_View"
+	xmlns:local="clr-namespace:HiRes.App.Extensions"
+>
+
+	<ContentPage.Content>
+		<ScrollView>
+			<StackLayout>
+
+				<!--<Label FontSize="Large">NEXT: Carousel with Tag</Label>-->
+
+				<!-- TODO: cleanup this hack for show and tell -->
+				<Image Source="{Binding CarouselImage}" />
+
+				<Label FontSize="Micro">Name</Label>
+				<Label Text="{Binding Name}"></Label>
+
+				<Label FontSize="Micro">City</Label>
+				<Label Text="{Binding City}"></Label>
+
+				<!--
+				<Label FontSize="Micro">Summary</Label>
+				<Label Text="{Binding CoverText}"></Label>
+				d-->
+
+				<Label FontSize="Micro">Closest Campus</Label>
+				<Label Text="{Binding ClosestCampus}"></Label>
+
+				<Label FontSize="Micro">Capacity</Label>
+				<Label Text="{Binding Capacity}"></Label>
+
+				<Label FontSize="Micro">Address</Label>
+				<Label Text="{Binding Address}"></Label>
+
+				<Label FontSize="Micro">Tribe</Label>
+				<Label Text="{Binding Tribe}"></Label>
+
+				<Label FontSize="Micro">AppartmentOptions</Label>
+				<Label Text="{Binding AppartmentOptions}"></Label>
+
+				<Label FontSize="Micro">Contact Number</Label>
+				<Label Text="{Binding ContactNumber}"></Label>
+
+				<Label FontSize="Micro">Head Office</Label>
+				<Label Text="{Binding HeadOfficeNumber}"></Label>
+
+				<Label FontSize="Micro">About</Label>
+				<Label Text="{Binding WriteUp}"></Label>
+
+				<StackLayout><Label /><BoxView HeightRequest="1" BackgroundColor="Black" HorizontalOptions="FillAndExpand" /><Label /></StackLayout>
+
+				<Label FontSize="Large">KEY INFO</Label>
+
+				<StackLayout
+					Orientation="Vertical"
+					x:Name="KeyInfoStack"
+				/>
+
+				<StackLayout>
+					<Label />
+					<BoxView HeightRequest="1" BackgroundColor="Black" HorizontalOptions="FillAndExpand" />
+					<Label />
+				</StackLayout>
+
+				<Label FontSize="Large">FIND US ON THE MAP</Label>
+				
+				<Label FontSize="Micro" Text="{Binding DistanceHeader}"></Label>
+				<Label Text="{Binding DistanceInfo}"></Label>
+
+				<Label FontSize="Micro">Directions</Label>
+				<Label Text="{Binding DirectionsLink}"></Label>
+
+				<Label FontSize="Micro">Directions</Label>
+				<Image Source="{Binding MapImage}"></Image>
+
+				<!--<Label FontSize="Large">NEXT: Image Gallery</Label>-->
+
+				<!--<Label FontSize="Large">NEXT: Videos</Label>-->
+
+				<!--<Label FontSize="Large">NEXT: 360 views</Label>-->
+
+			</StackLayout>
+		</ScrollView>
+	</ContentPage.Content>
+</ContentPage>
