@@ -1,0 +1,33 @@
+﻿<#@ template language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using CorePCL;
+using <#= _DataModel.ProjectName #>.Implementation.ViewModel;
+using <#= _DataModel.ProjectName #>.Interface.Service;
+
+namespace <#= _DataModel.ProjectName #>.Implementation.Service
+{
+    public class <#= _DataModel.ServiceName #> : BaseService, <#= _DataModel.ServiceInterfaceName #>
+    {
+        public <#= _DataModel.ServiceName #>(Func<string, Dictionary<string, object>, BaseNetworkAccessEnum, Task> networkInterface)
+            :base(networkInterface)
+        {
+        }
+
+        public async Task <#= _DataModel.EventName #>(<#= _DataModel.ViewModelName #> model)
+        {
+            string requestURL = "/path/{Parameter}";
+            var httpMethod = BaseNetworkAccessEnum.Get;
+            var parameters = new Dictionary<string, object>()
+            {
+                //{"Parameter", model.Property},
+            };
+            await _NetworkInterface(requestURL, parameters, httpMethod);
+        }
+    }
+}

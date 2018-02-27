@@ -1,0 +1,30 @@
+﻿<#@ template language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+using System;
+using System.Threading.Tasks;
+using <#= _DataModel.ProjectName #>.Interface.Service;
+using <#= _DataModel.ProjectName #>.Interface.Repository;
+using <#= _DataModel.ProjectName #>.Implementation.ViewModel;
+
+namespace <#= _DataModel.ProjectName #>.Implementation.Repository
+{
+    public class <#= _DataModel.RepositoryName #> : ProjectBaseRepository, <#= _DataModel.RepositoryInterfaceName #>
+    {
+        <#= _DataModel.ServiceInterfaceName #> _Service;
+
+        public <#= _DataModel.RepositoryName #>(IMasterRepository masterRepository, <#= _DataModel.ServiceInterfaceName #> service)
+            : base(masterRepository)
+        {
+            _Service = service;
+        }
+
+        public async Task <#= _DataModel.EventName #>(<#= _DataModel.ViewModelName #> model, Action completeAction)
+        {
+            await _Service.<#= _DataModel.EventName #>(model);
+            completeAction();
+        }
+    }
+}

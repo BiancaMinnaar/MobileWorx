@@ -1,0 +1,16 @@
+﻿<#@ template language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+using System.Threading.Tasks;
+using <#= _DataModel.ProjectName #>.Implementation.ViewModel;
+
+namespace <#= _DataModel.ProjectName #>.Interface.Service
+{
+    public interface <#= _DataModel.ServiceInterfaceName #>
+    {
+        Task <#= _DataModel.EventName #>(<#= _DataModel.ViewModelName #> model);
+    }
+}
+

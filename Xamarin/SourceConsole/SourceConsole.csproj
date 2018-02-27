@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProjectGuid>{335063C5-C4DE-4196-8957-EDF53F381C8B}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>SourceConsole</RootNamespace>
+    <AssemblyName>SourceConsole</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ExternalConsole>true</ExternalConsole>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ExternalConsole>true</ExternalConsole>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Templates\ViewTemplate.cs">
+      <DependentUpon>ViewTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\ViewControllerTemplate.cs">
+      <DependentUpon>ViewControllerTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\ViewCodeBehindTemplate.cs">
+      <DependentUpon>ViewCodeBehindTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\ViewModelTemplate.cs">
+      <DependentUpon>ViewModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\RepositoryTemplate.cs">
+      <DependentUpon>RepositoryTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\ViewControllerInterfaceTemplate.cs">
+      <DependentUpon>ViewControllerInterfaceTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\RepositoryInterfaceTemplate.cs">
+      <DependentUpon>RepositoryInterfaceTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\ServiceInterfaceTemplate.cs">
+      <DependentUpon>ServiceInterfaceTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\ServiceTemplate.cs">
+      <DependentUpon>ServiceTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\PartialClasses\RepositoryInterfaceTemplatePartial.cs" />
+    <Compile Include="Templates\PartialClasses\ServiceInterfaceTemplatePartial.cs" />
+    <Compile Include="Templates\PartialClasses\ServiceTemplatePartial.cs" />
+    <Compile Include="Templates\PartialClasses\ViewControllerInterfacePartial.cs" />
+    <Compile Include="Templates\PartialClasses\ViewCodeBehindTemplatePartial.cs" />
+    <Compile Include="Templates\PartialClasses\RepositoryTemplatePartial.cs" />
+    <Compile Include="Templates\PartialClasses\ViewControllerTemplatePartial.cs" />
+    <Compile Include="Templates\PartialClasses\ViewModelTemplatePartial.cs" />
+    <Compile Include="Templates\PartialClasses\ViewTemplatePartial.cs" />
+    <Compile Include="Templates\DataModel\TemplateDataModel.cs" />
+    <Compile Include="Templates\PartialClasses\ITemplate.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Templates\" />
+    <Folder Include="Templates\PartialClasses\" />
+    <Folder Include="Templates\DataModel\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Templates\ViewTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>ViewTemplate.cs</LastGenOutput>
+    </None>
+    <None Include="Templates\ViewControllerTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>ViewControllerTemplate.cs</LastGenOutput>
+    </None>
+    <None Include="Templates\ViewCodeBehindTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>ViewCodeBehindTemplate.cs</LastGenOutput>
+    </None>
+    <None Include="Templates\ViewModelTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>ViewModelTemplate.cs</LastGenOutput>
+    </None>
+    <None Include="Templates\RepositoryTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>RepositoryTemplate.cs</LastGenOutput>
+    </None>
+    <None Include="Templates\ViewControllerInterfaceTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>ViewControllerInterfaceTemplate.cs</LastGenOutput>
+    </None>
+    <None Include="Templates\RepositoryInterfaceTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>RepositoryInterfaceTemplate.cs</LastGenOutput>
+    </None>
+    <None Include="Templates\ServiceInterfaceTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>ServiceInterfaceTemplate.cs</LastGenOutput>
+    </None>
+    <None Include="Templates\ServiceTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>ServiceTemplate.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BasePCL\BasePCL.csproj">
+      <Project>{F34FE759-9422-4777-84F5-E253B9A3BA16}</Project>
+      <Name>BasePCL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>
