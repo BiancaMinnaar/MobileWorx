@@ -1,5 +1,5 @@
 ﻿using System;
-namespace ResPublica.PCL
+namespace ResPublica
 {
     public static class Constants
     {

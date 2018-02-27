@@ -1,4 +1,5 @@
-﻿using Xamarin.Forms;
+﻿using ResPublica.Implementation.Repository;
+using Xamarin.Forms;
 
 namespace ResPublica
 {
@@ -8,10 +9,10 @@ namespace ResPublica
         {
             InitializeComponent();
 
-            //var _MasterRepo = MasterRepository.MasterRepo;
+            var _MasterRepo = MasterRepository.MasterRepo;
             //_MasterRepo.SetRootView(new NavigationPage(new LoginView()));
-            ////_MasterRepo.SetRootView(new NavigationPage(new TestHarnesView()));
-            //MainPage = _MasterRepo.GetRootView();
+            //_MasterRepo.SetRootView(new NavigationPage(new TestHarnesView()));
+            MainPage = _MasterRepo.GetRootView();
         }
     }
 }
