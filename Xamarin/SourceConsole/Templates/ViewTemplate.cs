@@ -21,95 +21,96 @@ namespace SourceConsole.Templates {
             this.GenerationEnvironment = null;
             
             #line 6 ""
-            this.Write("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<b:ProjectBaseContentPage \n    xmlns=\"http" +
-                    "://xamarin.com/schemas/2014/forms\" \n    xmlns:x=\"http://schemas.microsoft.com/wi" +
-                    "nfx/2009/xaml\"\n    xmlns:m=\"clr-namespace:");
+            this.Write("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<base:ProjectBaseContentPage \n    xmlns=\"h" +
+                    "ttp://xamarin.com/schemas/2014/forms\" \n    xmlns:x=\"http://schemas.microsoft.com" +
+                    "/winfx/2009/xaml\"\n    xmlns:base=\"clr-namespace:ResPublica.Base\"\n    xmlns:m=\"cl" +
+                    "r-namespace:");
             
             #line default
             #line hidden
             
-            #line 10 ""
+            #line 11 ""
             this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.ProjectName ));
             
             #line default
             #line hidden
             
-            #line 10 ""
+            #line 11 ""
             this.Write(".Implementation.ViewModel\"\n    xmlns:p=\"clr-namespace:");
             
             #line default
             #line hidden
             
-            #line 11 ""
+            #line 12 ""
             this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.ProjectName ));
             
             #line default
             #line hidden
             
-            #line 11 ""
+            #line 12 ""
             this.Write(".Implementation.ViewController\"\n    xmlns:b=\"clr-namespace:");
             
             #line default
             #line hidden
             
-            #line 12 ""
+            #line 13 ""
             this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.ProjectName ));
             
             #line default
             #line hidden
             
-            #line 12 ""
+            #line 13 ""
             this.Write(".Implementation.View\"\n    xmlns:svg=\"clr-namespace:TwinTechsForms.NControl;assemb" +
                     "ly=TwinTechsForms.NControl.SvgImageView\"\n    x:Class=\"");
             
             #line default
             #line hidden
             
-            #line 14 ""
+            #line 15 ""
             this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.ProjectName ));
             
             #line default
             #line hidden
             
-            #line 14 ""
+            #line 15 ""
             this.Write(".Implementation.View.");
             
             #line default
             #line hidden
             
-            #line 14 ""
+            #line 15 ""
             this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.ViewName ));
             
             #line default
             #line hidden
             
-            #line 14 ""
+            #line 15 ""
             this.Write("\" \n    x:TypeArguments=\"p:");
             
             #line default
             #line hidden
             
-            #line 15 ""
+            #line 16 ""
             this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.ViewControllerName ));
             
             #line default
             #line hidden
             
-            #line 15 ""
+            #line 16 ""
             this.Write(", m:");
             
             #line default
             #line hidden
             
-            #line 15 ""
+            #line 16 ""
             this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.ViewModelName ));
             
             #line default
             #line hidden
             
-            #line 15 ""
+            #line 16 ""
             this.Write("\" \n    BackgroundColor=\"#565E60\"\n    Title=\"Login\">\n    <ContentPage.Content>\n   " +
-                    "     \n    </ContentPage.Content>\n</b:ProjectBaseContentPage>\n");
+                    "     \n    </ContentPage.Content>\n</base:ProjectBaseContentPage>\n");
             
             #line default
             #line hidden

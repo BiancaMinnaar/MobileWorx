@@ -5,6 +5,7 @@
 <#@ import namespace="System.Collections.Generic" #>
 using System;
 using Xamarin.Forms;
+using <#= _DataModel.ProjectName #>.Base;
 using <#= _DataModel.ProjectName #>.Implementation.ViewController;
 using <#= _DataModel.ProjectName #>.Implementation.ViewModel;
 

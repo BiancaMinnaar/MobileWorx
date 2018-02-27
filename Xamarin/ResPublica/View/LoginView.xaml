@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<base:ProjectBaseContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:base="clr-namespace:ResPublica.Base"
+    xmlns:m="clr-namespace:ResPublica.Implementation.ViewModel"
+    xmlns:p="clr-namespace:ResPublica.Implementation.ViewController"
+    xmlns:b="clr-namespace:ResPublica.Implementation.View"
+    xmlns:svg="clr-namespace:TwinTechsForms.NControl;assembly=TwinTechsForms.NControl.SvgImageView"
+    x:Class="ResPublica.Implementation.View.LoginView" 
+    x:TypeArguments="p:LoginViewController, m:LoginViewModel" 
+    BackgroundColor="#565E60"
+    Title="Login">
+    <ContentPage.Content>
+        
+    </ContentPage.Content>
+</base:ProjectBaseContentPage>

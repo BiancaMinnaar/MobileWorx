@@ -33,78 +33,90 @@ namespace SourceConsole.Templates {
             #line hidden
             
             #line 8 ""
+            this.Write(".Base;\nusing ");
+            
+            #line default
+            #line hidden
+            
+            #line 9 ""
+            this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.ProjectName ));
+            
+            #line default
+            #line hidden
+            
+            #line 9 ""
             this.Write(".Implementation.ViewController;\nusing ");
             
             #line default
             #line hidden
             
-            #line 9 ""
+            #line 10 ""
             this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.ProjectName ));
             
             #line default
             #line hidden
             
-            #line 9 ""
+            #line 10 ""
             this.Write(".Implementation.ViewModel;\n\nnamespace ");
             
             #line default
             #line hidden
             
-            #line 11 ""
+            #line 12 ""
             this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.ProjectName ));
             
             #line default
             #line hidden
             
-            #line 11 ""
+            #line 12 ""
             this.Write(".Implementation.View\n{\n    public partial class ");
             
             #line default
             #line hidden
             
-            #line 13 ""
+            #line 14 ""
             this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.ViewName ));
             
             #line default
             #line hidden
             
-            #line 13 ""
+            #line 14 ""
             this.Write(" : ProjectBaseContentPage<");
             
             #line default
             #line hidden
             
-            #line 13 ""
+            #line 14 ""
             this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.ViewControllerName ));
             
             #line default
             #line hidden
             
-            #line 13 ""
+            #line 14 ""
             this.Write(", ");
             
             #line default
             #line hidden
             
-            #line 13 ""
+            #line 14 ""
             this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.ViewModelName ));
             
             #line default
             #line hidden
             
-            #line 13 ""
+            #line 14 ""
             this.Write(">\n    {\n        public ");
             
             #line default
             #line hidden
             
-            #line 15 ""
+            #line 16 ""
             this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.ViewName ));
             
             #line default
             #line hidden
             
-            #line 15 ""
+            #line 16 ""
             this.Write(@"()
         {
             InitializeComponent();
@@ -121,25 +133,25 @@ namespace SourceConsole.Templates {
             #line default
             #line hidden
             
-            #line 26 ""
+            #line 27 ""
             this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.EventName ));
             
             #line default
             #line hidden
             
-            #line 26 ""
+            #line 27 ""
             this.Write("_Event(object sender, EventArgs e)\n        {\n            await _ViewController.");
             
             #line default
             #line hidden
             
-            #line 28 ""
+            #line 29 ""
             this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.EventName ));
             
             #line default
             #line hidden
             
-            #line 28 ""
+            #line 29 ""
             this.Write("();\n        }\n    }\n}\n\n\n");
             
             #line default
