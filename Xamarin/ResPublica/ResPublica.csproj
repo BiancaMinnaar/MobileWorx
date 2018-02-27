@@ -49,7 +49,7 @@
     <Compile Include="Repository\Implementation\LoginRepository.cs" />
     <Compile Include="Service\ILoginService.cs" />
     <Compile Include="Service\Implementation\LoginService.cs" />
-    <Compile Include="View\LoginView.cs" >
+    <Compile Include="View\LoginView.cs">
       <DependentUpon>LoginView.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewController\ILoginViewController.cs" />
