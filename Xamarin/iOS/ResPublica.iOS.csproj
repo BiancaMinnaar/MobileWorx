@@ -121,17 +121,17 @@
     <Reference Include="NGraphics.iOS">
       <HintPath>..\packages\NGraphics.0.4.0\lib\Xamarin.iOS10\NGraphics.iOS.dll</HintPath>
     </Reference>
-    <Reference Include="NControl">
-      <HintPath>..\packages\NControl.0.8.6\lib\Xamarin.iOS10\NControl.dll</HintPath>
-    </Reference>
-    <Reference Include="NControl.iOS">
-      <HintPath>..\packages\NControl.0.8.6\lib\Xamarin.iOS10\NControl.iOS.dll</HintPath>
-    </Reference>
     <Reference Include="TwinTechsForms.NControl.SvgImageView">
       <HintPath>..\packages\TwinTechsForms.NControl.SvgImageView.0.0.3\lib\Xamarin.iOS10\TwinTechsForms.NControl.SvgImageView.dll</HintPath>
     </Reference>
     <Reference Include="TwinTechsForms.NControl.SvgImageView.iOS">
       <HintPath>..\packages\TwinTechsForms.NControl.SvgImageView.0.0.3\lib\Xamarin.iOS10\TwinTechsForms.NControl.SvgImageView.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="NControl">
+      <HintPath>..\packages\NControl.0.9.1.0\lib\Xamarin.iOS10\NControl.dll</HintPath>
+    </Reference>
+    <Reference Include="NControl.iOS">
+      <HintPath>..\packages\NControl.0.9.1.0\lib\Xamarin.iOS10\NControl.iOS.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
