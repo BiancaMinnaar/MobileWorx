@@ -19,6 +19,7 @@ namespace ResPublica.Implementation.View
         {
             _ViewController.InputObject.SvgCollection.Add("DefaultButtonSvgPath", new SVGBindingProperty() { SVGFullName = "ResPublica.Images.CallCalendar.svg", Width = 30, Height = 30 });
             _ViewController.InputObject.SvgCollection.Add("StartCallSvgPath", new SVGBindingProperty() { SVGFullName = "ResPublica.Images.CallStartTime.svg", Width = 13, Height = 18 });
+            _ViewController.InputObject.SvgCollection.Add("SplashSvgPath", new SVGBindingProperty() { SVGFullName = "ResPublica.Images.Splash.svg", Width = 200, Height = 200 });
         }
 
         public async void On_Login_Event(object sender, EventArgs e)

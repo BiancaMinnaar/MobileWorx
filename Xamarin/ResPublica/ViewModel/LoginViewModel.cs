@@ -24,5 +24,7 @@ namespace ResPublica.Implementation.ViewModel
                 }
             }
         }
+
+        public string SvgFileName{ get { return "CallStartTime.svg"; }}
     }
 }

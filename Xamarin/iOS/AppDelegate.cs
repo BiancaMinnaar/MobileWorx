@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-
+using FFImageLoading.Forms.Touch;
+using FFImageLoading.Svg.Forms;
 using Foundation;
 using TwinTechsForms.NControl.iOS;
 using UIKit;
@@ -15,6 +16,8 @@ namespace ResPublica.iOS
         {
             global::Xamarin.Forms.Forms.Init();
             SvgImageViewRenderer.Init();
+            CachedImageRenderer.Init();
+            var ignore = typeof(SvgCachedImage);
             // Code for starting up the Xamarin Test Cloud Agent
 #if DEBUG
 			Xamarin.Calabash.Start();

@@ -8,6 +8,8 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 using TwinTechsForms.NControl.Android;
+using FFImageLoading.Svg.Forms;
+using FFImageLoading.Forms.Droid;
 
 namespace ResPublica.Droid
 {
@@ -23,6 +25,9 @@ namespace ResPublica.Droid
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
             SvgImageViewRenderer.Init();
+
+            CachedImageRenderer.Init(true);
+            var ignore = typeof(SvgCachedImage);
 
             LoadApplication(new App());
         }

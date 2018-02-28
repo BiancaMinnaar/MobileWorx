@@ -7,6 +7,7 @@
     xmlns:p="clr-namespace:ResPublica.Implementation.ViewController"
     xmlns:b="clr-namespace:ResPublica.Implementation.View"
     xmlns:svg="clr-namespace:TwinTechsForms.NControl;assembly=TwinTechsForms.NControl.SvgImageView"
+    xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
     xmlns:image="clr-namespace:ResPublica.View;assembly=ResPublica"
     x:Class="ResPublica.Implementation.View.LoginView"
     x:TypeArguments="p:LoginViewController, m:LoginViewModel"
@@ -17,32 +18,23 @@
 		</ResourceDictionary>
 	</ContentPage.Resources>
 	<ContentPage.Content>
-		<!--<Grid>
-			<Grid.RowDefinitions>
-				<RowDefinition Height="200" />
-				<RowDefinition Height="200" />
-				<RowDefinition Height="200" />
-				<RowDefinition Height="Auto" />
-				<RowDefinition Height="*" />
-			</Grid.RowDefinitions>
-			<Grid.ColumnDefinitions>
-				<ColumnDefinition Width="Auto" />
-				<ColumnDefinition Width="Auto" />
-			</Grid.ColumnDefinitions>
--->
-		<StackLayout>
-			<Image Source="{Binding BackGround, Converter={StaticResource ByteArrayToImage}}" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" />
-
-		</StackLayout>
-
-		<!--<Image Grid.Row="2"/>-->
-
-		<!--<StackLayout Orientation="Horizontal" Grid.Row="4" Grid.ColumnSpan="5" HorizontalOptions="Center">
-			<Label HorizontalTextAlignment="Start" VerticalTextAlignment="Center" HorizontalOptions="Center" FontSize="16" Text="You don't have an account?" TextColor="White" />
-			<Button Text="REGISTER" Margin="5" BackgroundColor="Transparent" TextColor="#88CBBA" />
-		</StackLayout>-->
-
-		<!--</Grid>-->
-
+        <RelativeLayout>
+            <Image
+            Aspect="AspectFill"
+            Source="{image:ImageResource ResPublica.Images.Login_Background.jpg}"
+            RelativeLayout.WidthConstraint= "{ConstraintExpression Type=RelativeToParent, Property=Width}"
+            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}"></Image>
+            <StackLayout RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}"
+                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}"
+                Orientation="Vertical">
+                <StackLayout Orientation="Vertical">
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="User name:" />
+                        <Entry />
+                    </StackLayout>
+                    <ffimageloadingsvg:SvgCachedImage WidthRequest="300" HeightRequest="600" Source="resource://ResPublica.Images.Button_Default.svg" />
+                </StackLayout>
+            </StackLayout>
+         </RelativeLayout>
 	</ContentPage.Content>
 </base:ProjectBaseContentPage>
