@@ -19,11 +19,15 @@ namespace ResPublica.Implementation.Service
 		{
 			string requestURL = "http://sm2.respublica.co.za//path/{Parameter}";
 			var httpMethod = BaseNetworkAccessEnum.Post;
-			var parameters = new Dictionary<string, object>()
-			{
-				//{"Parameter", model.Property},
-			};
-			await _NetworkInterface(requestURL, parameters, httpMethod);
+            var parameters = new Dictionary<string, ParameterTypedValue>()
+            {
+                {"Header", new ParameterTypedValue() {
+                        ParameterValue="Some Value",
+                        ParameterType=ParameterTypeEnum.HeaderParameter
+                    }
+                }
+            };
+            await _NetworkInterfaceWithTypedParameters(requestURL, parameters, httpMethod);
 		}
 	}
 }
