@@ -6,6 +6,7 @@ using Acr.UserDialogs;
 using CorePCL;
 using Newtonsoft.Json;
 using ResPublica.Base;
+using ResPublica.Implementation.View;
 using ResPublica.Interface.Repository;
 using ResPublica.ViewModel;
 using Xamarin.Forms;
@@ -84,7 +85,7 @@ namespace ResPublica.Implementation.Repository
 
         public void PushRegister()
         {
-            //_Navigation.PushAsync(new RegisterView());
+            _Navigation.PushAsync(new RegisterView());
         }
     }
 }
