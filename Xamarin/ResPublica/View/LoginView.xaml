@@ -11,11 +11,11 @@
     x:Class="ResPublica.Implementation.View.LoginView"
     x:TypeArguments="p:LoginViewController, m:LoginViewModel"
     Title="Login">
-    <ContentPage.Resources>
-    <ResourceDictionary>
-        <image:ByteArrayToImageSourceConverter x:Key="ByteArrayToImage" />
-    </ResourceDictionary>
-</ContentPage.Resources>
+	<ContentPage.Resources>
+		<ResourceDictionary>
+			<image:ByteArrayToImageSourceConverter x:Key="ByteArrayToImage" />
+		</ResourceDictionary>
+	</ContentPage.Resources>
 	<ContentPage.Content>
 		<!--<Grid>
 			<Grid.RowDefinitions>
@@ -30,17 +30,17 @@
 				<ColumnDefinition Width="Auto" />
 			</Grid.ColumnDefinitions>
 -->
-        <StackLayout>
-                <Image Source="{Binding BackGround, Converter={StaticResource ByteArrayToImage}}" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" />
-            
-            </StackLayout>
+		<StackLayout>
+			<Image Source="{Binding BackGround, Converter={StaticResource ByteArrayToImage}}" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" />
 
-			<Image Grid.Row="2"/>
+		</StackLayout>
 
-			<StackLayout Orientation="Horizontal" Grid.Row="4" Grid.ColumnSpan="5" HorizontalOptions="Center">
-				<Label HorizontalTextAlignment="Start" VerticalTextAlignment="Center" HorizontalOptions="Center" FontSize="16" Text="You don't have an account?" TextColor="White" />
-				<Button Text="REGISTER" Margin="5" BackgroundColor="Transparent" TextColor="#88CBBA" />
-			</StackLayout>
+		<!--<Image Grid.Row="2"/>-->
+
+		<!--<StackLayout Orientation="Horizontal" Grid.Row="4" Grid.ColumnSpan="5" HorizontalOptions="Center">
+			<Label HorizontalTextAlignment="Start" VerticalTextAlignment="Center" HorizontalOptions="Center" FontSize="16" Text="You don't have an account?" TextColor="White" />
+			<Button Text="REGISTER" Margin="5" BackgroundColor="Transparent" TextColor="#88CBBA" />
+		</StackLayout>-->
 
 		<!--</Grid>-->
 
