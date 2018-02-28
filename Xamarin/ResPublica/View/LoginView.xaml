@@ -11,8 +11,13 @@
     x:Class="ResPublica.Implementation.View.LoginView"
     x:TypeArguments="p:LoginViewController, m:LoginViewModel"
     Title="Login">
-	<ContentPage.Content >
-		<Grid>
+    <ContentPage.Resources>
+    <ResourceDictionary>
+        <image:ByteArrayToImageSourceConverter x:Key="ByteArrayToImage" />
+    </ResourceDictionary>
+</ContentPage.Resources>
+	<ContentPage.Content>
+		<!--<Grid>
 			<Grid.RowDefinitions>
 				<RowDefinition Height="2*" />
 				<RowDefinition Height="*" />
@@ -22,16 +27,13 @@
 				<ColumnDefinition Width="Auto" />
 				<ColumnDefinition Width="*" />
 			</Grid.ColumnDefinitions>
+-->
+        <StackLayout>
+                <Image Source="{Binding BackGround, Converter={StaticResource ByteArrayToImage}}" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" />
+            
+            </StackLayout>
 
-			<StackLayout Orientation="Horizontal" Grid.Row="4">
-				<!--<Label Text="You don't have an account?" />-->
-				<!--<Button Text="REGISTER" Clicked="RegisterView" HeightRequest="20"/>-->
-                <Label Text=">" />
-                <svg:SvgImageView SvgAssembly="{Binding SvgCollection[StartCallSvgPath].SvgAssembly}" SvgPath="{Binding SvgCollection[StartCallSvgPath].SVGFullName}" WidthRequest="{Binding SvgCollection[StartCallSvgPath].Width}" HeightRequest="{Binding SvgCollection[StartCallSvgPath].Height}" />
-                <Label Text=">" />
-			</StackLayout>
-
-		</Grid>
+		<!--</Grid>-->
 
 	</ContentPage.Content>
 </base:ProjectBaseContentPage>

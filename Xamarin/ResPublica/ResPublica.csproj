@@ -70,6 +70,7 @@
       <DependentUpon>Sandbox.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\ImageResourceExtension.cs" />
+    <Compile Include="View\ByteArrayToImageSourceConverter.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="App.xaml" />
