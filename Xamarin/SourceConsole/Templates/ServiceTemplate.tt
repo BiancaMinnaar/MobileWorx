@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using CorePCL;
+using <#= _DataModel.ProjectName #>.Base;
 using <#= _DataModel.ProjectName #>.Implementation.ViewModel;
 using <#= _DataModel.ProjectName #>.Interface.Service;
 

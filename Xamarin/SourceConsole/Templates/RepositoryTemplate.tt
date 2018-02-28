@@ -5,6 +5,7 @@
 <#@ import namespace="System.Collections.Generic" #>
 using System;
 using System.Threading.Tasks;
+using <#= _DataModel.ProjectName #>.Base;
 using <#= _DataModel.ProjectName #>.Interface.Service;
 using <#= _DataModel.ProjectName #>.Interface.Repository;
 using <#= _DataModel.ProjectName #>.Implementation.ViewModel;

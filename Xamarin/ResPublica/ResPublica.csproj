@@ -55,10 +55,21 @@
     <Compile Include="ViewController\ILoginViewController.cs" />
     <Compile Include="ViewController\Implementation\LoginViewController.cs" />
     <Compile Include="ViewModel\LoginViewModel.cs" />
+    <Compile Include="Repository\IRegisterRepository.cs" />
+    <Compile Include="Repository\Implementation\RegisterRepository.cs" />
+    <Compile Include="Service\IRegisterService.cs" />
+    <Compile Include="Service\Implementation\RegisterService.cs" />
+    <Compile Include="View\RegisterView.cs">
+      <DependentUpon>RegisterView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewController\IRegisterViewController.cs" />
+    <Compile Include="ViewController\Implementation\RegisterViewController.cs" />
+    <Compile Include="ViewModel\RegisterViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="App.xaml" />
     <EmbeddedResource Include="View\LoginView.xaml" />
+    <EmbeddedResource Include="View\RegisterView.xaml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BasePCL\BasePCL.csproj">

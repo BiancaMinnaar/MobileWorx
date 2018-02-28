@@ -34,66 +34,78 @@ namespace SourceConsole.Templates {
             #line hidden
             
             #line 10 ""
+            this.Write(".Base;\nusing ");
+            
+            #line default
+            #line hidden
+            
+            #line 11 ""
+            this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.ProjectName ));
+            
+            #line default
+            #line hidden
+            
+            #line 11 ""
             this.Write(".Implementation.ViewModel;\nusing ");
             
             #line default
             #line hidden
             
-            #line 11 ""
+            #line 12 ""
             this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.ProjectName ));
             
             #line default
             #line hidden
             
-            #line 11 ""
+            #line 12 ""
             this.Write(".Interface.Service;\n\nnamespace ");
             
             #line default
             #line hidden
             
-            #line 13 ""
+            #line 14 ""
             this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.ProjectName ));
             
             #line default
             #line hidden
             
-            #line 13 ""
+            #line 14 ""
             this.Write(".Implementation.Service\n{\n    public class ");
             
             #line default
             #line hidden
             
-            #line 15 ""
+            #line 16 ""
             this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.ServiceName ));
             
             #line default
             #line hidden
             
-            #line 15 ""
+            #line 16 ""
             this.Write(" : BaseService, ");
             
             #line default
             #line hidden
             
-            #line 15 ""
+            #line 16 ""
             this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.ServiceInterfaceName ));
             
             #line default
             #line hidden
             
-            #line 15 ""
+            #line 16 ""
             this.Write("\n    {\n        public ");
             
             #line default
             #line hidden
             
-            #line 17 ""
+            #line 18 ""
             this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.ServiceName ));
             
             #line default
             #line hidden
             
-            #line 17 ""
+            #line 18 ""
             this.Write("(Func<string, Dictionary<string, object>, BaseNetworkAccessEnum, Task> networkInt" +
                     "erface)\n            :base(networkInterface)\n        {\n        }\n\n        public " +
                     "async Task ");
@@ -101,25 +113,25 @@ namespace SourceConsole.Templates {
             #line default
             #line hidden
             
-            #line 22 ""
+            #line 23 ""
             this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.EventName ));
             
             #line default
             #line hidden
             
-            #line 22 ""
+            #line 23 ""
             this.Write("(");
             
             #line default
             #line hidden
             
-            #line 22 ""
+            #line 23 ""
             this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.ViewModelName ));
             
             #line default
             #line hidden
             
-            #line 22 ""
+            #line 23 ""
             this.Write(@" model)
         {
             string requestURL = ""/path/{Parameter}"";
