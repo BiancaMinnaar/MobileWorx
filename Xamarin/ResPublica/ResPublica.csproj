@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -65,6 +65,9 @@
     <Compile Include="ViewController\IRegisterViewController.cs" />
     <Compile Include="ViewController\Implementation\RegisterViewController.cs" />
     <Compile Include="ViewModel\RegisterViewModel.cs" />
+    <Compile Include="View\Sandbox.xaml.cs">
+      <DependentUpon>Sandbox.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="App.xaml" />
@@ -78,17 +81,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="ViewModel\" />
-    <Folder Include="Repository\" />
-    <Folder Include="Service\" />
-    <Folder Include="View\" />
-    <Folder Include="ViewController\" />
-    <Folder Include="Repository\Implementation\" />
-    <Folder Include="Service\Implementation\" />
-    <Folder Include="ViewController\Implementation\" />
     <Folder Include="ViewModel\Controls\" />
     <Folder Include="View\Controls\" />
-    <Folder Include="Base\" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">
@@ -115,6 +109,32 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="View\Sandbox.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\Dots3_Left.svg" />
+    <EmbeddedResource Include="Images\Dots3_Middle.svg" />
+    <EmbeddedResource Include="Images\Dots3_Right.svg" />
+    <EmbeddedResource Include="Images\Lock_Icon.svg" />
+    <EmbeddedResource Include="Images\Login_Background.jpg" />
+    <EmbeddedResource Include="Images\Main_Logo.svg" />
+    <EmbeddedResource Include="Images\Message_Icon.svg" />
+    <EmbeddedResource Include="Images\MyBuilding.svg" />
+    <EmbeddedResource Include="Images\MyRoom.svg" />
+    <EmbeddedResource Include="Images\MyStudentLiving.svg" />
+    <EmbeddedResource Include="Images\Splash.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\Button_Fade.svg" />
+    <EmbeddedResource Include="Images\Button_Default.svg" />
+    <EmbeddedResource Include="Images\Button_Pressed_Default.svg" />
+    <EmbeddedResource Include="Images\Button_Pressed_Primary.svg" />
+    <EmbeddedResource Include="Images\Button_Primary.svg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.2.5.0.280555\build\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.5.0.280555\build\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.targets')" />
