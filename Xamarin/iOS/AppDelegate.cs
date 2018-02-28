@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 using Foundation;
+using TwinTechsForms.NControl.iOS;
 using UIKit;
 
 namespace ResPublica.iOS
@@ -13,7 +14,7 @@ namespace ResPublica.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
-
+            SvgImageViewRenderer.Init();
             // Code for starting up the Xamarin Test Cloud Agent
 #if DEBUG
 			Xamarin.Calabash.Start();
