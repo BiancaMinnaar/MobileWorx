@@ -12,6 +12,8 @@
     BackgroundColor="#565E60"
     Title="Login">
     <ContentPage.Content>
-        
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+            <Button Text="Register" Command="{Binding OnRegister}"/>
+        </StackLayout>
     </ContentPage.Content>
 </base:ProjectBaseContentPage>
