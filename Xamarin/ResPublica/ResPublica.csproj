@@ -75,6 +75,7 @@
     <EmbeddedResource Include="App.xaml" />
     <EmbeddedResource Include="View\LoginView.xaml" />
     <EmbeddedResource Include="View\RegisterView.xaml" />
+    <EmbeddedResource Include="Images\CallStartTime.svg" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BasePCL\BasePCL.csproj">

@@ -17,7 +17,8 @@ namespace ResPublica.Implementation.View
 
         protected override void SetSVGCollection()
         {
-            _ViewController.InputObject.SvgCollection.Add("DefaultButtonSvgPath", new SVGBindingProperty() { SVGFullName = "ResPublica.Images.Button_Default.svg", Width = 30, Height = 30 });
+            _ViewController.InputObject.SvgCollection.Add("DefaultButtonSvgPath", new SVGBindingProperty() { SVGFullName = "ResPublica.Images.CallCalendar.svg", Width = 30, Height = 30 });
+            _ViewController.InputObject.SvgCollection.Add("StartCallSvgPath", new SVGBindingProperty() { SVGFullName = "ResPublica.Images.CallStartTime.svg", Width = 13, Height = 18 });
         }
 
         public async void On_Login_Event(object sender, EventArgs e)

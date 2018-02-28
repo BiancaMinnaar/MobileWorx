@@ -10,7 +10,6 @@
     xmlns:image="clr-namespace:ResPublica.View;assembly=ResPublica"
     x:Class="ResPublica.Implementation.View.LoginView"
     x:TypeArguments="p:LoginViewController, m:LoginViewModel"
-    BackgroundColor="#565E60"
     Title="Login">
 	<ContentPage.Content >
 		<Grid>
@@ -25,9 +24,11 @@
 			</Grid.ColumnDefinitions>
 
 			<StackLayout Orientation="Horizontal" Grid.Row="4">
-				<Label Text="You don't have an account?" />
-				<Button Text="REGISTER" Clicked="RegisterView" HeightRequest="20"/>
-                <svg:SvgImageView HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" SvgAssembly="{Binding SvgCollection[DefaultButtonSvgPath].SvgAssembly}" SvgPath="{Binding SvgCollection[DefaultButtonSvgPath].SVGFullName}" WidthRequest="{Binding SvgCollection[DefaultButtonSvgPath].Width}" HeightRequest="{Binding SvgCollection[DefaultButtonSvgPath].Height}" />
+				<!--<Label Text="You don't have an account?" />-->
+				<!--<Button Text="REGISTER" Clicked="RegisterView" HeightRequest="20"/>-->
+                <Label Text=">" />
+                <svg:SvgImageView SvgAssembly="{Binding SvgCollection[StartCallSvgPath].SvgAssembly}" SvgPath="{Binding SvgCollection[StartCallSvgPath].SVGFullName}" WidthRequest="{Binding SvgCollection[StartCallSvgPath].Width}" HeightRequest="{Binding SvgCollection[StartCallSvgPath].Height}" />
+                <Label Text=">" />
 			</StackLayout>
 
 		</Grid>
