@@ -12,10 +12,16 @@
     xmlns:p="clr-namespace:<#= _DataModel.ProjectName #>.Implementation.ViewController"
     xmlns:b="clr-namespace:<#= _DataModel.ProjectName #>.Implementation.View"
     xmlns:svg="clr-namespace:TwinTechsForms.NControl;assembly=TwinTechsForms.NControl.SvgImageView"
+    xmlns:image="clr-namespace:<#= _DataModel.ProjectName #>.View;assembly=<#= _DataModel.ProjectName #>"
     x:Class="<#= _DataModel.ProjectName #>.Implementation.View.<#= _DataModel.ViewName #>" 
     x:TypeArguments="p:<#= _DataModel.ViewControllerName #>, m:<#= _DataModel.ViewModelName #>" 
     BackgroundColor="#565E60"
     Title="Login">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <image:ByteArrayToImageSourceConverter x:Key="ByteArrayToImage" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <ContentPage.Content>
         
     </ContentPage.Content>

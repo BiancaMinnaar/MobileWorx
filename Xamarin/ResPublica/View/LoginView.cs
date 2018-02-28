@@ -17,6 +17,7 @@ namespace ResPublica.Implementation.View
 
         protected override void SetSVGCollection()
         {
+            _ViewController.InputObject.SvgCollection.Add("DefaultButtonSvgPath", new SVGBindingProperty() { SVGFullName = "ResPublica.Images.Button_Default.svg", Width = 30, Height = 30 });
         }
 
         public async void On_Login_Event(object sender, EventArgs e)

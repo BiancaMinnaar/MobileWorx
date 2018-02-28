@@ -7,6 +7,7 @@
     xmlns:p="clr-namespace:ResPublica.Implementation.ViewController"
     xmlns:b="clr-namespace:ResPublica.Implementation.View"
     xmlns:svg="clr-namespace:TwinTechsForms.NControl;assembly=TwinTechsForms.NControl.SvgImageView"
+    xmlns:image="clr-namespace:ResPublica.View;assembly=ResPublica"
     x:Class="ResPublica.Implementation.View.LoginView"
     x:TypeArguments="p:LoginViewController, m:LoginViewModel"
     BackgroundColor="#565E60"
@@ -25,7 +26,8 @@
 
 			<StackLayout Orientation="Horizontal" Grid.Row="4">
 				<Label Text="You don't have an account?" />
-				<Button Text="REGISTER" Clicked="RegisterView" />
+				<Button Text="REGISTER" Clicked="RegisterView" HeightRequest="20"/>
+                <svg:SvgImageView HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" SvgAssembly="{Binding SvgCollection[DefaultButtonSvgPath].SvgAssembly}" SvgPath="{Binding SvgCollection[DefaultButtonSvgPath].SVGFullName}" WidthRequest="{Binding SvgCollection[DefaultButtonSvgPath].Width}" HeightRequest="{Binding SvgCollection[DefaultButtonSvgPath].Height}" />
 			</StackLayout>
 
 		</Grid>
