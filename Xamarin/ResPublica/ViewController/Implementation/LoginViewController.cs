@@ -26,5 +26,10 @@ namespace ResPublica.Implementation.ViewController
         {
             
         }
+
+        public void RegisterView()
+        {
+            _MasterRepo.PushRegister();
+        }
     }
 }

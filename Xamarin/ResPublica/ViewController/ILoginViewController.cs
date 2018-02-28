@@ -5,5 +5,6 @@ namespace ResPublica.Interface.ViewController
     public interface ILoginViewController
     {
         Task Login();
+        void RegisterView();
     }
 }

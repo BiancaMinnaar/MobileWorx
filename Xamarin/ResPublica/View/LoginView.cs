@@ -23,6 +23,11 @@ namespace ResPublica.Implementation.View
         {
             await _ViewController.Login();
         }
+
+        public void RegisterView(object sender, EventArgs e)
+        {
+            _ViewController.RegisterView();
+        }
     }
 }
 

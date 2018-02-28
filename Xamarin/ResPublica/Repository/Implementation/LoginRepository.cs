@@ -4,6 +4,7 @@ using ResPublica.Interface.Service;
 using ResPublica.Interface.Repository;
 using ResPublica.Implementation.ViewModel;
 using ResPublica.Base;
+using System.Windows.Input;
 
 namespace ResPublica.Implementation.Repository
 {
@@ -22,5 +23,11 @@ namespace ResPublica.Implementation.Repository
             await _Service.Login(model);
             completeAction();
         }
+
+        public void RegisterView()
+        {
+            _MasterRepo.PushRegister();
+        }
+
     }
 }

@@ -13,7 +13,7 @@
     Title="Login">
     <ContentPage.Content>
         <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
-            <Button Text="Register" Command="{Binding OnRegister}"/>
+            <Button Text="Register" Clicked="RegisterView"/>
         </StackLayout>
     </ContentPage.Content>
 </base:ProjectBaseContentPage>
