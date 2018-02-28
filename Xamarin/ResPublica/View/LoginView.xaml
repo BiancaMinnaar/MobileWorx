@@ -10,12 +10,14 @@
     xmlns:image="clr-namespace:ResPublica.View;assembly=ResPublica"
     x:Class="ResPublica.Implementation.View.LoginView"
     x:TypeArguments="p:LoginViewController, m:LoginViewModel"
-	xmlns:imageEx="clr-namespace:ResPublica.Extensions"
-	BackgroundImage="{imageEx:ImageResource Login_Background.jpg}"
-    BackgroundColor="#565E60"
     Title="Login">
-	<ContentPage.Content >
-		<Grid>
+    <ContentPage.Resources>
+    <ResourceDictionary>
+        <image:ByteArrayToImageSourceConverter x:Key="ByteArrayToImage" />
+    </ResourceDictionary>
+</ContentPage.Resources>
+	<ContentPage.Content>
+		<!--<Grid>
 			<Grid.RowDefinitions>
 				<RowDefinition Height="200" />
 				<RowDefinition Height="200" />
@@ -27,6 +29,11 @@
 				<ColumnDefinition Width="Auto" />
 				<ColumnDefinition Width="Auto" />
 			</Grid.ColumnDefinitions>
+-->
+        <StackLayout>
+                <Image Source="{Binding BackGround, Converter={StaticResource ByteArrayToImage}}" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" />
+            
+            </StackLayout>
 
 			<Image Grid.Row="2"/>
 
@@ -35,6 +42,7 @@
 				<Button Text="REGISTER" Margin="5" BackgroundColor="Transparent" TextColor="#88CBBA" />
 			</StackLayout>
 
-		</Grid>
+		<!--</Grid>-->
+
 	</ContentPage.Content>
 </base:ProjectBaseContentPage>
