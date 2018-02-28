@@ -17,7 +17,7 @@ namespace ResPublica.Interface.Repository
 
         //Navigation
         void PushHomeView();
-
+        void PushRegister();
         //Logic
         //debug
         void DumpJson<T>(string heading, T objectToDump);

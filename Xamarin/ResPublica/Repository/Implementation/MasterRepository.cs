@@ -81,5 +81,10 @@ namespace ResPublica.Implementation.Repository
         {
             //_Navigation.PushAsync(new HomeView());
         }
+
+        public void PushRegister()
+        {
+            //_Navigation.PushAsync(new RegisterView());
+        }
     }
 }
