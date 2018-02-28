@@ -68,6 +68,7 @@
     <Compile Include="View\Sandbox.xaml.cs">
       <DependentUpon>Sandbox.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\ImageResourceExtension.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="App.xaml" />

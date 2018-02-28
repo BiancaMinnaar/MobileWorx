@@ -9,6 +9,9 @@
     xmlns:svg="clr-namespace:TwinTechsForms.NControl;assembly=TwinTechsForms.NControl.SvgImageView"
     x:Class="ResPublica.Implementation.View.LoginView"
     x:TypeArguments="p:LoginViewController, m:LoginViewModel"
+    xmlns:image="clr-namespace:ResPublica.View;assembly=ResPublica"
+    x:Class="ResPublica.Implementation.View.LoginView" 
+    x:TypeArguments="p:LoginViewController, m:LoginViewModel" 
     BackgroundColor="#565E60"
     Title="Login">
 	<ContentPage.Content >
