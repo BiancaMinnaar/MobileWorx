@@ -8,22 +8,22 @@ using ResPublica.Interface.Service;
 
 namespace ResPublica.Implementation.Service
 {
-    public class LoginService : BaseService, ILoginService
-    {
-        public LoginService(Func<string, Dictionary<string, object>, BaseNetworkAccessEnum, Task> networkInterface)
-            :base(networkInterface)
-        {
-        }
+	public class LoginService : BaseService, ILoginService
+	{
+		public LoginService(Func<string, Dictionary<string, object>, BaseNetworkAccessEnum, Task> networkInterface)
+			: base(networkInterface)
+		{
+		}
 
-        public async Task Login(LoginViewModel model)
-        {
-            string requestURL = "/path/{Parameter}";
-            var httpMethod = BaseNetworkAccessEnum.Get;
-            var parameters = new Dictionary<string, object>()
-            {
-                //{"Parameter", model.Property},
-            };
-            await _NetworkInterface(requestURL, parameters, httpMethod);
-        }
-    }
+		public async Task Login(LoginViewModel model)
+		{
+			string requestURL = "http://sm2.respublica.co.za//path/{Parameter}";
+			var httpMethod = BaseNetworkAccessEnum.Post;
+			var parameters = new Dictionary<string, object>()
+			{
+				//{"Parameter", model.Property},
+			};
+			await _NetworkInterface(requestURL, parameters, httpMethod);
+		}
+	}
 }

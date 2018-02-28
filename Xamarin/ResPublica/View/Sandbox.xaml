@@ -1,25 +1,29 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+			 xmlns:image="clr-namespace:ResPublica.Extensions"
              x:Class="ResPublica.View.Sandbox"
-			 BackgroundImage="{StaticResource LoginView}">
+			 >
     <ContentPage.Content>
 		<Grid>
 			<Grid.RowDefinitions>
-				<RowDefinition Height="2*" />
 				<RowDefinition Height="*" />
-				<RowDefinition Height="200" />
+				<RowDefinition Height="*" />
+				<RowDefinition Height="*" />
+				<RowDefinition Height="10" />
+				<RowDefinition Height="50" />
 			</Grid.RowDefinitions>
 			<Grid.ColumnDefinitions>
 				<ColumnDefinition Width="Auto" />
 				<ColumnDefinition Width="*" />
 			</Grid.ColumnDefinitions>
 
-			
-			
-			<StackLayout Orientation="Horizontal" Grid.Row="4">
-				<Label Text="You don't have an account?" />
-				<Button Text="REGISTER" HeightRequest="20" />
+
+			<Image Source="{image:ImageResource Main_Logo.svg}" />
+
+			<StackLayout Orientation="Horizontal" Grid.Row="4" Grid.Column="1">
+				<Label HorizontalTextAlignment="Start" VerticalTextAlignment="Center" HorizontalOptions="Center" Text="You don't have an account?" />
+				<Button Text="REGISTER" Margin="5"  />
 				</StackLayout>
 
 		</Grid>

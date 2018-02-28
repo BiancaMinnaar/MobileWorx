@@ -25,7 +25,7 @@
 
 			<StackLayout Orientation="Horizontal" Grid.Row="4">
 				<Label Text="You don't have an account?" />
-				<Button Text="REGISTER" Clicked="RegisterView" RequestedHeight="20"/>
+				<Button Text="REGISTER" Clicked="RegisterView" />
 			</StackLayout>
 
 		</Grid>
