@@ -2,39 +2,61 @@
 <base:ProjectBaseContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:controls="clr-namespace:ResPublica.View.Controls"
     xmlns:base="clr-namespace:ResPublica.Base"
     xmlns:m="clr-namespace:ResPublica.Implementation.ViewModel"
     xmlns:p="clr-namespace:ResPublica.Implementation.ViewController"
     xmlns:b="clr-namespace:ResPublica.Implementation.View"
-    xmlns:svg="clr-namespace:TwinTechsForms.NControl;assembly=TwinTechsForms.NControl.SvgImageView"
-    xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
-    xmlns:image="clr-namespace:ResPublica.View;assembly=ResPublica"
     x:Class="ResPublica.Implementation.View.LoginView"
     x:TypeArguments="p:LoginViewController, m:LoginViewModel"
-    Title="Login">
-	<ContentPage.Resources>
-		<ResourceDictionary>
-			<image:ByteArrayToImageSourceConverter x:Key="ByteArrayToImage" />
-		</ResourceDictionary>
-	</ContentPage.Resources>
+    Title="Login"
+	>
 	<ContentPage.Content>
-        <RelativeLayout>
-            <Image
+		<RelativeLayout>
+			<Image
             Aspect="AspectFill"
-            Source="{image:ImageResource ResPublica.Images.Login_Background.jpg}"
+            Source="Login_Background.jpg"
             RelativeLayout.WidthConstraint= "{ConstraintExpression Type=RelativeToParent, Property=Width}"
             RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}"></Image>
-            <StackLayout RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}"
+			<StackLayout RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}"
                 RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}"
                 Orientation="Vertical">
-                <StackLayout Orientation="Vertical">
+				<!--<StackLayout Orientation="Vertical">
                     <StackLayout Orientation="Horizontal">
                         <Label Text="User name:" />
                         <Entry />
                     </StackLayout>
-                    <ffimageloadingsvg:SvgCachedImage WidthRequest="300" HeightRequest="600" Source="resource://ResPublica.Images.Button_Default.svg" />
-                </StackLayout>
-            </StackLayout>
-         </RelativeLayout>
+                </StackLayout>-->
+				<!--<ffimageloadingsvg:SvgCachedImage WidthRequest="300" HeightRequest="600" Source="resource://ResPublica.Images.Button_Default.svg" />-->
+				<Grid >
+					<Grid.RowDefinitions>
+						<RowDefinition Height="*" />
+						<RowDefinition Height="1*" />
+						<RowDefinition Height="*" />
+						<RowDefinition Height="*" />
+						<RowDefinition Height="*" />
+					</Grid.RowDefinitions>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="*" />
+						<ColumnDefinition Width="*" />
+					</Grid.ColumnDefinitions>
+
+					<StackLayout Orientation="Horizontal" Grid.Row="0" Grid.ColumnSpan="5" HorizontalOptions="Center">
+						<Image Source="Main_Logo.png"></Image>
+					</StackLayout>
+
+					<StackLayout Orientation="Horizontal" Grid.Row="2" Grid.ColumnSpan="5" HorizontalOptions="Center">
+						<controls:HREntry Text="Email address...." ></controls:HREntry>
+					</StackLayout>
+
+					<StackLayout Orientation="Horizontal" Grid.Row="5" Grid.ColumnSpan="5" HorizontalOptions="Center">
+						<Label HorizontalTextAlignment="Start" VerticalTextAlignment="Center" HorizontalOptions="Center" Font="Bold,18" Text="You don't have an account?" TextColor="White" />
+						<Button Text="REGISTER" Margin="5" BackgroundColor="Transparent"   TextColor="#88CBBA"  BorderColor="Transparent" BorderWidth="0"/>
+					</StackLayout>
+
+				</Grid>
+
+			</StackLayout>
+		</RelativeLayout>
 	</ContentPage.Content>
 </base:ProjectBaseContentPage>

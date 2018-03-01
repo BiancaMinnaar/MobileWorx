@@ -17,12 +17,12 @@ namespace ResPublica.Implementation.Service
 
 		public async Task Login(LoginViewModel model)
 		{
-			string requestURL = "http://sm2.respublica.co.za//path/{Parameter}";
+			string requestURL = "http://sm2.respublica.co.za/API/app/AppAPI/Login";
 			var httpMethod = BaseNetworkAccessEnum.Post;
             var parameters = new Dictionary<string, ParameterTypedValue>()
             {
-                {"Header", new ParameterTypedValue() {
-                        ParameterValue="Some Value",
+                {"X-API-TOKEN", new ParameterTypedValue() {
+                        ParameterValue="boguskey",
                         ParameterType=ParameterTypeEnum.HeaderParameter
                     }
                 }

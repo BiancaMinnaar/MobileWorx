@@ -17,7 +17,7 @@ namespace ResPublica.Implementation.Service
 
         public async Task Register(RegisterViewModel model)
         {
-            string requestURL = "/path/{Parameter}";
+            string requestURL = "http://sm2.respublica.co.za/API/app/AppAPI/Register";
             var httpMethod = BaseNetworkAccessEnum.Get;
             var parameters = new Dictionary<string, object>()
             {
