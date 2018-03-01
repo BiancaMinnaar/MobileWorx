@@ -24,7 +24,8 @@ namespace ResPublica.Implementation.Repository
             completeAction();
         }
 
-        public void RegisterView()
+
+		public void RegisterView()
         {
             _MasterRepo.PushRegister();
         }

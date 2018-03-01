@@ -42,12 +42,12 @@
 					</StackLayout>
 
 					<StackLayout Orientation="Vertical" Grid.Row="3" Grid.ColumnSpan="5" HorizontalOptions="FillAndExpand" Padding="30">
-						<controls:HREntry Text="" Image="Message_Icon.png"
+						<controls:HREntry Text="{Binding Username}" Image="Message_Icon.png"
 										  Placeholder="Email address..."
 										  HeightRequest="45"
 										  HorizontalOptions="FillAndExpand">
 						</controls:HREntry>
-						<controls:HREntry Text="" Image="Lock_Icon.png"
+						<controls:HREntry Text="{Binding Password}" Image="Lock_Icon.png"
 										  Placeholder="Password..."
 										  HorizontalOptions="FillAndExpand"
 										  HeightRequest="45"
@@ -55,12 +55,12 @@
 					</StackLayout>
 
 					<StackLayout Orientation="Horizontal" Grid.Row="4" Grid.ColumnSpan="5" HorizontalOptions="FillAndExpand" Padding="30,0,30,0">
-						<Button Text="Sign In" BackgroundColor="#0195A7" TextColor="White" BorderRadius="10" HorizontalOptions="FillAndExpand" ></Button>
+						<Button Text="Sign In" BackgroundColor="#0195A7" TextColor="White" BorderRadius="10" HorizontalOptions="FillAndExpand" Clicked="On_Login_Event"></Button>
 					</StackLayout>
 
 					<StackLayout Orientation="Horizontal" Grid.Row="5" Grid.ColumnSpan="5" HorizontalOptions="Center">
 						<Label HorizontalTextAlignment="Start" VerticalTextAlignment="Center" HorizontalOptions="Center" Font="Bold,18" Text="You don't have an account?" TextColor="White" />
-						<Button Text="REGISTER" Margin="5" BackgroundColor="Transparent"   TextColor="#88CBBA"  BorderColor="Transparent" BorderWidth="0"/>
+						<Button Text="REGISTER" Margin="5" BackgroundColor="Transparent"   TextColor="#88CBBA"  BorderColor="Transparent" BorderWidth="0" Clicked="RegisterView" />
 					</StackLayout>
 
 				</Grid>

@@ -10,7 +10,7 @@ namespace ResPublica.Implementation.Service
 {
 	public class LoginService : BaseService, ILoginService
 	{
-		public LoginService(Func<string, Dictionary<string, object>, BaseNetworkAccessEnum, Task> networkInterface)
+		public LoginService(Func<string, Dictionary<string, ParameterTypedValue>, BaseNetworkAccessEnum, Task> networkInterface)
 			: base(networkInterface)
 		{
 		}

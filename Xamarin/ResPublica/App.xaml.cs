@@ -1,4 +1,5 @@
-﻿using ResPublica.Implementation.Repository;
+﻿using Acr.UserDialogs;
+using ResPublica.Implementation.Repository;
 using ResPublica.Implementation.View;
 using Xamarin.Forms;
 
@@ -14,6 +15,9 @@ namespace ResPublica
             _MasterRepo.SetRootView(new NavigationPage(new LoginView()));
             //_MasterRepo.SetRootView(new NavigationPage(new TestHarnesView()));
             MainPage = _MasterRepo.GetRootView();
-        }
-    }
+
+			
+
+		}
+	}
 }

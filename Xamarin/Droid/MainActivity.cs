@@ -10,26 +10,28 @@ using Android.OS;
 using TwinTechsForms.NControl.Android;
 using FFImageLoading.Svg.Forms;
 using FFImageLoading.Forms.Droid;
+using Acr.UserDialogs;
 
 namespace ResPublica.Droid
 {
-    [Activity(Label = "ResPublica.Droid", Icon = "@drawable/icon", Theme = "@style/MyTheme", ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
-    public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
-    {
-        protected override void OnCreate(Bundle bundle)
-        {
-            TabLayoutResource = Resource.Layout.Tabbar;
-            ToolbarResource = Resource.Layout.Toolbar;
+	[Activity(Label = "ResPublica.Droid", Icon = "@drawable/icon", Theme = "@style/MyTheme", ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+	public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
+	{
+		protected override void OnCreate(Bundle bundle)
+		{
+			TabLayoutResource = Resource.Layout.Tabbar;
+			ToolbarResource = Resource.Layout.Toolbar;
 
-            base.OnCreate(bundle);
+			base.OnCreate(bundle);
 
-            global::Xamarin.Forms.Forms.Init(this, bundle);
-            SvgImageViewRenderer.Init();
+			global::Xamarin.Forms.Forms.Init(this, bundle);
+			SvgImageViewRenderer.Init();
 
-            CachedImageRenderer.Init(true);
-            var ignore = typeof(SvgCachedImage);
+			CachedImageRenderer.Init(true);
+			var ignore = typeof(SvgCachedImage);
 
-            LoadApplication(new App());
-        }
-    }
+			LoadApplication(new App());
+			Acr.Support.Android.ActivityLifecycleCallbacks.Register(this);
+		}
+	}
 }

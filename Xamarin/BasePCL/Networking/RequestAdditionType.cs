@@ -14,7 +14,10 @@ namespace CorePCL
         public object ParameterValue { get; set; }
         public ParameterTypeEnum ParameterType { get; set; }
 
+		public ParameterTypedValue()
+		{
 
+		}
 
    //     Func<string, object, RestRequest, IRestRequest> _AddFunction;
    //     string _ParameterName;
