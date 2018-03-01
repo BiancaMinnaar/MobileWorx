@@ -31,15 +31,11 @@
 				<Grid >
 					<Grid.RowDefinitions>
 						<RowDefinition Height="*" />
-						<RowDefinition Height="1*" />
+						<RowDefinition Height="Auto" />
 						<RowDefinition Height="*" />
-						<RowDefinition Height="*" />
+						<RowDefinition Height="Auto" />
 						<RowDefinition Height="*" />
 					</Grid.RowDefinitions>
-					<Grid.ColumnDefinitions>
-						<ColumnDefinition Width="*" />
-						<ColumnDefinition Width="*" />
-					</Grid.ColumnDefinitions>
 
 					<StackLayout Orientation="Horizontal" Grid.Row="1" Grid.ColumnSpan="5" HorizontalOptions="Center">
 						<Image Source="Main_Logo.png"></Image>
@@ -55,11 +51,10 @@
 										  Placeholder="Password..."
 										  HorizontalOptions="FillAndExpand"
 										  HeightRequest="45"
-
 										  IsPassword="True"></controls:HREntry>
 					</StackLayout>
 
-					<Button Grid.Row="4" Grid.ColumnSpan="5" Text="Sign In" HorizontalOptions="Center" HeightRequest="60"></Button>
+					<Button Grid.Row="4"  Text="Sign In" HorizontalOptions="FillAndExpand" Margin="20,0,0,20" BackgroundColor="#0195A7" TextColor="White" BorderRadius="5"></Button>
 
 					<StackLayout Orientation="Horizontal" Grid.Row="5" Grid.ColumnSpan="5" HorizontalOptions="Center">
 						<Label HorizontalTextAlignment="Start" VerticalTextAlignment="Center" HorizontalOptions="Center" Font="Bold,18" Text="You don't have an account?" TextColor="White" />
