@@ -54,7 +54,9 @@
 										  IsPassword="True"></controls:HREntry>
 					</StackLayout>
 
-					<Button Grid.Row="4"  Text="Sign In" HorizontalOptions="FillAndExpand" Margin="20,0,0,20" BackgroundColor="#0195A7" TextColor="White" BorderRadius="5"></Button>
+					<StackLayout Orientation="Horizontal" Grid.Row="4" Grid.ColumnSpan="5" HorizontalOptions="FillAndExpand" Padding="30,0,30,0">
+						<Button Text="Sign In" BackgroundColor="#0195A7" TextColor="White" BorderRadius="10" HorizontalOptions="FillAndExpand" ></Button>
+					</StackLayout>
 
 					<StackLayout Orientation="Horizontal" Grid.Row="5" Grid.ColumnSpan="5" HorizontalOptions="Center">
 						<Label HorizontalTextAlignment="Start" VerticalTextAlignment="Center" HorizontalOptions="Center" Font="Bold,18" Text="You don't have an account?" TextColor="White" />

@@ -40,7 +40,9 @@
 			</StackLayout>
 
 
-			<Button Grid.Row="4"  Text="Sign In" HorizontalOptions="FillAndExpand"  BackgroundColor="#0195A7" TextColor="White" BorderRadius="5"></Button>
+			<StackLayout Orientation="Vertical" Grid.Row="4" HorizontalOptions="FillAndExpand" Padding="30,0,0,30">
+				<Button Text="Sign In" HorizontalOptions="FillAndExpand" BackgroundColor="#0195A7" TextColor="White" BorderRadius="5"></Button>
+			</StackLayout>
 
 			<StackLayout Orientation="Horizontal" Grid.Row="5" Grid.ColumnSpan="5" HorizontalOptions="Center">
 				<Label HorizontalTextAlignment="Start" VerticalTextAlignment="Center" HorizontalOptions="Center" Font="Bold,18" Text="You don't have an account?" TextColor="White" />
