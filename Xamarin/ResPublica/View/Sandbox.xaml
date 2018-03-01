@@ -10,26 +10,41 @@
 
 		<Grid >
 			<Grid.RowDefinitions>
-				<RowDefinition Height="100" />
-				<RowDefinition Height="100" />
-				<RowDefinition Height="100" />
-				<RowDefinition Height="100" />
-				<RowDefinition Height="100" />
+				<RowDefinition Height="*" />
+				<RowDefinition Height="1*" />
+				<RowDefinition Height="*" />
+				<RowDefinition Height="*" />
+				<RowDefinition Height="*" />
 			</Grid.RowDefinitions>
 			<Grid.ColumnDefinitions>
 				<ColumnDefinition Width="*" />
 				<ColumnDefinition Width="*" />
 			</Grid.ColumnDefinitions>
 
-			<controls:HREntry Text="Hello" Placeholder="Username..."></controls:HREntry>
-			
-			<Button Grid.Row="3" Text="Is this working"></Button>
+			<StackLayout Orientation="Horizontal" Grid.Row="0" Grid.ColumnSpan="5" HorizontalOptions="Center">
+				<Image Source="Main_Logo.png"></Image>
+			</StackLayout>
 
-			<StackLayout Orientation="Horizontal" Grid.Row="4" Grid.ColumnSpan="5" HorizontalOptions="Center">
-				<Label HorizontalTextAlignment="Start" VerticalTextAlignment="Center" HorizontalOptions="Center" FontSize="16" Text="You don't have an account?" TextColor="White" />
-				<Button Text="REGISTER" Margin="5" BackgroundColor="Transparent" TextColor="#88CBBA"  BorderColor="Transparent" BorderWidth="0"/>
+			<StackLayout Orientation="Vertical" Grid.Row="2" Grid.ColumnSpan="5" HorizontalOptions="FillAndExpand" Opacity=".15" Padding="30">
+				<controls:HREntry Text="" Image="Message_Icon.png"
+								  Placeholder="Email address..."
+								  HorizontalOptions="FillAndExpand"
+								  HeightRequest="25"
+								  BackgroundColor="LightGray"
+								  ImageHeight="16"
+								  ></controls:HREntry>
+				<controls:HREntry Text="" Image="Lock_Icon.png"
+										  Placeholder="Password..."
+										  HorizontalOptions="FillAndExpand"
+										  IsPassword="True"></controls:HREntry>
+			</StackLayout>
+
+			<StackLayout Orientation="Horizontal" Grid.Row="5" Grid.ColumnSpan="5" HorizontalOptions="Center">
+				<Label HorizontalTextAlignment="Start" VerticalTextAlignment="Center" HorizontalOptions="Center" Font="Bold,18" Text="You don't have an account?" TextColor="White" />
+				<Button Text="REGISTER" Margin="5" BackgroundColor="Transparent"   TextColor="#88CBBA"  BorderColor="Transparent" BorderWidth="0"/>
 			</StackLayout>
 
 		</Grid>
+
 	</ContentPage.Content>
 </ContentPage>
