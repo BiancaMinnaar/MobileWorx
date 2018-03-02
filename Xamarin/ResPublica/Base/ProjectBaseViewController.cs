@@ -4,10 +4,10 @@ using System.Diagnostics;
 using Acr.UserDialogs;
 using CorePCL;
 using Newtonsoft.Json;
-using ResPublica.Implementation.Repository;
-using ResPublica.Interface.Repository;
+using HiRes.Implementation.Repository;
+using HiRes.Interface.Repository;
 
-namespace ResPublica.Base
+namespace HiRes.Base
 {
     public abstract class ProjectBaseViewController<T> : BaseViewController<T>
         where T : ProjectBaseViewModel

@@ -1,15 +1,15 @@
 using System;
 using System.Diagnostics;
 using System.Threading.Tasks;
-using ResPublica.Base;
-using ResPublica.Implementation.Repository;
-using ResPublica.Implementation.Service;
-using ResPublica.Implementation.ViewModel;
-using ResPublica.Interface.Repository;
-using ResPublica.Interface.Service;
-using ResPublica.Interface.ViewController;
+using HiRes.Base;
+using HiRes.Implementation.Repository;
+using HiRes.Implementation.Service;
+using HiRes.Implementation.ViewModel;
+using HiRes.Interface.Repository;
+using HiRes.Interface.Service;
+using HiRes.Interface.ViewController;
 
-namespace ResPublica.Implementation.ViewController
+namespace HiRes.Implementation.ViewController
 {
 	public class LoginViewController : ProjectBaseViewController<LoginViewModel>, ILoginViewController
 	{

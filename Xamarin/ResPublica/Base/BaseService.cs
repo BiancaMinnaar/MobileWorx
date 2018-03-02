@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using CorePCL;
 
-namespace ResPublica.Base
+namespace HiRes.Base
 {
 	public class BaseService
 	{

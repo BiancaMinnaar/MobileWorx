@@ -9,7 +9,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using System.Collections;
 
-namespace ResPublica.View
+namespace HiRes.View
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class Sandbox : CarouselPage

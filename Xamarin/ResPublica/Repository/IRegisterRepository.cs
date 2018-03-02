@@ -1,8 +1,8 @@
 using System;
 using System.Threading.Tasks;
-using ResPublica.Implementation.ViewModel;
+using HiRes.Implementation.ViewModel;
 
-namespace ResPublica.Interface.Repository
+namespace HiRes.Interface.Repository
 {
     public interface IRegisterRepository
     {

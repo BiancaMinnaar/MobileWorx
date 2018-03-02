@@ -2,7 +2,7 @@
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace ResPublica.View
+namespace HiRes.View
 {
 	[ContentProperty("Source")]
 	public class ImageResourceExtension : IMarkupExtension

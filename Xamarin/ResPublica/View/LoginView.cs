@@ -1,10 +1,10 @@
 using System;
-using ResPublica.Base;
-using ResPublica.Implementation.ViewController;
-using ResPublica.Implementation.ViewModel;
+using HiRes.Base;
+using HiRes.Implementation.ViewController;
+using HiRes.Implementation.ViewModel;
 using Xamarin.Forms;
 
-namespace ResPublica.Implementation.View
+namespace HiRes.Implementation.View
 {
     public partial class LoginView : ProjectBaseContentPage<LoginViewController, LoginViewModel>
     {

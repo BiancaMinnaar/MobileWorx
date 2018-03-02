@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
-using ResPublica.Base;
+using HiRes.Base;
 
-namespace ResPublica.Implementation.ViewModel
+namespace HiRes.Implementation.ViewModel
 {
 	public class RegisterViewModel : ProjectBaseViewModel
 	{

@@ -11,6 +11,7 @@ using TwinTechsForms.NControl.Android;
 using FFImageLoading.Svg.Forms;
 using FFImageLoading.Forms.Droid;
 using Acr.UserDialogs;
+using HiRes;
 
 namespace ResPublica.Droid
 {

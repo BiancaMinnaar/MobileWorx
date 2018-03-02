@@ -1,9 +1,9 @@
 ﻿using Acr.UserDialogs;
-using ResPublica.Implementation.Repository;
-using ResPublica.Implementation.View;
+using HiRes.Implementation.Repository;
+using HiRes.Implementation.View;
 using Xamarin.Forms;
 
-namespace ResPublica
+namespace HiRes
 {
     public partial class App : Application
     {

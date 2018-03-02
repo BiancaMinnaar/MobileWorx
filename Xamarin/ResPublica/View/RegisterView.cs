@@ -1,10 +1,10 @@
 using System;
 using Xamarin.Forms;
-using ResPublica.Base;
-using ResPublica.Implementation.ViewController;
-using ResPublica.Implementation.ViewModel;
+using HiRes.Base;
+using HiRes.Implementation.ViewController;
+using HiRes.Implementation.ViewModel;
 
-namespace ResPublica.Implementation.View
+namespace HiRes.Implementation.View
 {
     public partial class RegisterView : ProjectBaseContentPage<RegisterViewController, RegisterViewModel>
     {

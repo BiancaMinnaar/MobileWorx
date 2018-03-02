@@ -208,9 +208,9 @@
       <Project>{F34FE759-9422-4777-84F5-E253B9A3BA16}</Project>
       <Name>BasePCL</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ResPublica\ResPublica.csproj">
+    <ProjectReference Include="..\ResPublica\HiRes.csproj">
       <Project>{EE1B5837-EEE7-41B1-A364-F5930E789E83}</Project>
-      <Name>ResPublica</Name>
+      <Name>HiRes</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

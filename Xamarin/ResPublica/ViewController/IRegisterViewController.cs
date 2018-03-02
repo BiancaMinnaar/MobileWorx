@@ -1,6 +1,6 @@
 using System.Threading.Tasks;
 
-namespace ResPublica.Interface.ViewController
+namespace HiRes.Interface.ViewController
 {
     public interface IRegisterViewController
     {

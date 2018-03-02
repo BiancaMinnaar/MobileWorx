@@ -10,7 +10,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResPublica.UITests", "UITes
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasePCL", "BasePCL\BasePCL.csproj", "{F34FE759-9422-4777-84F5-E253B9A3BA16}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResPublica", "ResPublica\ResPublica.csproj", "{EE1B5837-EEE7-41B1-A364-F5930E789E83}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HiRes", "ResPublica\HiRes.csproj", "{EE1B5837-EEE7-41B1-A364-F5930E789E83}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SourceConsole", "SourceConsole\SourceConsole.csproj", "{335063C5-C4DE-4196-8957-EDF53F381C8B}"
 EndProject

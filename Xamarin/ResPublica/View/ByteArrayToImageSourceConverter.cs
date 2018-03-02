@@ -2,7 +2,7 @@
 using System.IO;
 using Xamarin.Forms;
 
-namespace ResPublica.View
+namespace HiRes.View
 {
 	public class ByteArrayToImageSourceConverter : IValueConverter
 	{

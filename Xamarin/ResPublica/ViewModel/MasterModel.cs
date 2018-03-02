@@ -1,4 +1,4 @@
-﻿namespace ResPublica.ViewModel
+﻿namespace HiRes.ViewModel
 {
     public class MasterModel
     {

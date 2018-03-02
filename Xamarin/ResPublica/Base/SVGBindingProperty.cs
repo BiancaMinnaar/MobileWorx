@@ -1,6 +1,6 @@
 ﻿using System.Reflection;
 
-namespace ResPublica.Base
+namespace HiRes.Base
 {
     public class SVGBindingProperty
     {

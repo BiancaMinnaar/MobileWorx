@@ -12,8 +12,8 @@ using Android.Runtime;
 using Android.Support.V4.Content;
 using Android.Views;
 using Android.Widget;
+using HiRes.View.Controls;
 using ResPublica.Droid.CustomRenderers;
-using ResPublica.View.Controls;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 

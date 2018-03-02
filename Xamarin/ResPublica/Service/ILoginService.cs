@@ -1,7 +1,7 @@
 using System.Threading.Tasks;
-using ResPublica.Implementation.ViewModel;
+using HiRes.Implementation.ViewModel;
 
-namespace ResPublica.Interface.Service
+namespace HiRes.Interface.Service
 {
     public interface ILoginService
     {

@@ -1,12 +1,12 @@
 using System;
 using System.Threading.Tasks;
-using ResPublica.Interface.Service;
-using ResPublica.Interface.Repository;
-using ResPublica.Implementation.ViewModel;
-using ResPublica.Base;
+using HiRes.Interface.Service;
+using HiRes.Interface.Repository;
+using HiRes.Implementation.ViewModel;
+using HiRes.Base;
 using System.Windows.Input;
 
-namespace ResPublica.Implementation.Repository
+namespace HiRes.Implementation.Repository
 {
     public class LoginRepository : ProjectBaseRepository, ILoginRepository
     {

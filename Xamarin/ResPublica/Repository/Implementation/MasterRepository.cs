@@ -5,14 +5,14 @@ using System.Threading.Tasks;
 using Acr.UserDialogs;
 using CorePCL;
 using Newtonsoft.Json;
-using ResPublica.Base;
-using ResPublica.Implementation.View;
-using ResPublica.Interface.Repository;
-using ResPublica.View;
-using ResPublica.ViewModel;
+using HiRes.Base;
+using HiRes.Implementation.View;
+using HiRes.Interface.Repository;
+using HiRes.View;
+using HiRes.ViewModel;
 using Xamarin.Forms;
 
-namespace ResPublica.Implementation.Repository
+namespace HiRes.Implementation.Repository
 {
 	public class MasterRepository : ProjectBaseRepository, IMasterRepository
 	{

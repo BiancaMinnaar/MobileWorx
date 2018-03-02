@@ -6,8 +6,8 @@
     <ProjectGuid>{EE1B5837-EEE7-41B1-A364-F5930E789E83}</ProjectGuid>
     <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
-    <RootNamespace>ResPublica</RootNamespace>
-    <AssemblyName>ResPublica</AssemblyName>
+    <RootNamespace>HiRes</RootNamespace>
+    <AssemblyName>HiRes</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <TargetFrameworkProfile>Profile44</TargetFrameworkProfile>
   </PropertyGroup>

@@ -5,7 +5,7 @@ using System.ComponentModel;
 using CorePCL;
 using Xamarin.Forms;
 
-namespace ResPublica.Base
+namespace HiRes.Base
 {
 	public abstract class ProjectBaseViewModel : BaseViewModel, INotifyPropertyChanged, INotifyDataErrorInfo
 	{

@@ -1,11 +1,11 @@
 using System;
 using System.Threading.Tasks;
-using ResPublica.Base;
-using ResPublica.Implementation.ViewModel;
-using ResPublica.Interface.Repository;
-using ResPublica.Interface.Service;
+using HiRes.Base;
+using HiRes.Implementation.ViewModel;
+using HiRes.Interface.Repository;
+using HiRes.Interface.Service;
 
-namespace ResPublica.Implementation.Repository
+namespace HiRes.Implementation.Repository
 {
     public class RegisterRepository : ProjectBaseRepository, IRegisterRepository
     {

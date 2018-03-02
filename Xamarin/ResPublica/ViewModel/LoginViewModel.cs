@@ -2,9 +2,9 @@ using System;
 using System.IO;
 using System.Reflection;
 using System.Windows.Input;
-using ResPublica.Base;
+using HiRes.Base;
 
-namespace ResPublica.Implementation.ViewModel
+namespace HiRes.Implementation.ViewModel
 {
     public class LoginViewModel : ProjectBaseViewModel
     {

@@ -6,7 +6,7 @@ using BasePCL.DataContracts.Interface;
 using System.Collections.Generic;
 using RestSharp;
 using System.Threading.Tasks;
-using ResPublica;
+using HiRes;
 
 [assembly: Dependency(typeof(RestServiceDroid))]
 namespace MeasurePro.Droid.Injection

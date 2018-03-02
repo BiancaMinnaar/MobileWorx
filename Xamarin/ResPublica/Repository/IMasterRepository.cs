@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using CorePCL;
-using ResPublica.ViewModel;
+using HiRes.ViewModel;
 using Xamarin.Forms;
 
-namespace ResPublica.Interface.Repository
+namespace HiRes.Interface.Repository
 {
     public interface IMasterRepository
     {

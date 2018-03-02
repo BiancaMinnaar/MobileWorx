@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
-namespace ResPublica.View.Controls
+namespace HiRes.View.Controls
 {
 	public class HREntry : Entry
 	{

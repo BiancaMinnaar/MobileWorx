@@ -1,5 +1,5 @@
 ﻿using System;
-namespace ResPublica.Base
+namespace HiRes.Base
 {
 	public class CheckAndBalance
 	{

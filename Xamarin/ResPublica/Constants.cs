@@ -1,5 +1,5 @@
 ﻿using System;
-namespace ResPublica
+namespace HiRes
 {
     public static class Constants
     {

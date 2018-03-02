@@ -2,11 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using CorePCL;
-using ResPublica.Base;
-using ResPublica.Implementation.ViewModel;
-using ResPublica.Interface.Service;
+using HiRes.Base;
+using HiRes.Implementation.ViewModel;
+using HiRes.Interface.Service;
 
-namespace ResPublica.Implementation.Service
+namespace HiRes.Implementation.Service
 {
 	public class LoginService : BaseService, ILoginService
 	{

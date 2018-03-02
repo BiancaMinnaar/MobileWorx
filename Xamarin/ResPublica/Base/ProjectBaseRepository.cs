@@ -1,7 +1,7 @@
 ﻿using PCLBase.DataContracts;
-using ResPublica.Interface.Repository;
+using HiRes.Interface.Repository;
 
-namespace ResPublica.Base
+namespace HiRes.Base
 {
     public class ProjectBaseRepository : BaseRepository
     {

@@ -1,7 +1,7 @@
-﻿using ResPublica.Implementation.Repository;
+﻿using HiRes.Implementation.Repository;
 using Xamarin.Forms;
 
-namespace ResPublica.Base
+namespace HiRes.Base
 {
     public abstract class ProjectBaseContentView<T, M> : Grid
 		where T: ProjectBaseViewController<M>, new()
