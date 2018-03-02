@@ -19,15 +19,15 @@ namespace ResPublica.Implementation.Service
 		{
 			string requestURL = "http://sm2.respublica.co.za/API/app/AppAPI/Login";
 			var httpMethod = BaseNetworkAccessEnum.Post;
-            var parameters = new Dictionary<string, ParameterTypedValue>()
-            {
-                {"X-API-TOKEN", new ParameterTypedValue() {
-                        ParameterValue="boguskey",
-                        ParameterType=ParameterTypeEnum.HeaderParameter
-                    }
-                }
-            };
-            await _NetworkInterfaceWithTypedParameters(requestURL, parameters, httpMethod);
+			var parameters = new Dictionary<string, ParameterTypedValue>()
+			{
+				{"X-API-TOKEN", new ParameterTypedValue() {
+						ParameterValue="boguskey",
+						ParameterType=ParameterTypeEnum.HeaderParameter
+					}
+				}
+			};
+			await _NetworkInterface(requestURL, parameters, httpMethod);
 		}
 	}
 }

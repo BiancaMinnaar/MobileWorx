@@ -1,17 +1,103 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<base:ProjectBaseContentPage 
-    xmlns="http://xamarin.com/schemas/2014/forms" 
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:base="clr-namespace:ResPublica.Base"
-    xmlns:m="clr-namespace:ResPublica.Implementation.ViewModel"
-    xmlns:p="clr-namespace:ResPublica.Implementation.ViewController"
-    xmlns:b="clr-namespace:ResPublica.Implementation.View"
-    xmlns:svg="clr-namespace:TwinTechsForms.NControl;assembly=TwinTechsForms.NControl.SvgImageView"
-    x:Class="ResPublica.Implementation.View.RegisterView" 
-    x:TypeArguments="p:RegisterViewController, m:RegisterViewModel" 
-    BackgroundColor="#565E60"
-    Title="Login">
-    <ContentPage.Content>
-        <Label Text="Register" />
-    </ContentPage.Content>
+<base:ProjectBaseContentPage
+		xmlns="http://xamarin.com/schemas/2014/forms"
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+		xmlns:base="clr-namespace:ResPublica.Base"
+		xmlns:m="clr-namespace:ResPublica.Implementation.ViewModel"
+		xmlns:p="clr-namespace:ResPublica.Implementation.ViewController"
+		xmlns:b="clr-namespace:ResPublica.Implementation.View"
+		xmlns:svg="clr-namespace:TwinTechsForms.NControl;assembly=TwinTechsForms.NControl.SvgImageView"
+		xmlns:controls="clr-namespace:ResPublica.View.Controls"
+		x:Class="ResPublica.Implementation.View.RegisterView"
+		x:TypeArguments="p:RegisterViewController, m:RegisterViewModel"
+		BackgroundColor="#565E60"
+		Title="Login">
+	<ContentPage.Content>
+		<ScrollView >
+			<StackLayout>
+				<StackLayout Orientation="Horizontal" Grid.Row="1" Grid.ColumnSpan="5" HorizontalOptions="Center">
+					<Image Source="UserProfile.png"></Image>
+				</StackLayout>
+
+				<StackLayout Orientation="Vertical" Grid.Row="3" Grid.ColumnSpan="5" HorizontalOptions="FillAndExpand" Padding="30">
+					<Label Text="Name"></Label>
+					<controls:HREntry Text="{Binding Name}"
+										  Placeholder="Name..."
+										  HeightRequest="45"
+										  HorizontalOptions="FillAndExpand">
+					</controls:HREntry>
+					<Label Text="Surname"></Label>
+					<controls:HREntry Text="{Binding Surname}"
+										  Placeholder="Surname..."
+										  HeightRequest="45"
+										  HorizontalOptions="FillAndExpand">
+					</controls:HREntry>
+
+					<StackLayout Orientation="Horizontal">
+						<StackLayout Orientation="Vertical">
+							<Label Text="Gender"></Label>
+							<Picker SelectedItem="{Binding Gender}"
+									HeightRequest="45"
+									HorizontalOptions="FillAndExpand"
+									ItemsSource="{Binding GenderTypes}">
+							</Picker>
+						</StackLayout>
+
+						<StackLayout Orientation="Vertical">
+							<Label Text="Nationality"></Label>
+							<Picker SelectedItem="{Binding Nationality}"
+									HeightRequest="45"
+									HorizontalOptions="FillAndExpand"
+									ItemsSource="{Binding Nationalities}">
+							</Picker>
+						</StackLayout>
+					</StackLayout>
+
+					<Label Text="RSA Id Number"></Label>
+					<controls:HREntry Text="{Binding NationalIdNumber}"
+										  Placeholder="Enter you South African Id Number..."
+										  HeightRequest="45"
+										  HorizontalOptions="FillAndExpand">
+					</controls:HREntry>
+
+					<Label Text="Cellphone Number"/>
+					<StackLayout Orientation="Horizontal">
+						<StackLayout Orientation="Vertical">
+							<controls:HREntry Text="{Binding CountryCode}"
+										  HeightRequest="45"
+										  WidthRequest="50"
+										  HorizontalOptions="FillAndExpand">
+							</controls:HREntry>
+
+							<controls:HREntry Text="{Binding MobileNumber}"
+										  HeightRequest="45"
+										  HorizontalOptions="FillAndExpand">
+							</controls:HREntry>
+						</StackLayout>
+					</StackLayout>
+
+
+					<Label Text="Email Address"></Label>
+					<controls:HREntry Text="{Binding EmailAddress}"
+										  Placeholder="Email address..."
+										  HeightRequest="45"
+										  HorizontalOptions="FillAndExpand">
+					</controls:HREntry>
+
+
+					<Label Text="Confirm Email Address"></Label>
+					<controls:HREntry Text="{Binding EmailAddressConfirm}"
+										  Placeholder="Confirm Email address..."
+										  HeightRequest="45"
+										  HorizontalOptions="FillAndExpand">
+					</controls:HREntry>
+
+					<StackLayout Orientation="Horizontal" Grid.Row="4" Grid.ColumnSpan="5" HorizontalOptions="FillAndExpand" Padding="30,0,30,0">
+						<Button Text="Register" BackgroundColor="#0195A7" TextColor="White" BorderRadius="10" HorizontalOptions="FillAndExpand" ></Button>
+					</StackLayout>
+
+				</StackLayout>
+			</StackLayout>
+		</ScrollView>
+	</ContentPage.Content>
 </base:ProjectBaseContentPage>

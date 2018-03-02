@@ -2,22 +2,43 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ResPublica.View.Sandbox"
+			 xmlns:controls="clr-namespace:ResPublica.View.Controls"
 		 	 xmlns:image="clr-namespace:ResPublica.View"
 			 xmlns:cv="clr-namespace:CarouselView.FormsPlugin.Abstractions;assembly=CarouselView.FormsPlugin.Abstractions"
 			 >
 
 	<ContentPage.Content>
 
-		<cv:CarouselViewControl x:Name="carousel"
-        ItemsSource="{Binding MyItemsSource}"
-        ShowArrows="true"
-        ShowIndicators="true"
-        PositionSelectedCommand="{Binding MyCommand}"
-        PositionSelected="Handle_PositionSelected"
-        Scrolled="Handle_Scrolled"
-        Orientation="Horizontal">
+		<cv:CarouselViewControl x:Name="myCarousel" BindingContext="{Binding Person}">
+			<cv:CarouselViewControl.ItemsSource>
+				<x:Array Type="{x:Type View}">
 
-			<!--<cv:CarouselViewControl.ItemsSource>
+					<!-- Page1 Display Photo -->
+					<Image Source="{Binding PhotoUrl}"/>
+
+					<!-- Page2 Display Bio -->
+					<!--<Label FormattedString="{Binding Bio}"/>-->
+
+					<!-- Page2 Display contact information -->
+					<!--<Label FormattedString="{Binding Info}"/>-->
+
+				</x:Array>
+			</cv:CarouselViewControl.ItemsSource>
+		</cv:CarouselViewControl>
+		
+		<!--<cv:CarouselViewControl x:Name="carousel"
+								ItemsSource="{Binding MyItemsSource}"
+								ShowArrows="true"
+								ShowIndicators="true"
+								PositionSelectedCommand="{Binding MyCommand}"
+								PositionSelected="Handle_PositionSelected"
+								Scrolled="Handle_Scrolled"
+								Orientation="Horizontal">
+
+		</cv:CarouselViewControl>-->
+
+
+		<!--<cv:CarouselViewControl.ItemsSource>
            <x:Array Type="{x:Type View}">
                 <ScrollView>
                     <StackLayout>
@@ -32,7 +53,6 @@
            </x:Array>
         </cv:CarouselViewControl.ItemsSource>-->
 
-		</cv:CarouselViewControl>
 
 
 

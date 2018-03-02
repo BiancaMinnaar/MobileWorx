@@ -18,7 +18,7 @@ namespace ResPublica.Implementation.ViewController
         {
             _MasterRepo.NetworkInterface = (U, P, A) => ExecuteQueryWithObjectAndNetworkAccessAsync(U, P, A);
             _MasterRepo.NetworkInterfaceWithTypedParameters = (U, P, A) => ExecuteQueryWithTypedParametersAndNetworkAccessAsync(U, P, A);
-            _Service = new RegisterService(_MasterRepo.NetworkInterface);
+            _Service = new RegisterService(_MasterRepo.NetworkInterfaceWithTypedParameters);
             _Reposetory = new RegisterRepository(_MasterRepo, _Service);
         }
 

@@ -18,7 +18,7 @@ namespace ResPublica.Implementation.ViewController
 
 		public override void SetRepositories()
 		{
-			_MasterRepo.NetworkInterface = (U, P, A) => ExecuteQueryWithObjectAndNetworkAccessAsync(U, P, A);
+//			_MasterRepo.NetworkInterface = (U, P, A) => ExecuteQueryWithObjectAndNetworkAccessAsync(U, P, A);
 			_MasterRepo.NetworkInterfaceWithTypedParameters = (U, P, A) => ExecuteQueryWithTypedParametersAndNetworkAccessAsync(U, P, A);
 			_Service = new LoginService(_MasterRepo.NetworkInterfaceWithTypedParameters);
 			_Repository = new LoginRepository(_MasterRepo, _Service);

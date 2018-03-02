@@ -134,18 +134,18 @@ namespace MeasurePro.Droid.Injection
 					networkEventArgs.NetworkResponseContent = networkResponse.Content;
 					NetworkInteractionSucceeded(this, networkEventArgs);
 
-                    if (_urlExtension != null &&_urlExtension.Equals("/Workflow/SaveAnswers/{Answers}", StringComparison.CurrentCultureIgnoreCase))
-                    {
-                        _urlExtension = null;
-                        AnswersUploadSucceeded(this, networkEventArgs);
-                    }
-                    if (_urlExtension != null &&_urlExtension.Equals("/Gallary/{Photo}", StringComparison.CurrentCultureIgnoreCase) && _networkCallType == BaseNetworkAccessEnum.Post)
-                    {
-                        networkEventArgs.ObjectID = _photoID;
-                        _urlExtension = null;
-                        _photoID = 0;
-                        PhotoUploadSucceeded(this, networkEventArgs);
-                    }
+                    //if (_urlExtension != null &&_urlExtension.Equals("/Workflow/SaveAnswers/{Answers}", StringComparison.CurrentCultureIgnoreCase))
+                    //{
+                    //    _urlExtension = null;
+                    //    AnswersUploadSucceeded(this, networkEventArgs);
+                    //}
+                    //if (_urlExtension != null &&_urlExtension.Equals("/Gallary/{Photo}", StringComparison.CurrentCultureIgnoreCase) && _networkCallType == BaseNetworkAccessEnum.Post)
+                    //{
+                    //    networkEventArgs.ObjectID = _photoID;
+                    //    _urlExtension = null;
+                    //    _photoID = 0;
+                    //    PhotoUploadSucceeded(this, networkEventArgs);
+                    //}
                 }
 				else
 				{

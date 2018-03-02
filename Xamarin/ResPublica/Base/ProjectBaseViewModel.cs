@@ -1,66 +1,75 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.ComponentModel;
 using CorePCL;
+using Xamarin.Forms;
 
 namespace ResPublica.Base
 {
-    public abstract class ProjectBaseViewModel : BaseViewModel//, INotifyPropertyChanged
-    {
+	public abstract class ProjectBaseViewModel : BaseViewModel, INotifyPropertyChanged, INotifyDataErrorInfo
+	{
 		public IDictionary<string, SVGBindingProperty> SvgCollection { get; set; }
-        public IDictionary<string, string[]> LookupLists;
 
-        public ProjectBaseViewModel()
-        {
-            SvgCollection = new Dictionary<string, SVGBindingProperty>();
-        }
+		public bool HasErrors { get; set; }
 
-        //protected void SetProperty<U>(
-        //    ref U backingStore, U value,
-        //    string propertyName,
-        //    Action onChanged = null,
-        //    Action<U> onChanging = null)
-        //{
-        //    if (EqualityComparer<U>.Default.Equals(backingStore, value))
-        //        return;
+		public IDictionary<string, string[]> LookupLists;
 
-        //    if (onChanging != null)
-        //        onChanging(value);
+		public ProjectBaseViewModel()
+		{
+			SvgCollection = new Dictionary<string, SVGBindingProperty>();
+		}
 
-        //    OnPropertyChanging(propertyName);
+		protected void SetProperty<U>(ref U backingStore, U value, string propertyName, Action onChanged = null, Action<U> onChanging = null)
+		{
+			if (EqualityComparer<U>.Default.Equals(backingStore, value))
+				return;
 
-        //    backingStore = value;
+			if (onChanging != null)
+				onChanging(value);
 
-        //    if (onChanged != null)
-        //        onChanged();
+			OnPropertyChanging(propertyName);
 
-        //    OnPropertyChanged(propertyName);
-        //}
+			backingStore = value;
 
-        //#region INotifyPropertyChanging implementation
+			if (onChanged != null)
+				onChanged();
 
-        //public event PropertyChangingEventHandler PropertyChanging;
+			OnPropertyChanged(propertyName);
+		}
 
-        //#endregion
+		#region INotifyPropertyChanging implementation
 
-        //public void OnPropertyChanging(string propertyName)
-        //{
-        //    if (PropertyChanging == null)
-        //        return;
+		public event PropertyChangingEventHandler PropertyChanging;
 
-        //    PropertyChanging(this, new PropertyChangingEventArgs(propertyName));
-        //}
+		#endregion
 
-        //#region INotifyPropertyChanged implementation
+		public void OnPropertyChanging(string propertyName)
+		{
+			if (PropertyChanging == null)
+				return;
 
-        //public event PropertyChangedEventHandler PropertyChanged;
+			PropertyChanging(this, new PropertyChangingEventArgs(propertyName));
+		}
 
-        //#endregion
+		#region INotifyPropertyChanged implementation
 
-        //public void OnPropertyChanged(string propertyName)
-        //{
-        //    if (PropertyChanged == null)
-        //        return;
+		public event PropertyChangedEventHandler PropertyChanged;
+		public event EventHandler<DataErrorsChangedEventArgs> ErrorsChanged;
 
-        //    PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-        //}
-    }
+		#endregion
+
+		public void OnPropertyChanged(string propertyName)
+		{
+			if (PropertyChanged == null)
+				return;
+
+			PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+		}
+
+		public IEnumerable GetErrors(string propertyName)
+		{
+			return null; // throw new NotImplementedException();
+		}
+	}
 }
