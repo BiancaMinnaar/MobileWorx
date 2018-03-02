@@ -21,12 +21,9 @@ namespace ResPublica.Droid
 
 			base.OnCreate(bundle);
 
-//			OverridePendingTransition(Resource.Animation.design_bottom_sheet_slide_in, Resource.Animation.design_bottom_sheet_slide_out);
-
 			var intent = new Intent(this, typeof(MainActivity));
 
-			OverridePendingTransition(Resource.Animation.design_bottom_sheet_slide_in, Resource.Animation.design_bottom_sheet_slide_out);
-
+			OverridePendingTransition(Resource.Animation.abc_fade_in, Resource.Animation.abc_fade_out);
 
 			StartActivity(intent);
 			Finish();

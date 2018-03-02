@@ -24,6 +24,9 @@ namespace ResPublica.Droid
 
 			base.OnCreate(bundle);
 
+			UserDialogs.Init(this);
+			Plugin.CurrentActivity.CrossCurrentActivity.Current.Activity = this;
+
 			global::Xamarin.Forms.Forms.Init(this, bundle);
 			SvgImageViewRenderer.Init();
 
@@ -31,7 +34,6 @@ namespace ResPublica.Droid
 			var ignore = typeof(SvgCachedImage);
 
 			LoadApplication(new App());
-			Acr.Support.Android.ActivityLifecycleCallbacks.Register(this);
 		}
 	}
 }

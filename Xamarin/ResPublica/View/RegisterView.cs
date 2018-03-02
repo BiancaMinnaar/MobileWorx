@@ -11,7 +11,7 @@ namespace ResPublica.Implementation.View
         public RegisterView()
         {
             InitializeComponent();
-            NavigationPage.SetHasNavigationBar(this, false);
+            NavigationPage.SetHasNavigationBar(this, true);
             BindingContext = _ViewController.InputObject;
         }
 

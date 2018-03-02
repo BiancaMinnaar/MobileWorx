@@ -34,6 +34,7 @@ namespace ResPublica.Droid.CustomRenderers
 			if (e.OldElement != null || e.NewElement == null)
 				return;
 
+
 			element = (HREntry)this.Element;
 
 			var editText = this.Control;
@@ -49,16 +50,20 @@ namespace ResPublica.Droid.CustomRenderers
 						break;
 				}
 			}
-			editText.CompoundDrawablePadding = 25;
+			//editText.CompoundDrawablePadding = 25;
 
 
 			if (Control != null)
 			{
-				var background = ContextCompat.GetDrawable(Context, Resource.Drawable.RoundedCornerEntry);
+				//var background = ContextCompat.GetDrawable(Context, Resource.Drawable.RoundedCornerEntry);
+				GradientDrawable gd = new GradientDrawable();
+				gd.SetColor(new Android.Graphics.Color(242, 242, 242));
+				gd.SetCornerRadius(20);
+				gd.SetStroke(2, new Android.Graphics.Color(204, 204, 204));
+				Control.Background = gd;
 
-				Control.Background = background;
-				Control.SetPadding(10, 20, 10, 20);
-				
+				//Control.Background = background;
+				//Control.SetPadding(10, 20, 10, 20);
 			}
 		}
 
@@ -68,7 +73,7 @@ namespace ResPublica.Droid.CustomRenderers
 			//int resID = Resources.GetIdentifier(imageEntryImage, "drawable", this.Context.PackageName);
 			//var drawable = ContextCompat.GetDrawable(this.Context, resID);
 			//var bitmap = ((BitmapDrawable)drawable).Bitmap;
-
+			
 			return new BitmapDrawable(Resources, Bitmap.CreateScaledBitmap(bitmap, element.ImageWidth * 2, element.ImageHeight * 2, true));
 		}
 	}

@@ -24,7 +24,8 @@ namespace ResPublica.Implementation.ViewController
 
         public async Task Register()
         {
-            
-        }
-    }
+			_MasterRepo.PushSandbox();
+
+		}
+	}
 }

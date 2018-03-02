@@ -15,19 +15,21 @@
 		<item name="colorPrimaryDark">#1976D2</item>
 		<!-- colorAccent is used as the default value for colorControlActivated
          which is used to tint widgets -->
-		<item name="colorAccent">#FF4081</item>
+		<item name="colorAccent">#0196A6</item>
 		<!-- You can also set colorControlNormal, colorControlActivated
          colorControlHighlight and colorSwitchThumbNormal. -->
 		<item name="windowActionModeOverlay">true</item>
+		<item name="android:windowFullscreen">true</item>
 		<item name="android:datePickerDialogTheme">@style/AppCompatDialogStyle</item>
 	</style>
 	<style name="AppCompatDialogStyle" parent="Theme.AppCompat.Light.Dialog">
-		<item name="colorAccent">#FF4081</item>
+		<item name="colorAccent">#0196A6</item>
 	</style>
 	<style name="Theme.Splash" parent="android:Theme">
 		<item name="android:windowBackground">
 			@drawable/splashscreen
 		</item>
+		<item name="android:windowFullscreen">true</item>
 		<item name="android:windowNoTitle">true</item>
 		<item name="android:windowIsTranslucent">false</item>
 		<item name="android:windowIsFloating">false</item>

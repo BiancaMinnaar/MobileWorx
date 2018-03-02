@@ -18,10 +18,11 @@ namespace ResPublica.Interface.Repository
         //Navigation
         void PushHomeView();
         void PushRegister();
+		void PushSandbox();
         //Logic
         //debug
         void DumpJson<T>(string heading, T objectToDump);
 
-        //Off-Line
-    }
+		//Off-Line
+	}
 }

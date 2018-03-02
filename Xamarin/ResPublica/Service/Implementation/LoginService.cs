@@ -19,6 +19,7 @@ namespace ResPublica.Implementation.Service
 		{
 			string requestURL = "http://sm2.respublica.co.za/API/app/AppAPI/Login";
 			var httpMethod = BaseNetworkAccessEnum.Post;
+			var deviceId = Plugin.DeviceInfo.CrossDeviceInfo.Current.GenerateAppId(true, "RSL");
 			var parameters = new Dictionary<string, ParameterTypedValue>()
 			{
 				{"X-API-TOKEN", new ParameterTypedValue() {

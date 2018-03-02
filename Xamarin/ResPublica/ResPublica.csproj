@@ -89,8 +89,11 @@
     <Folder Include="ViewModel\Controls\" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="CarouselView.FormsPlugin.Abstractions, Version=1.0.6591.24917, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\CarouselView.FormsPlugin.5.2.0\lib\portable-net45+netcore45+wpa81+wp8+MonoAndroid10+Xamarin.iOS10\CarouselView.FormsPlugin.Abstractions.dll</HintPath>
+    <Reference Include="Plugin.DeviceInfo, Version=3.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xam.Plugin.DeviceInfo.3.1.0\lib\netstandard1.0\Plugin.DeviceInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.DeviceInfo.Abstractions, Version=3.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xam.Plugin.DeviceInfo.3.1.0\lib\netstandard1.0\Plugin.DeviceInfo.Abstractions.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Forms.Core">
       <HintPath>..\packages\Xamarin.Forms.2.5.0.280555\lib\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.Core.dll</HintPath>
@@ -186,6 +189,7 @@
     <Content Include="Images\MyBuilding.png" />
     <Content Include="Images\MyRoom.png" />
     <Content Include="Images\MyStudentLiving.png" />
+    <Content Include="Images\RSL_Logo.png" />
     <Content Include="Images\Splash.png" />
     <Content Include="Images\UserProfile.png" />
   </ItemGroup>
