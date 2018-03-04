@@ -50,6 +50,7 @@
     <Compile Include="Service\ILoginService.cs" />
     <Compile Include="Service\Implementation\LoginService.cs" />
     <Compile Include="View\Controls\HREntry.cs" />
+    <Compile Include="View\Controls\NavigationPageGradientHeader.cs" />
     <Compile Include="View\ImageResourceExtension.cs" />
     <Compile Include="View\LoginView.cs">
       <DependentUpon>LoginView.xaml</DependentUpon>

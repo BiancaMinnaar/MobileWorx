@@ -12,10 +12,11 @@ using FFImageLoading.Svg.Forms;
 using FFImageLoading.Forms.Droid;
 using Acr.UserDialogs;
 using HiRes;
+using CarouselView.FormsPlugin.Android;
 
 namespace ResPublica.Droid
 {
-	[Activity(Label = "ResPublica.Droid", Icon = "@drawable/icon", Theme = "@style/MyTheme", ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+	[Activity(Label = "HiRes.Respublica", Icon = "@drawable/icon", Theme = "@style/MyTheme", ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
 	public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
 	{
 		protected override void OnCreate(Bundle bundle)
@@ -25,6 +26,7 @@ namespace ResPublica.Droid
 
 			base.OnCreate(bundle);
 
+			CarouselViewRenderer.Init();
 			UserDialogs.Init(this);
 			Plugin.CurrentActivity.CrossCurrentActivity.Current.Activity = this;
 
