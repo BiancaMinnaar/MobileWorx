@@ -4,11 +4,48 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     x:Class="HiRes.App">
 	<Application.Resources>
-		<ResourceDictionary>
-			<Color x:Key="Primary">#2196F3</Color>
-			<Color x:Key="PrimaryDark">#1976D2</Color>
-			<Color x:Key="Accent">#96d1ff</Color>
-			<Color x:Key="LightBackgroundColor">#FAFAFA</Color>
+
+		<ResourceDictionary >
+
+			<Color x:Key="Button_BackgroundColor">#0196a6</Color>
+			<Color x:Key="Button_BorderColor">#0196a6</Color>
+
+			<!--Main Blue 	=	#0196a6
+				Light Blue	=	#d6eaea
+				Gray		=	#cccccc
+				Off White	=	#f2f2f2-->
+
+			<Style TargetType="Entry">
+				<Setter Property="HorizontalOptions" Value="Fill" />
+				<Setter Property="VerticalOptions" Value="CenterAndExpand" />
+				<Setter Property="BackgroundColor" Value="White" />
+				<Setter Property="TextColor" Value="Black" />
+				<!--<Setter Property="HasShadow" Value="True"/>-->
+				<Style.Triggers>
+					<Trigger TargetType="Entry"
+                         Property="IsFocused" Value="True">
+						<Setter Property="BackgroundColor" Value="Yellow" />
+					</Trigger>
+				</Style.Triggers>
+			</Style>
+
+			<Style TargetType="Button">
+				<!--<Setter Property="HorizontalOptions" Value="Fill" />-->
+				<!--<Setter Property="VerticalOptions" Value="CenterAndExpand" />-->
+				<Setter Property="BackgroundColor" Value="{DynamicResource Button_BackgroundColor}" />
+				<Setter Property="TextColor" Value="White" />
+				<Setter Property="BorderRadius" Value="25" />
+				<Setter Property="BorderWidth" Value="5"/>
+			</Style>
+
+			<!--</ResourceDictionary>
+
+
+		<ResourceDictionary>-->
+			<Color x:Key="Primary">#0196a6</Color>
+			<Color x:Key="PrimaryDark">#07074d</Color>
+			<Color x:Key="Accent">#0196a6</Color>
+			<Color x:Key="LightBackgroundColor">#d6eaea</Color>
 			<Color x:Key="DarkBackgroundColor">#C0C0C0</Color>
 			<Color x:Key="MediumGrayTextColor">#4d4d4d</Color>
 			<Color x:Key="LightTextColor">#999999</Color>

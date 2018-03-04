@@ -3,37 +3,159 @@
 			  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
 			   x:Class="HiRes.View.Sandbox"
 			  >
-	<ContentPage>
+	
+	<!--My Building-->
+	<ContentPage >
 		<ContentPage.Padding>
 			<OnPlatform x:TypeArguments="Thickness">
 				<On Platform="iOS, Android" Value="0,40,0,0" />
 			</OnPlatform>
 		</ContentPage.Padding>
-		<StackLayout>
-			<Label Text="Red" FontSize="Medium" HorizontalOptions="Center" />
-			<BoxView Color="Red" WidthRequest="200" HeightRequest="200" HorizontalOptions="CenterAndExpand" VerticalOptions="FillAndExpand" />
-		</StackLayout>
+
+		<Grid >
+			<Grid.RowDefinitions>
+				<RowDefinition Height="Auto" /> <!-- 0 -->
+				<RowDefinition Height="Auto" /> <!-- 1 -->
+				<RowDefinition Height="*"/>  <!-- 2 -->
+				<RowDefinition Height="Auto"/>  <!-- 3 -->
+				<RowDefinition Height="50"/>  <!-- 4 -->
+			</Grid.RowDefinitions>
+
+			<Image Grid.Row="0" Source="MyBuilding.png" />
+
+			<Label Grid.Row="1" HorizontalTextAlignment="Center" >
+				<Label.FormattedText>
+					<FormattedString>
+						<FormattedString.Spans>
+							<Span Text="MY " ForegroundColor="{StaticResource Primary}" FontSize="24" />
+							<Span Text="BUILDING" ForegroundColor="{StaticResource PrimaryDark}" FontSize="24" />
+							<Span Text="&#x0a; " />
+							<Span Text="&#x0a; " />
+							<Span Text="Navigate in to and out of the building by using the application."></Span>
+						</FormattedString.Spans>
+					</FormattedString>
+				</Label.FormattedText>
+			</Label>
+
+			<Image Grid.Row="3" Source="Dots3_Left.png"></Image>
+
+			<Button Grid.Row="4" Text="Skip" HorizontalOptions="FillAndExpand" Clicked="Button_Clicked"></Button>
+
+		</Grid>
+		
+		<!--<StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand">
+			<Image Source="MyBuilding.png" VerticalOptions="StartAndExpand" BackgroundColor="Yellow" />
+
+			<StackLayout HorizontalOptions="Center">
+				<Label HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" BackgroundColor="OrangeRed" >
+					<Label.FormattedText>
+						<FormattedString>
+							<FormattedString.Spans>
+								<Span Text="MY " ForegroundColor="{StaticResource Primary}" FontSize="24" />
+								<Span Text="BUILDING" ForegroundColor="{StaticResource PrimaryDark}" FontSize="24" />
+								<Span Text="&#x0a; " />
+								<Span Text="&#x0a; " />
+								<Span Text="Navigate in to and out of the building by using the application."></Span>
+							</FormattedString.Spans>
+						</FormattedString>
+					</Label.FormattedText>
+				</Label>
+				<Image Source="Dots3_Left.png"></Image>
+			</StackLayout>
+			<Button Text="Skip" HorizontalOptions="FillAndExpand"></Button>
+		</StackLayout>-->
 	</ContentPage>
-	<ContentPage>
+	
+	<!--My Room-->
+	<ContentPage >
 		<ContentPage.Padding>
 			<OnPlatform x:TypeArguments="Thickness">
 				<On Platform="iOS, Android" Value="0,40,0,0" />
 			</OnPlatform>
 		</ContentPage.Padding>
-		<StackLayout>
-			<Label Text="Green" FontSize="Medium" HorizontalOptions="Center" />
-			<BoxView Color="Green" WidthRequest="200" HeightRequest="200" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
-		</StackLayout>
+
+		<Grid >
+			<Grid.RowDefinitions>
+				<RowDefinition Height="Auto" />
+				<!-- 0 -->
+				<RowDefinition Height="Auto" />
+				<!-- 1 -->
+				<RowDefinition Height="*"/>
+				<!-- 2 -->
+				<RowDefinition Height="Auto"/>
+				<!-- 3 -->
+				<RowDefinition Height="50"/>
+				<!-- 4 -->
+			</Grid.RowDefinitions>
+
+			<Image Grid.Row="0" Source="MyRoom.png" />
+
+			<Label Grid.Row="1" HorizontalTextAlignment="Center" >
+				<Label.FormattedText>
+					<FormattedString>
+						<FormattedString.Spans>
+							<Span Text="MY " ForegroundColor="{StaticResource Primary}" FontSize="24" />
+							<Span Text="ROOM" ForegroundColor="{StaticResource PrimaryDark}" FontSize="24" />
+							<Span Text="&#x0a; " />
+							<Span Text="&#x0a; " />
+							<Span Text="Make use of the application to access your room."></Span>
+						</FormattedString.Spans>
+					</FormattedString>
+				</Label.FormattedText>
+			</Label>
+
+			<Image Grid.Row="3" Source="Dots3_Middle.png"></Image>
+
+			<Button Grid.Row="4" Text="Skip" HorizontalOptions="FillAndExpand" Clicked="Button_Clicked"></Button>
+
+		</Grid>
 	</ContentPage>
-	<ContentPage>
+	
+	<!--My Student Living-->
+	<ContentPage >
 		<ContentPage.Padding>
 			<OnPlatform x:TypeArguments="Thickness">
 				<On Platform="iOS, Android" Value="0,40,0,0" />
 			</OnPlatform>
 		</ContentPage.Padding>
-		<StackLayout>
-			<Label Text="Blue" FontSize="Medium" HorizontalOptions="Center" />
-			<BoxView Color="Blue" WidthRequest="200" HeightRequest="200" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
-		</StackLayout>
+
+		<Grid >
+			<Grid.RowDefinitions>
+				<RowDefinition Height="Auto" />
+				<!-- 0 -->
+				<RowDefinition Height="Auto" />
+				<!-- 1 -->
+				<RowDefinition Height="*"/>
+				<!-- 2 -->
+				<RowDefinition Height="Auto"/>
+				<!-- 3 -->
+				<RowDefinition Height="50"/>
+				<!-- 4 -->
+			</Grid.RowDefinitions>
+
+			<Image Grid.Row="0" Source="MyStudentLiving.png" />
+
+			<Label Grid.Row="1" HorizontalTextAlignment="Center" >
+				<Label.FormattedText>
+					<FormattedString>
+						<FormattedString.Spans>
+							<Span Text="MY " ForegroundColor="{StaticResource Primary}" FontSize="24" />
+							<Span Text="STUDENT " ForegroundColor="{StaticResource PrimaryDark}" FontSize="24" />
+							<Span Text="LIVING" ForegroundColor="{StaticResource PrimaryDark}" FontSize="24" />
+							<Span Text="&#x0a; " />
+							<Span Text="&#x0a; " />
+							<Span Text="Engage with fellow students through calendars and make online bookings."></Span>
+						</FormattedString.Spans>
+					</FormattedString>
+				</Label.FormattedText>
+			</Label>
+
+			<Image Grid.Row="3" Source="Dots3_Right.png"></Image>
+
+			<Button Grid.Row="4" Text="Skip" HorizontalOptions="FillAndExpand" Clicked="Button_Clicked"></Button>
+
+		</Grid>
+
 	</ContentPage>
+
 </CarouselPage>

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 
@@ -50,26 +51,31 @@ namespace ResPublica.Droid.CustomRenderers
 						break;
 				}
 			}
-			//editText.CompoundDrawablePadding = 25;
+			editText.CompoundDrawablePadding = 25;
 
 
 			if (Control != null)
 			{
-				//var background = ContextCompat.GetDrawable(Context, Resource.Drawable.RoundedCornerEntry);
+				var background = ContextCompat.GetDrawable(Context, Resource.Drawable.RoundedCornerEntry);
 				GradientDrawable gd = new GradientDrawable();
-				if (Control.IsFocused)
-					gd.SetColor(new Android.Graphics.Color(255, 255, 255));
-				else
-					gd.SetColor(new Android.Graphics.Color(242, 242, 242));
+				//if (Control.IsFocused)
+				//	gd.SetColor(new Android.Graphics.Color(255, 255, 255));
+				//else
+				//	gd.SetColor(new Android.Graphics.Color(242, 242, 242));
 
-				gd.SetCornerRadius(25);
+				//gd.SetCornerRadius(25);
 
 				//gd.SetStroke(2, new Android.Graphics.Color(204, 204, 204));
-				Control.Background = gd;
+				//Control.Background = gd;
 
-				//Control.Background = background;
-				Control.SetPadding(10, 0, 0, 0);
+				Control.Background = background;
+				//Control.SetPaddingRelative(10, 10, 10, 10);
 			}
+		}
+
+		protected override void OnFocusChanged(bool gainFocus, [GeneratedEnum] FocusSearchDirection direction, Rect previouslyFocusedRect)
+		{
+			base.OnFocusChanged(gainFocus, direction, previouslyFocusedRect);
 		}
 
 		private BitmapDrawable GetDrawable(string imageEntryImage)
