@@ -92,6 +92,26 @@
     </Compile>
     <Compile Include="ViewController\Implementation\WelcomeOneViewController.cs" />
     <Compile Include="ViewModel\WelcomeOneViewModel.cs" />
+    <Compile Include="Repository\IWelcomeTwoRepository.cs" />
+    <Compile Include="Service\IWelcomeTwoService.cs" />
+    <Compile Include="ViewController\IWelcomeTwoViewController.cs" />
+    <Compile Include="Repository\Implementation\WelcomeTwoRepository.cs" />
+    <Compile Include="Service\Implementation\WelcomeTwoService.cs" />
+    <Compile Include="View\WelcomeTwoView.cs">
+      <DependentUpon>WelcomeTwoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewController\Implementation\WelcomeTwoViewController.cs" />
+    <Compile Include="ViewModel\WelcomeTwoViewModel.cs" />
+    <Compile Include="Repository\IWelcomeThreeRepository.cs" />
+    <Compile Include="Service\IWelcomeThreeService.cs" />
+    <Compile Include="Repository\Implementation\WelcomeThreeRepository.cs" />
+    <Compile Include="Service\Implementation\WelcomeThreeService.cs" />
+    <Compile Include="View\WelcomeThreeView.cs">
+      <DependentUpon>WelcomeThreeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewController\Implementation\WelcomeThreeViewController.cs" />
+    <Compile Include="ViewModel\WelcomeThreeViewModel.cs" />
+    <Compile Include="ViewController\IWelcomeThreeViewController.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="App.xaml" />
@@ -100,6 +120,8 @@
     <None Include="Images\CallStartTime.svg" />
     <EmbeddedResource Include="View\WelcomeView.xaml" />
     <EmbeddedResource Include="View\WelcomeOneView.xaml" />
+    <EmbeddedResource Include="View\WelcomeTwoView.xaml" />
+    <EmbeddedResource Include="View\WelcomeThreeView.xaml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BasePCL\BasePCL.csproj">
