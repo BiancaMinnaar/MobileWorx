@@ -15,7 +15,7 @@ namespace <#= _DataModel.ProjectName #>.Implementation.Service
 {
     public class <#= _DataModel.ServiceName #> : BaseService, <#= _DataModel.ServiceInterfaceName #>
     {
-        public <#= _DataModel.ServiceName #>(Func<string, Dictionary<string, object>, BaseNetworkAccessEnum, Task> networkInterface)
+        public <#= _DataModel.ServiceName #>(Func<string, Dictionary<string, ParameterTypedValue>, BaseNetworkAccessEnum, Task> networkInterface)
             :base(networkInterface)
         {
         }
@@ -24,7 +24,7 @@ namespace <#= _DataModel.ProjectName #>.Implementation.Service
         {
             string requestURL = "/path/{Parameter}";
             var httpMethod = BaseNetworkAccessEnum.Get;
-            var parameters = new Dictionary<string, object>()
+            var parameters = new Dictionary<string, ParameterTypedValue>()
             {
                 //{"Parameter", model.Property},
             };

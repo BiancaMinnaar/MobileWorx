@@ -106,9 +106,9 @@ namespace SourceConsole.Templates {
             #line hidden
             
             #line 18 ""
-            this.Write("(Func<string, Dictionary<string, object>, BaseNetworkAccessEnum, Task> networkInt" +
-                    "erface)\n            :base(networkInterface)\n        {\n        }\n\n        public " +
-                    "async Task ");
+            this.Write("(Func<string, Dictionary<string, ParameterTypedValue>, BaseNetworkAccessEnum, Tas" +
+                    "k> networkInterface)\n            :base(networkInterface)\n        {\n        }\n\n  " +
+                    "      public async Task ");
             
             #line default
             #line hidden
@@ -136,7 +136,7 @@ namespace SourceConsole.Templates {
         {
             string requestURL = ""/path/{Parameter}"";
             var httpMethod = BaseNetworkAccessEnum.Get;
-            var parameters = new Dictionary<string, object>()
+            var parameters = new Dictionary<string, ParameterTypedValue>()
             {
                 //{""Parameter"", model.Property},
             };
