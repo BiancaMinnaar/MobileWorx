@@ -6,7 +6,7 @@ using NDC.iOS.Injection;
 using BasePCL.DataContracts.Interface;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using ResPublica;
+using HiRes;
 
 [assembly: Dependency(typeof(RestServiceIOS))]
 namespace NDC.iOS.Injection

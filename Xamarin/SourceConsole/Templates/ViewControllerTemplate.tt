@@ -23,7 +23,7 @@ namespace <#= _DataModel.ProjectName #>.Implementation.ViewController
         {
             _MasterRepo.NetworkInterface = (U, P, A) => ExecuteQueryWithObjectAndNetworkAccessAsync(U, P, A);
             _MasterRepo.NetworkInterfaceWithTypedParameters = (U, P, A) => ExecuteQueryWithTypedParametersAndNetworkAccessAsync(U, P, A);
-            _Service = new <#= _DataModel.EventName #>Service(_MasterRepo.NetworkInterface);
+            _Service = new <#= _DataModel.EventName #>Service(_MasterRepo.NetworkInterfaceWithTypedParameters);
             _Reposetory = new <#= _DataModel.EventName #>Repository(_MasterRepo, _Service);
         }
 

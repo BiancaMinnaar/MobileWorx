@@ -23,8 +23,19 @@ namespace SourceConsole.Templates {
             #line 6 ""
             this.Write("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<base:ProjectBaseContentPage \n    xmlns=\"h" +
                     "ttp://xamarin.com/schemas/2014/forms\" \n    xmlns:x=\"http://schemas.microsoft.com" +
-                    "/winfx/2009/xaml\"\n    xmlns:base=\"clr-namespace:ResPublica.Base\"\n    xmlns:m=\"cl" +
-                    "r-namespace:");
+                    "/winfx/2009/xaml\"\n    xmlns:base=\"clr-namespace:");
+            
+            #line default
+            #line hidden
+            
+            #line 10 ""
+            this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.ProjectName ));
+            
+            #line default
+            #line hidden
+            
+            #line 10 ""
+            this.Write(".Base\"\n    xmlns:m=\"clr-namespace:");
             
             #line default
             #line hidden

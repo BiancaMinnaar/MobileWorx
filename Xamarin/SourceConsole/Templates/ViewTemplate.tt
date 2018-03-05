@@ -7,7 +7,7 @@
 <base:ProjectBaseContentPage 
     xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:base="clr-namespace:ResPublica.Base"
+    xmlns:base="clr-namespace:<#= _DataModel.ProjectName #>.Base"
     xmlns:m="clr-namespace:<#= _DataModel.ProjectName #>.Implementation.ViewModel"
     xmlns:p="clr-namespace:<#= _DataModel.ProjectName #>.Implementation.ViewController"
     xmlns:b="clr-namespace:<#= _DataModel.ProjectName #>.Implementation.View"

@@ -195,7 +195,8 @@ namespace SourceConsole.Templates {
             #line hidden
             
             #line 26 ""
-            this.Write("Service(_MasterRepo.NetworkInterface);\n            _Reposetory = new ");
+            this.Write("Service(_MasterRepo.NetworkInterfaceWithTypedParameters);\n            _Reposetory" +
+                    " = new ");
             
             #line default
             #line hidden

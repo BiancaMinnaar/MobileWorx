@@ -72,12 +72,23 @@
       <DependentUpon>Sandbox.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\ByteArrayToImageSourceConverter.cs" />
+    <Compile Include="Repository\IWelcomeRepository.cs" />
+    <Compile Include="Service\IWelcomeService.cs" />
+    <Compile Include="ViewController\IWelcomeViewController.cs" />
+    <Compile Include="Repository\Implementation\WelcomeRepository.cs" />
+    <Compile Include="Service\Implementation\WelcomeService.cs" />
+    <Compile Include="View\WelcomeView.cs">
+      <DependentUpon>WelcomeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewController\Implementation\WelcomeViewController.cs" />
+    <Compile Include="ViewModel\WelcomeViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="App.xaml" />
     <EmbeddedResource Include="View\LoginView.xaml" />
     <EmbeddedResource Include="View\RegisterView.xaml" />
     <None Include="Images\CallStartTime.svg" />
+    <EmbeddedResource Include="View\WelcomeView.xaml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BasePCL\BasePCL.csproj">
