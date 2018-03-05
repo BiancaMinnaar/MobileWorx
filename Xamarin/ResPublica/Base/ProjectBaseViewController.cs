@@ -41,16 +41,15 @@ namespace HiRes.Base
 			base.NetworkInteractionFailed += (sender, e) =>
 			{
 				string mys = e.NetworkCallMessage;
-				UserDialogs.Instance.Toast(new ToastConfig(e.NetworkCallMessage)
-					.SetDuration(TimeSpan.FromSeconds(5)).SetBackgroundColor(System.Drawing.Color.FromArgb(193, 57, 43)));
+				UserDialogs.Instance.Toast(new ToastConfig(e.NetworkCallMessage).SetDuration(TimeSpan.FromSeconds(5)).SetBackgroundColor(System.Drawing.Color.FromArgb(193, 57, 43)));
 			};
 			base.NetworkCallInitialised += (sender, e) =>
 			{
-				//UserDialogs.Instance.ShowLoading();
+				UserDialogs.Instance.ShowLoading();
 			};
 			base.NetworkCallCompleted += (sender, e) =>
 			{
-				//UserDialogs.Instance.HideLoading();
+				UserDialogs.Instance.HideLoading();
 			};
 		}
 
@@ -102,7 +101,7 @@ namespace HiRes.Base
 				toastOptions.SetPosition(ToastPosition.Bottom);
 				toastOptions.SetMessageTextColor(System.Drawing.Color.White);
 				UserDialogs.Instance.Toast(message, TimeSpan.FromSeconds(5));
-				
+
 				// ShowError.Toast(toastOptions);
 
 			}

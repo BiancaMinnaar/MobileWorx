@@ -31,5 +31,7 @@ namespace HiRes.Implementation.ViewModel
 
         public string UserName { get; set; }
         public string Password { get; set; }
-    }
+		[JsonProperty(PropertyName ="X-API-TOKEN")]
+		public string XAPITOKEN { get; set; } = "boguskey_rsl";
+	}
 }

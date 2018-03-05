@@ -23,7 +23,7 @@ namespace HiRes.Implementation.Service
 			var parameters = new Dictionary<string, ParameterTypedValue>()
 			{
 				{"X-API-TOKEN", new ParameterTypedValue() {
-						ParameterValue="boguskey",
+						ParameterValue="boguskey_rsl",
 						ParameterType=ParameterTypeEnum.HeaderParameter
 					}
 				}
