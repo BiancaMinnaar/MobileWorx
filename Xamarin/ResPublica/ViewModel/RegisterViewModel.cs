@@ -125,7 +125,7 @@ namespace HiRes.Implementation.ViewModel
 		/// <value>
 		/// The birth date.
 		/// </value>
-		public DateTime BirthDate { get; set; }
+		public DateTime BirthDate { get; set; } = DateTime.Today;
 
 		/// <summary>
 		/// Gets the password.
@@ -133,7 +133,7 @@ namespace HiRes.Implementation.ViewModel
 		/// <value>
 		/// The password.
 		/// </value>
-		public string Password { get; set; }
+		public string Password { get; set; } = string.Empty;
 
 		/// <summary>
 		/// Gets the password confirm.
@@ -141,7 +141,7 @@ namespace HiRes.Implementation.ViewModel
 		/// <value>
 		/// The password confirm.
 		/// </value>
-		public string PasswordConfirm { get; set; }
+		public string PasswordConfirm { get; set; } = string.Empty;	
 
 		/// <summary>
 		/// Gets the where did you hear about us.
@@ -149,7 +149,7 @@ namespace HiRes.Implementation.ViewModel
 		/// <value>
 		/// The where did you hear about us.
 		/// </value>
-		public string WhereDidYouHearAboutUs { get; set; }
+		public string WhereDidYouHearAboutUs { get; set; } = string.Empty;
 	}
 
 	public enum GenderType

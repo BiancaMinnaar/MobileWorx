@@ -52,8 +52,12 @@ namespace HiRes.Implementation.Service
 
 			parameters["source"] = new ParameterTypedValue(model.WhereDidYouHearAboutUs);
 
-			parameters["device"] = new ParameterTypedValue();
+			var deviceId = Plugin.DeviceInfo.CrossDeviceInfo.Current.GenerateAppId(true, "RSL");
+
+			parameters["device"] = new ParameterTypedValue(deviceId);
 			parameters["token_type"] = new ParameterTypedValue("app");
+
+
 			// : male, female, other
 			//nationality : local = South African, foreign: Foreign
 			//birthday
