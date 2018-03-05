@@ -1,5 +1,6 @@
 using System;
 using System.Diagnostics;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using HiRes.Base;
 using HiRes.Implementation.Repository;
@@ -16,6 +17,27 @@ namespace HiRes.Implementation.ViewController
 		ILoginRepository _Repository;
 		ILoginService _Service;
 
+        public LoginViewController()
+        {
+            _ChecksAndBalances.Add(new CheckAndBalance()
+            {
+                Check = () => !(InputObject.UserName == null && InputObject.UserName.Equals("")),
+                Balance = "The Username is required."
+            });
+
+            var emailValidator = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
+            _ChecksAndBalances.Add(new CheckAndBalance()
+            {
+                Check = () => emailValidator.IsMatch(InputObject.UserName),
+                Balance = "The Username must be a valid email address."
+            });
+            _ChecksAndBalances.Add(new CheckAndBalance()
+            {
+                Check = () => !(InputObject.Password == null && InputObject.Password.Equals("")),
+                Balance = "The Password is required."
+            });
+        }
+
 		public override void SetRepositories()
 		{
 //			_MasterRepo.NetworkInterface = (U, P, A) => ExecuteQueryWithObjectAndNetworkAccessAsync(U, P, A);
@@ -28,10 +50,15 @@ namespace HiRes.Implementation.ViewController
 		{
 			try
 			{
-				//MasterRepository.MasterRepo.ShowLoading();
-
-				await _Repository.Login(InputObject, () => { });
-
+                var validation = RunChecksAndBalances();
+                if (validation == "")
+                {
+                    await _Repository.Login(InputObject, () => { });
+                }
+                else
+                {
+                    ShowMessage(validation);
+                }
 			}
 			catch (Exception ex)
 			{

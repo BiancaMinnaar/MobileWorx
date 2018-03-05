@@ -42,7 +42,7 @@
 					</StackLayout>
 
 					<StackLayout Orientation="Vertical" Grid.Row="3" Grid.ColumnSpan="5" HorizontalOptions="FillAndExpand" Padding="30">
-						<controls:HREntry Text="{Binding Username}" Image="Message_Icon.png"
+						<controls:HREntry Text="{Binding UserName}" Image="Message_Icon.png"
 										  Placeholder="Email address..."
 										  HeightRequest="45"
 										  HorizontalOptions="FillAndExpand">
