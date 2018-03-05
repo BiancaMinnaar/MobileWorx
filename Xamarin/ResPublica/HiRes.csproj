@@ -112,6 +112,7 @@
     <Compile Include="ViewController\Implementation\WelcomeThreeViewController.cs" />
     <Compile Include="ViewModel\WelcomeThreeViewModel.cs" />
     <Compile Include="ViewController\IWelcomeThreeViewController.cs" />
+    <Compile Include="ViewModel\UserModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="App.xaml" />
