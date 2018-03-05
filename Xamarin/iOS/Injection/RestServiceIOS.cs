@@ -116,6 +116,45 @@ namespace NDC.iOS.Injection
 			return async () => await client.ExecuteTaskAsync(req);
 		}
 
+        private Func<Task<IRestResponse>> GetNetworkCallAsync(
+            string urlExtension, BaseNetworkAccessEnum networkCallType, Dictionary<string, ParameterTypedValue> paramterCollection, 
+            object body)
+        {
+            Method returnNetworkType;
+            switch (networkCallType)
+            {
+                default:
+                    returnNetworkType = Method.GET;
+                    break;
+                case BaseNetworkAccessEnum.Post:
+                    returnNetworkType = Method.POST;
+                    break;
+                case BaseNetworkAccessEnum.Put:
+                    returnNetworkType = Method.PUT;
+                    break;
+            }
+
+            RestRequest req = new RestRequest(urlExtension, returnNetworkType);
+            foreach (string key in paramterCollection.Keys)
+            {
+                var parameter = paramterCollection[key];
+                switch (parameter.ParameterType)
+                {
+                    case ParameterTypeEnum.ValueParameter:
+                        req.AddParameter(key, parameter.ParameterValue);
+                        break;
+                    case ParameterTypeEnum.FileParameter:
+                        req.AddFile(key, (byte[])parameter.ParameterValue, "cFile");
+                        break;
+                    case ParameterTypeEnum.HeaderParameter:
+                        req.AddHeader(key, parameter.ToString());
+                        break;
+                }
+            }
+            req.AddBody(body);
+            return async () => await client.ExecuteTaskAsync(req);
+        }
+
 		private async Task handleNetworkResponseWithCallAsync(Func<Task<IRestResponse>> call)
 		{
             NetworkCallInitialised?.Invoke(this, new EventArgs());
@@ -178,13 +217,15 @@ namespace NDC.iOS.Injection
 		{
             _urlExtension = urlExtension;
             _networkCallType = networkCallType;
-            if (paramterCollection.ContainsKey("Id"))
-            {
-                var parameter = paramterCollection["Id"];
-                if (parameter.ParameterType == ParameterTypeEnum.IdParameter && Int32.Parse(parameter.ParameterValue.ToString()) != 0)
-                    _photoID = Int32.Parse(parameter.ParameterValue.ToString());
-            }
             await handleNetworkResponseWithCallAsync(GetNetworkCallAsync(urlExtension, networkCallType, paramterCollection));
 		}
+
+        public async Task ExecuteNetworkRequestAsync(string urlExtension, Dictionary<string, ParameterTypedValue> paramterCollection, 
+                                                     object body, BaseNetworkAccessEnum networkCallType)
+        {
+            _urlExtension = urlExtension;
+            _networkCallType = networkCallType;
+            await handleNetworkResponseWithCallAsync(GetNetworkCallAsync(urlExtension, networkCallType, paramterCollection, body));
+        }
     }
 }

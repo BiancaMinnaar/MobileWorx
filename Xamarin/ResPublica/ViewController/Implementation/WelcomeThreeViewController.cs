@@ -17,7 +17,7 @@ namespace HiRes.Implementation.ViewController
         public override void SetRepositories()
         {
             _MasterRepo.NetworkInterface = (U, P, A) => ExecuteQueryWithObjectAndNetworkAccessAsync(U, P, A);
-            _MasterRepo.NetworkInterfaceWithTypedParameters = (U, P, A) => ExecuteQueryWithTypedParametersAndNetworkAccessAsync(U, P, A);
+            _MasterRepo.NetworkInterfaceWithTypedParameters = (U, P, C, A) => ExecuteQueryWithTypedParametersAndNetworkAccessAsync(U, P, C, A);
             _Service = new WelcomeThreeService(_MasterRepo.NetworkInterfaceWithTypedParameters);
             _Reposetory = new WelcomeThreeRepository(_MasterRepo, _Service);
         }

@@ -13,7 +13,7 @@ namespace HiRes.Interface.Repository
         void SetRootView(Page rootView);
         Page GetRootView();
         Func<string, Dictionary<string, object>, BaseNetworkAccessEnum, Task> NetworkInterface { get; set; }
-        Func<string, Dictionary<string, ParameterTypedValue>, BaseNetworkAccessEnum, Task> NetworkInterfaceWithTypedParameters { get; set; }
+        Func<string, Dictionary<string, ParameterTypedValue>, object, BaseNetworkAccessEnum, Task> NetworkInterfaceWithTypedParameters { get; set; }
 
         //Navigation
         void PushHomeView();

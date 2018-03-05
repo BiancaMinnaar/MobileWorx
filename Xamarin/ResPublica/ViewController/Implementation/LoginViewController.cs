@@ -9,6 +9,7 @@ using HiRes.Implementation.ViewModel;
 using HiRes.Interface.Repository;
 using HiRes.Interface.Service;
 using HiRes.Interface.ViewController;
+using HiRes.ViewModel;
 
 namespace HiRes.Implementation.ViewController
 {
@@ -40,7 +41,7 @@ namespace HiRes.Implementation.ViewController
 
 		public override void SetRepositories()
 		{
-			_MasterRepo.NetworkInterfaceWithTypedParameters = (U, P, A) => ExecuteQueryWithTypedParametersAndNetworkAccessAsync(U, P, A);
+			_MasterRepo.NetworkInterfaceWithTypedParameters = (U, P, C, A) => ExecuteQueryWithTypedParametersAndNetworkAccessAsync(U, P, C, A);
 			_Service = new LoginService(_MasterRepo.NetworkInterfaceWithTypedParameters);
 			_Repository = new LoginRepository(_MasterRepo, _Service);
 		}
@@ -52,7 +53,11 @@ namespace HiRes.Implementation.ViewController
 				var validation = ValidateBrokenRules();
 				if (validation == "")
 				{
-					await _Repository.Login(InputObject, () => { });
+					await _Repository.Login(InputObject, () => 
+                    { 
+                        _MasterRepo.DataSorce.Authenticated = true;
+                        _MasterRepo.DataSorce.User = DeserializeObject<UserModel>(_ResponseContent);
+                    });
 				}
 				else
 				{

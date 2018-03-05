@@ -22,7 +22,7 @@ namespace HiRes.Implementation.Repository
 		private INavigation _Navigation;
 		private Page _RootView;
 		public Func<string, Dictionary<string, object>, BaseNetworkAccessEnum, Task> NetworkInterface { get; set; }
-		public Func<string, Dictionary<string, ParameterTypedValue>, BaseNetworkAccessEnum, Task> NetworkInterfaceWithTypedParameters { get; set; }
+		public Func<string, Dictionary<string, ParameterTypedValue>, object, BaseNetworkAccessEnum, Task> NetworkInterfaceWithTypedParameters { get; set; }
 
 		MasterRepository()
 			: base(null)

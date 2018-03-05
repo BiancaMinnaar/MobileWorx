@@ -3,11 +3,13 @@ using System.IO;
 using System.Reflection;
 using System.Windows.Input;
 using HiRes.Base;
+using Newtonsoft.Json;
 
 namespace HiRes.Implementation.ViewModel
 {
     public class LoginViewModel : ProjectBaseViewModel
     {
+        [JsonIgnore]
         public byte[] BackGround
         {
             get
