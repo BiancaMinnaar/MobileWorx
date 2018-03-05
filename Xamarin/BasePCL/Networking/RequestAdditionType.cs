@@ -14,9 +14,23 @@ namespace CorePCL
         public object ParameterValue { get; set; }
         public ParameterTypeEnum ParameterType { get; set; }
 
+		/// <summary>
+		/// Initializes a new instance of the <see cref="ParameterTypedValue" /> class.
+		/// </summary>
 		public ParameterTypedValue()
 		{
 
+		}
+
+		/// <summary>
+		/// Initializes a new instance of the <see cref="ParameterTypedValue"/> class.
+		/// </summary>
+		/// <param name="value">The value.</param>
+		/// <param name="type">The type.</param>
+		public ParameterTypedValue(object value, ParameterTypeEnum type= ParameterTypeEnum.ValueParameter)
+		{
+			ParameterType = type;
+			ParameterValue = value;
 		}
 
    //     Func<string, object, RestRequest, IRestRequest> _AddFunction;

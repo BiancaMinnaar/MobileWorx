@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -40,7 +40,7 @@
       <ReferenceOutputAssembly>False</ReferenceOutputAssembly>
       <Private>False</Private>
     </ProjectReference>
-    <ProjectReference Include="..\Droid\ResPublica.Droid.csproj">
+    <ProjectReference Include="..\Droid\HiRes.Droid.csproj">
       <Project>{76EABEB8-F902-400D-8B4E-71693295DD7F}</Project>
       <Name>ResPublica.Droid</Name>
       <ReferenceOutputAssembly>False</ReferenceOutputAssembly>

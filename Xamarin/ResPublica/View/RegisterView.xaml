@@ -34,7 +34,7 @@
 					</controls:HREntry>
 
 					<StackLayout Orientation="Horizontal">
-						<StackLayout Orientation="Vertical">
+						<StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
 							<Label Text="Gender"></Label>
 							<Picker SelectedItem="{Binding Gender}"
 									HeightRequest="45"
@@ -43,7 +43,7 @@
 							</Picker>
 						</StackLayout>
 
-						<StackLayout Orientation="Vertical">
+						<StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
 							<Label Text="Nationality"></Label>
 							<Picker SelectedItem="{Binding Nationality}"
 									HeightRequest="45"
@@ -61,8 +61,8 @@
 					</controls:HREntry>
 
 					<Label Text="Cellphone Number"/>
-					<StackLayout Orientation="Horizontal">
-						<StackLayout Orientation="Vertical">
+					<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+						<StackLayout Orientation="Horizontal">
 							<controls:HREntry Text="{Binding CountryCode}"
 										  HeightRequest="45"
 										  WidthRequest="50"
@@ -88,6 +88,20 @@
 					<controls:HREntry Text="{Binding EmailAddressConfirm}"
 										  Placeholder="Confirm Email address..."
 										  HorizontalOptions="FillAndExpand">
+					</controls:HREntry>
+
+					<Label Text="Birthday"/>
+					<DatePicker x:Name="StartDatePicker"
+								Format="dd-MM-YYYY"
+								MinimumDate="1930-01-01"
+								Date="{Binding Birthday}"
+								HorizontalOptions="FillAndExpand"/>
+
+					<Label Text="Password"></Label>
+					<controls:HREntry Text="{Binding Password}"
+									  Placeholder="Password..."
+									  HorizontalOptions="FillAndExpand"
+									  IsPassword="True" >
 					</controls:HREntry>
 
 					<StackLayout Orientation="Horizontal" Grid.Row="4" Grid.ColumnSpan="5" HorizontalOptions="FillAndExpand" Padding="30,0,30,0">

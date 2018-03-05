@@ -118,6 +118,38 @@ namespace HiRes.Implementation.ViewModel
 		/// The gender other.
 		/// </value>
 		public string GenderOther { get; set; } = string.Empty;
+
+		/// <summary>
+		/// Gets the birth date.
+		/// </summary>
+		/// <value>
+		/// The birth date.
+		/// </value>
+		public DateTime BirthDate { get; set; }
+
+		/// <summary>
+		/// Gets the password.
+		/// </summary>
+		/// <value>
+		/// The password.
+		/// </value>
+		public string Password { get; set; }
+
+		/// <summary>
+		/// Gets the password confirm.
+		/// </summary>
+		/// <value>
+		/// The password confirm.
+		/// </value>
+		public string PasswordConfirm { get; set; }
+
+		/// <summary>
+		/// Gets the where did you hear about us.
+		/// </summary>
+		/// <value>
+		/// The where did you hear about us.
+		/// </value>
+		public string WhereDidYouHearAboutUs { get; set; }
 	}
 
 	public enum GenderType
