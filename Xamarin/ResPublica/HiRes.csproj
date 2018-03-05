@@ -82,6 +82,16 @@
     </Compile>
     <Compile Include="ViewController\Implementation\WelcomeViewController.cs" />
     <Compile Include="ViewModel\WelcomeViewModel.cs" />
+    <Compile Include="Repository\IWelcomeOneRepository.cs" />
+    <Compile Include="Service\IWelcomeOneService.cs" />
+    <Compile Include="ViewController\IWelcomeOneViewController.cs" />
+    <Compile Include="Repository\Implementation\WelcomeOneRepository.cs" />
+    <Compile Include="Service\Implementation\WelcomeOneService.cs" />
+    <Compile Include="View\WelcomeOneView.cs">
+      <DependentUpon>WelcomeOneView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewController\Implementation\WelcomeOneViewController.cs" />
+    <Compile Include="ViewModel\WelcomeOneViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="App.xaml" />
@@ -89,6 +99,7 @@
     <EmbeddedResource Include="View\RegisterView.xaml" />
     <None Include="Images\CallStartTime.svg" />
     <EmbeddedResource Include="View\WelcomeView.xaml" />
+    <EmbeddedResource Include="View\WelcomeOneView.xaml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BasePCL\BasePCL.csproj">

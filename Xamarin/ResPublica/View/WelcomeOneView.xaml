@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<base:ProjectBaseContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:base="clr-namespace:HiRes.Base"
+    xmlns:m="clr-namespace:HiRes.Implementation.ViewModel"
+    xmlns:p="clr-namespace:HiRes.Implementation.ViewController"
+    xmlns:b="clr-namespace:HiRes.Implementation.View"
+    xmlns:svg="clr-namespace:TwinTechsForms.NControl;assembly=TwinTechsForms.NControl.SvgImageView"
+    xmlns:image="clr-namespace:HiRes.View;assembly=HiRes"
+    x:Class="HiRes.Implementation.View.WelcomeOneView" 
+    x:TypeArguments="p:WelcomeOneViewController, m:WelcomeOneViewModel" 
+    BackgroundColor="#565E60"
+    Title="Login">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <image:ByteArrayToImageSourceConverter x:Key="ByteArrayToImage" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        
+    </ContentPage.Content>
+</base:ProjectBaseContentPage>
