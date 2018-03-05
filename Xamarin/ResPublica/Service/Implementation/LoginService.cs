@@ -19,7 +19,6 @@ namespace HiRes.Implementation.Service
 		{
 			string requestURL = "http://sm2.respublica.co.za/API/app/AppAPI/Login";
 			var httpMethod = BaseNetworkAccessEnum.Post;
-			var deviceId = Plugin.DeviceInfo.CrossDeviceInfo.Current.GenerateAppId(true, "RSL");
 			var parameters = new Dictionary<string, ParameterTypedValue>()
 			{
 				{"X-API-TOKEN", new ParameterTypedValue() {
@@ -28,6 +27,14 @@ namespace HiRes.Implementation.Service
 					}
 				}
 			};
+
+			parameters["username"] = new ParameterTypedValue(model.UserName);
+			parameters["email_confirm"] = new ParameterTypedValue(model.Password);
+
+			var deviceId = Plugin.DeviceInfo.CrossDeviceInfo.Current.GenerateAppId(true, "RSL");
+			parameters["device"] = new ParameterTypedValue(deviceId);
+			parameters["token_type"] = new ParameterTypedValue("app");
+
 			await _NetworkInterface(requestURL, parameters, httpMethod);
 		}
 	}
