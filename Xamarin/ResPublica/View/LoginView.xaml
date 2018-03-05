@@ -42,16 +42,19 @@
 					</StackLayout>
 
 					<StackLayout Orientation="Vertical" Grid.Row="3" Grid.ColumnSpan="5" HorizontalOptions="FillAndExpand" Padding="30">
-						<controls:HREntry Text="{Binding UserName}" Image="Message_Icon.png"
+						<controls:HREntry Text="{Binding UserName}" 
+										  Image="Message_Icon.png"
 										  Placeholder="Email address..."
 										  HeightRequest="45"
 										  HorizontalOptions="FillAndExpand">
 						</controls:HREntry>
-						<controls:HREntry Text="{Binding Password}" Image="Lock_Icon.png"
+						<controls:HREntry Text="{Binding Password}" 
+										  Image="Lock_Icon.png"
 										  Placeholder="Password..."
 										  HorizontalOptions="FillAndExpand"
 										  HeightRequest="45"
-										  IsPassword="True"></controls:HREntry>
+										  IsPassword="True">
+						</controls:HREntry>
 					</StackLayout>
 
 					<StackLayout Orientation="Horizontal" Grid.Row="4" Grid.ColumnSpan="5" HorizontalOptions="FillAndExpand" Padding="30,0,30,0">

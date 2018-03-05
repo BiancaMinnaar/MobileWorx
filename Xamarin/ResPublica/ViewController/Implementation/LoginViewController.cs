@@ -17,30 +17,29 @@ namespace HiRes.Implementation.ViewController
 		ILoginRepository _Repository;
 		ILoginService _Service;
 
-        public LoginViewController()
-        {
-            _ChecksAndBalances.Add(new CheckAndBalance()
-            {
-                Check = () => !(InputObject.UserName == null && InputObject.UserName.Equals("")),
-                Balance = "The Username is required."
-            });
+		public LoginViewController()
+		{
+			BrokenRules.Add(new BrokenRule()
+			{
+				Check = () => !string.IsNullOrWhiteSpace(InputObject.UserName),
+				Balance = "The Username is required."
+			});
 
-            var emailValidator = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
-            _ChecksAndBalances.Add(new CheckAndBalance()
-            {
-                Check = () => emailValidator.IsMatch(InputObject.UserName),
-                Balance = "The Username must be a valid email address."
-            });
-            _ChecksAndBalances.Add(new CheckAndBalance()
-            {
-                Check = () => !(InputObject.Password == null && InputObject.Password.Equals("")),
-                Balance = "The Password is required."
-            });
-        }
+			var emailValidator = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
+			BrokenRules.Add(new BrokenRule()
+			{
+				Check = () => emailValidator.IsMatch(InputObject.UserName),
+				Balance = "The Username must be a valid email address."
+			});
+			BrokenRules.Add(new BrokenRule()
+			{
+				Check = () => !(InputObject.Password == null && InputObject.Password.Equals("")),
+				Balance = "The Password is required."
+			});
+		}
 
 		public override void SetRepositories()
 		{
-//			_MasterRepo.NetworkInterface = (U, P, A) => ExecuteQueryWithObjectAndNetworkAccessAsync(U, P, A);
 			_MasterRepo.NetworkInterfaceWithTypedParameters = (U, P, A) => ExecuteQueryWithTypedParametersAndNetworkAccessAsync(U, P, A);
 			_Service = new LoginService(_MasterRepo.NetworkInterfaceWithTypedParameters);
 			_Repository = new LoginRepository(_MasterRepo, _Service);
@@ -50,15 +49,15 @@ namespace HiRes.Implementation.ViewController
 		{
 			try
 			{
-                var validation = RunChecksAndBalances();
-                if (validation == "")
-                {
-                    await _Repository.Login(InputObject, () => { });
-                }
-                else
-                {
-                    ShowMessage(validation);
-                }
+				var validation = ValidateBrokenRules();
+				if (validation == "")
+				{
+					await _Repository.Login(InputObject, () => { });
+				}
+				else
+				{
+					ShowMessage(validation);
+				}
 			}
 			catch (Exception ex)
 			{

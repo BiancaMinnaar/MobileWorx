@@ -29,7 +29,7 @@ namespace HiRes.Implementation.Service
 			};
 
 			parameters["username"] = new ParameterTypedValue(model.UserName);
-			parameters["email_confirm"] = new ParameterTypedValue(model.Password);
+			parameters["password"] = new ParameterTypedValue(model.Password);
 
 			var deviceId = Plugin.DeviceInfo.CrossDeviceInfo.Current.GenerateAppId(true, "RSL");
 			parameters["device"] = new ParameterTypedValue(deviceId);
