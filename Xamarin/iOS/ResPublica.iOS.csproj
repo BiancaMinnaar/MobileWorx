@@ -191,7 +191,6 @@
     <Compile Include="Injection\RestServiceIOS.cs" />
     <Compile Include="Injection\IJsonSerializer.cs" />
     <Compile Include="Injection\NewtonsoftJsonSerializer.cs" />
-    <Compile Include="Injection\DynamicJsonDeserializer.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BasePCL\BasePCL.csproj">

@@ -42,7 +42,7 @@
     </ProjectReference>
     <ProjectReference Include="..\Droid\HiRes.Droid.csproj">
       <Project>{76EABEB8-F902-400D-8B4E-71693295DD7F}</Project>
-      <Name>ResPublica.Droid</Name>
+      <Name>HiRes.Droid</Name>
       <ReferenceOutputAssembly>False</ReferenceOutputAssembly>
       <Private>False</Private>
     </ProjectReference>
