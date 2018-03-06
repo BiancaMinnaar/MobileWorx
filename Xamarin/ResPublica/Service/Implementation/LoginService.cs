@@ -6,15 +6,12 @@ using HiRes.Base;
 using HiRes.Implementation.ViewModel;
 using HiRes.Interface.Service;
 using HiRes.ViewModel;
-using HiRes.ViewModel.ReturnModel;
 
 namespace HiRes.Implementation.Service
 {
-    public class LoginService<T> : BaseService, ILoginService<T>
+    public class LoginService<T> : BaseService<T>, ILoginService<T>
         where T : BaseViewModel
 	{
-        Func<string, Dictionary<string, ParameterTypedValue>, BaseViewModel, BaseNetworkAccessEnum, Task<T>> _NetworkInterface;
-
         public LoginService(Func<string, Dictionary<string, ParameterTypedValue>, BaseViewModel, BaseNetworkAccessEnum, Task<T>> networkInterface)
 			: base(networkInterface)
 		{

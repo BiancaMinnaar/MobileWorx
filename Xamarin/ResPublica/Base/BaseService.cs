@@ -1,11 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Net.Http;
 using System.Threading.Tasks;
 using CorePCL;
 
 namespace HiRes.Base
 {
+    public class BaseService<T>
+        where T:BaseViewModel
+    {
+        protected Func<string, Dictionary<string, ParameterTypedValue>, BaseViewModel, BaseNetworkAccessEnum, Task<T>> _NetworkInterface;
+
+        public BaseService(Func<string, Dictionary<string, ParameterTypedValue>, BaseViewModel, BaseNetworkAccessEnum, Task<T>> networkInterface)
+        {
+            _NetworkInterface = networkInterface;
+        }
+    }
+
 	public class BaseService
 	{
 		protected Func<string, Dictionary<string, ParameterTypedValue>, BaseNetworkAccessEnum, Task> _NetworkInterface;
