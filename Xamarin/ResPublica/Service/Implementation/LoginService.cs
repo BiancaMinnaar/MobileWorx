@@ -10,7 +10,8 @@ using HiRes.ViewModel.ReturnModel;
 
 namespace HiRes.Implementation.Service
 {
-	public class LoginService<T> : BaseService, ILoginService<T>
+    public class LoginService<T> : BaseService, ILoginService<T>
+        where T : BaseViewModel
 	{
         Func<string, Dictionary<string, ParameterTypedValue>, BaseViewModel, BaseNetworkAccessEnum, Task<T>> _NetworkInterface;
 

@@ -10,14 +10,13 @@ using HiRes.Implementation.ViewModel;
 using HiRes.Interface.Repository;
 using HiRes.Interface.Service;
 using HiRes.Interface.ViewController;
-using HiRes.ViewModel;
 using HiRes.ViewModel.ReturnModel;
 
 namespace HiRes.Implementation.ViewController
 {
 	public class LoginViewController : ProjectBaseViewController<LoginViewModel>, ILoginViewController
 	{
-		ILoginRepository _Repository;
+        ILoginRepository<LoginResponseUser> _Repository;
         ILoginService<LoginResponseUser> _Service;
 
 		public LoginViewController()
@@ -45,7 +44,8 @@ namespace HiRes.Implementation.ViewController
 		{
             //_MasterRepo.NetworkInterfaceWithReturn = (U, P, C, A) => 
                 //ExecuteQueryWithReturnTypeAndNetworkAccessAsync<BaseViewModel>(U, P, C, A);
-            _Service = new LoginService<LoginResponseUser>((U, P, C, A) => ExecuteQueryWithReturnTypeAndNetworkAccessAsync<LoginResponseUser>(U, P, C, A));
+            _Service = new LoginService<LoginResponseUser>((U, P, C, A) => 
+                                                           ExecuteQueryWithReturnTypeAndNetworkAccessAsync<LoginResponseUser>(U, P, C, A));
             _Repository = new LoginRepository<LoginResponseUser>(_MasterRepo, _Service);
 		}
 
@@ -56,8 +56,9 @@ namespace HiRes.Implementation.ViewController
 				var validation = ValidateBrokenRules();
 				if (validation == "")
 				{
-                    await _Repository.Login(InputObject, () => 
+                    await _Repository.Login(InputObject, (a) => 
                     { 
+                        Debug.WriteLine(a.Token);
                     });
 				}
 				else

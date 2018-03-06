@@ -1,5 +1,6 @@
 using System;
 using System.Threading.Tasks;
+using CorePCL;
 using HiRes.Base;
 using HiRes.Implementation.ViewModel;
 using HiRes.Interface.Repository;
@@ -7,7 +8,8 @@ using HiRes.Interface.Service;
 
 namespace HiRes.Implementation.Repository
 {
-    public class LoginRepository<T> : ProjectBaseRepository, ILoginRepository
+    public class LoginRepository<T> : ProjectBaseRepository, ILoginRepository<T>
+        where T : BaseViewModel
     {
         ILoginService<T> _Service;
 
@@ -17,10 +19,10 @@ namespace HiRes.Implementation.Repository
             _Service = service;
         }
 
-        public async Task Login(LoginViewModel model, Action completeAction)
+        public async Task Login(LoginViewModel model, Action<T> completeAction)
         {
-            await _Service.Login(model);
-            completeAction();
+            var serviceReturnModel = await _Service.Login(model);
+            completeAction(serviceReturnModel);
         }
 
 
