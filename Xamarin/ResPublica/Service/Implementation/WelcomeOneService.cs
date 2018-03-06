@@ -10,7 +10,7 @@ namespace HiRes.Implementation.Service
 {
     public class WelcomeOneService : BaseService, IWelcomeOneService
     {
-        public WelcomeOneService(Func<string, Dictionary<string, ParameterTypedValue>, object, BaseNetworkAccessEnum, Task> networkInterface)
+        public WelcomeOneService(Func<string, Dictionary<string, ParameterTypedValue>, BaseViewModel, BaseNetworkAccessEnum, Task> networkInterface)
             :base(networkInterface)
         {
         }

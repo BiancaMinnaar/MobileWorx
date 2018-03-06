@@ -1,18 +1,17 @@
 using System;
 using System.Threading.Tasks;
-using HiRes.Interface.Service;
-using HiRes.Interface.Repository;
-using HiRes.Implementation.ViewModel;
 using HiRes.Base;
-using System.Windows.Input;
+using HiRes.Implementation.ViewModel;
+using HiRes.Interface.Repository;
+using HiRes.Interface.Service;
 
 namespace HiRes.Implementation.Repository
 {
-    public class LoginRepository : ProjectBaseRepository, ILoginRepository
+    public class LoginRepository<T> : ProjectBaseRepository, ILoginRepository
     {
-        ILoginService _Service;
+        ILoginService<T> _Service;
 
-        public LoginRepository(IMasterRepository masterRepository, ILoginService service)
+        public LoginRepository(IMasterRepository masterRepository, ILoginService<T> service)
             : base(masterRepository)
         {
             _Service = service;

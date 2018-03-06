@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using RestSharp;
 using System.Threading.Tasks;
 using HiRes;
+using ResPublica.Droid.Injection;
 
 [assembly: Dependency(typeof(RestServiceDroid))]
 namespace MeasurePro.Droid.Injection
@@ -118,7 +119,7 @@ namespace MeasurePro.Droid.Injection
 
         private Func<Task<IRestResponse>> GetNetworkCallAsync(
             string urlExtension, BaseNetworkAccessEnum networkCallType, Dictionary<string, ParameterTypedValue> paramterCollection,
-            object body)
+            BaseViewModel body)
         {
             Method returnNetworkType;
             switch (networkCallType)
@@ -135,23 +136,32 @@ namespace MeasurePro.Droid.Injection
             }
 
             RestRequest req = new RestRequest(urlExtension, returnNetworkType);
-            foreach (string key in paramterCollection.Keys)
+
+            req.RequestFormat = DataFormat.Json;
+            req.JsonSerializer = NewtonsoftJsonSerializer.Default;
+            if (paramterCollection != null)
             {
-                var parameter = paramterCollection[key];
-                switch (parameter.ParameterType)
+                foreach (string key in paramterCollection.Keys)
                 {
-                    case ParameterTypeEnum.ValueParameter:
-                        req.AddParameter(key, parameter.ParameterValue);
-                        break;
-                    case ParameterTypeEnum.FileParameter:
-                        req.AddFile(key, (byte[])parameter.ParameterValue, "cFile");
-                        break;
-                    case ParameterTypeEnum.HeaderParameter:
-                        req.AddHeader(key, parameter.ToString());
-                        break;
+                    var parameter = paramterCollection[key];
+                    switch (parameter.ParameterType)
+                    {
+                        case ParameterTypeEnum.ValueParameter:
+                            req.AddParameter(key, parameter.ParameterValue);
+                            break;
+                        case ParameterTypeEnum.FileParameter:
+                            req.AddFile(key, (byte[])parameter.ParameterValue, "cFile");
+                            break;
+                        case ParameterTypeEnum.HeaderParameter:
+                            req.AddHeader(key, parameter.ParameterValue.ToString());
+                            break;
+                    }
                 }
             }
-            req.AddBody(body);
+            if (body != null)
+            {
+                req.AddJsonBody(body);
+            }
             return async () => await client.ExecuteTaskAsync(req);
         }
 
@@ -221,7 +231,7 @@ namespace MeasurePro.Droid.Injection
         }
 
         public async Task ExecuteNetworkRequestAsync(string urlExtension, Dictionary<string, ParameterTypedValue> paramterCollection,
-                                                     object body, BaseNetworkAccessEnum networkCallType)
+                                                     BaseViewModel body, BaseNetworkAccessEnum networkCallType)
         {
             _urlExtension = urlExtension;
             _networkCallType = networkCallType;

@@ -1,11 +1,12 @@
 using System.Threading.Tasks;
 using HiRes.Implementation.ViewModel;
+using HiRes.ViewModel.ReturnModel;
 
 namespace HiRes.Interface.Service
 {
-    public interface ILoginService
+    public interface ILoginService<T>
     {
-        Task Login(LoginViewModel model);
+        Task<T> Login(LoginViewModel model);
     }
 }
 

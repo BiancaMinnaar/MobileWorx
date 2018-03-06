@@ -10,7 +10,7 @@ namespace HiRes.Implementation.Service
 {
 	public class RegisterService : BaseService, IRegisterService
 	{
-		public RegisterService(Func<string, Dictionary<string, ParameterTypedValue>, object, BaseNetworkAccessEnum, Task> networkInterface)
+        public RegisterService(Func<string, Dictionary<string, ParameterTypedValue>, BaseViewModel, BaseNetworkAccessEnum, Task> networkInterface)
 			: base(networkInterface)
 		{
 		}

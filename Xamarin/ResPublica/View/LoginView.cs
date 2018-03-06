@@ -12,6 +12,8 @@ namespace HiRes.Implementation.View
         {
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
+            _ViewController.InputObject.UserName = "johan@publica.co.za";
+            _ViewController.InputObject.Password = "Publica!~";
             BindingContext = _ViewController.InputObject;
         }
 

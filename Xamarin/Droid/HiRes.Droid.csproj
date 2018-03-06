@@ -197,6 +197,9 @@
     <Reference Include="FFImageLoading.Svg.Forms">
       <HintPath>..\packages\Xamarin.FFImageLoading.Svg.Forms.2.3.4\lib\MonoAndroid10\FFImageLoading.Svg.Forms.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\netstandard2.0\Newtonsoft.Json.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CustomRenderers\HREntryRenderer.cs" />
@@ -206,6 +209,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Injection\RestServiceDroid.cs" />
     <Compile Include="SplashActivity.cs" />
+    <Compile Include="Injection\IJsonSerializer.cs" />
+    <Compile Include="Injection\NewtonsoftJsonSerializer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
