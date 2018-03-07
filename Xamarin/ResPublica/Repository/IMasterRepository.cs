@@ -21,6 +21,7 @@ namespace HiRes.Interface.Repository
         void PushHomeView();
         void PushRegister();
 		void PushSandbox();
+        void PushWelcome();
         //Logic
         //debug
         void DumpJson<T>(string heading, T objectToDump);

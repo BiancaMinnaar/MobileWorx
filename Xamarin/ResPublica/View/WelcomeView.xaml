@@ -18,6 +18,6 @@
         </ResourceDictionary>
     </ContentPage.Resources>
     <ContentPage.Content>
-        
+        <Label Text="Welcome" />
     </ContentPage.Content>
 </base:ProjectBaseContentPage>

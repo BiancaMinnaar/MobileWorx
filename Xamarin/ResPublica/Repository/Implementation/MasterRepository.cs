@@ -94,5 +94,10 @@ namespace HiRes.Implementation.Repository
 		{
 			_Navigation.PushModalAsync(new Sandbox());
 		}
-	}
+
+        public void PushWelcome()
+        {
+            _Navigation.PushAsync(new WelcomeView());
+        }
+    }
 }

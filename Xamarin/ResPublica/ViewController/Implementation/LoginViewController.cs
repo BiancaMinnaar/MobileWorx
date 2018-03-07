@@ -55,8 +55,17 @@ namespace HiRes.Implementation.ViewController
 				if (validation == "")
 				{
                     await _Repository.Login(InputObject, (a) => 
-                    { 
-                        Debug.WriteLine(a.Token);
+                    {
+                        if (a.Status.StatusCode != 200)
+                        {
+                            ShowMessage(a.Status.Message);
+                        }
+					    else
+                        {
+                            _MasterRepo.DataSorce.AuthUser = a;
+                            _MasterRepo.DataSorce.Authenticated = true;
+                            _MasterRepo.PushWelcome();
+                        }
                     });
 				}
 				else
