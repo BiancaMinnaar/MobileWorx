@@ -6,7 +6,7 @@ using HiRes.Implementation.ViewModel;
 
 namespace HiRes.Implementation.View
 {
-    public partial class WelcomeThreeView : ProjectBaseContentPage<WelcomeThreeViewController, WelcomeThreeViewModel>
+    public partial class WelcomeThreeView : ProjectBaseStackContentView<WelcomeThreeViewController, WelcomeThreeViewModel>
     {
         public WelcomeThreeView()
         {

@@ -6,7 +6,7 @@ using HiRes.Implementation.ViewModel;
 
 namespace HiRes.Implementation.View
 {
-    public partial class WelcomeTwoView : ProjectBaseContentPage<WelcomeTwoViewController, WelcomeTwoViewModel>
+    public partial class WelcomeTwoView : ProjectBaseStackContentView<WelcomeTwoViewController, WelcomeTwoViewModel>
     {
         public WelcomeTwoView()
         {

@@ -18,6 +18,11 @@
         </ResourceDictionary>
     </ContentPage.Resources>
     <ContentPage.Content>
-        <Label Text="Welcome" />
+        <StackLayout Orientation="Vertical">
+            <StackLayout.GestureRecognizers>
+                <PanGestureRecognizer PanUpdated="Handle_Swipe"/>
+            </StackLayout.GestureRecognizers>
+            <StackLayout x:Name="WelcomeViewContent" />
+        </StackLayout>
     </ContentPage.Content>
 </base:ProjectBaseContentPage>
