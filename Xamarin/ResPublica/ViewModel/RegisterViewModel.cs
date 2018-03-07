@@ -125,7 +125,7 @@ namespace HiRes.Implementation.ViewModel
 		/// <value>
 		/// The birth date.
 		/// </value>
-		public DateTime BirthDate { get; set; } = DateTime.Today;
+		public DateTime BirthDate { get; set; } = DateTime.Today.AddYears(-18);
 
 		/// <summary>
 		/// Gets the password.
@@ -141,7 +141,7 @@ namespace HiRes.Implementation.ViewModel
 		/// <value>
 		/// The password confirm.
 		/// </value>
-		public string PasswordConfirm { get; set; } = string.Empty;	
+		public string PasswordConfirm { get; set; } = string.Empty;
 
 		/// <summary>
 		/// Gets the where did you hear about us.

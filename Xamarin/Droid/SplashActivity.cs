@@ -13,7 +13,7 @@ using Android.Widget;
 
 namespace ResPublica.Droid
 {
-	[Activity(Label = "ResPublica.Droid", NoHistory = true, Icon = "@drawable/icon", Theme = "@style/Theme.Splash", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+	[Activity(Label = "Respublica", NoHistory = true, Icon = "@drawable/icon", Theme = "@style/Theme.Splash", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
 	public class SplashActivity : Activity
 	{
 		protected override void OnCreate(Bundle bundle)

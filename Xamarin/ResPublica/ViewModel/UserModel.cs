@@ -8,9 +8,6 @@ namespace HiRes.ViewModel
     {
         public string username { get; set; }
         public string password { get; set; }
-        public string token_type { get; set; }
-        public string device { get; set; }
-        [JsonProperty("X-API-KEY")]
-        public string X_API_KEY { get; set; }
+
     }
 }

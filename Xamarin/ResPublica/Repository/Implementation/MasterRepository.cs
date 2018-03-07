@@ -92,7 +92,7 @@ namespace HiRes.Implementation.Repository
 
 		public void PushSandbox()
 		{
-			_Navigation.PushAsync(new Sandbox());
+			_Navigation.PushModalAsync(new Sandbox());
 		}
 	}
 }

@@ -100,10 +100,30 @@ namespace HiRes.Base
 				toastOptions.SetBackgroundColor(System.Drawing.Color.Red);
 				toastOptions.SetPosition(ToastPosition.Bottom);
 				toastOptions.SetMessageTextColor(System.Drawing.Color.White);
+
 				UserDialogs.Instance.Toast(message, TimeSpan.FromSeconds(5));
 
 				// ShowError.Toast(toastOptions);
 
+			}
+			catch (Exception ex)
+			{
+				Debug.WriteLine(ex.Message);
+			}
+			///	new ToastConfig(message).SetDuration(TimeSpan.FromSeconds(5)).SetBackgroundColor(System.Drawing.Color.FromArgb(193, 57, 43)));
+		}
+
+		public void ShowError(string message)
+		{
+			try
+			{
+				var toastOptions = new ToastConfig(message);
+				toastOptions.SetDuration(TimeSpan.FromSeconds(5));
+				toastOptions.SetBackgroundColor(System.Drawing.Color.Red);
+				toastOptions.SetPosition(ToastPosition.Bottom);
+				toastOptions.SetMessageTextColor(System.Drawing.Color.White);
+
+				UserDialogs.Instance.Toast(toastOptions);
 			}
 			catch (Exception ex)
 			{

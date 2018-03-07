@@ -38,6 +38,14 @@
 				<Setter Property="BorderWidth" Value="5"/>
 			</Style>
 
+			<Style TargetType="DatePicker">
+				<Setter Property="Format">
+					<OnIdiom x:TypeArguments="x:String"
+                 Tablet="D"
+                 Phone="d"/>
+				</Setter>
+			</Style>
+
 			<!--</ResourceDictionary>
 
 

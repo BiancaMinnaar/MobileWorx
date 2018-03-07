@@ -24,10 +24,8 @@ namespace HiRes.Implementation.Service
 			var httpMethod = BaseNetworkAccessEnum.Post;
 			var userModel = new UserModel()
             {
-                username = model.UserName,
+                username = model.Username,
                 password = model.Password,
-                device = "12",
-                token_type = "app",
                 X_API_KEY = "boguskey_rsl"
             };
 
