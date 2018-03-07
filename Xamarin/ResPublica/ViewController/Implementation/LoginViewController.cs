@@ -23,14 +23,14 @@ namespace HiRes.Implementation.ViewController
 		{
 			BrokenRules.Add(new BrokenRule()
 			{
-				Check = () => !string.IsNullOrWhiteSpace(InputObject.UserName),
+				Check = () => !string.IsNullOrWhiteSpace(InputObject.Username),
 				Balance = "The Username is required."
 			});
 
 			var emailValidator = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
 			BrokenRules.Add(new BrokenRule()
 			{
-				Check = () => emailValidator.IsMatch(InputObject.UserName),
+				Check = () => emailValidator.IsMatch(InputObject.Username),
 				Balance = "The Username must be a valid email address."
 			});
 			BrokenRules.Add(new BrokenRule()
