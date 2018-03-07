@@ -10,8 +10,7 @@
     xmlns:image="clr-namespace:HiRes.View;assembly=HiRes"
     x:Class="HiRes.Implementation.View.WelcomeView" 
     x:TypeArguments="p:WelcomeViewController, m:WelcomeViewModel" 
-    BackgroundColor="#565E60"
-    Title="Login">
+    BackgroundColor="White">
     <ContentPage.Resources>
         <ResourceDictionary>
             <image:ByteArrayToImageSourceConverter x:Key="ByteArrayToImage" />
@@ -23,6 +22,9 @@
                 <PanGestureRecognizer PanUpdated="Handle_Swipe"/>
             </StackLayout.GestureRecognizers>
             <StackLayout x:Name="WelcomeViewContent" />
+            <StackLayout>
+                <Label Text="SwipeView" />
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </base:ProjectBaseContentPage>

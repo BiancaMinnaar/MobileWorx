@@ -10,14 +10,9 @@
     xmlns:image="clr-namespace:HiRes.View;assembly=HiRes"
     x:Class="HiRes.Implementation.View.WelcomeTwoView" 
     x:TypeArguments="p:WelcomeTwoViewController, m:WelcomeTwoViewModel" 
-    BackgroundColor="#565E60"
-    Title="Login">
-    <ContentPage.Resources>
-        <ResourceDictionary>
-            <image:ByteArrayToImageSourceConverter x:Key="ByteArrayToImage" />
-        </ResourceDictionary>
-    </ContentPage.Resources>
-    <ContentPage.Content>
-        
-    </ContentPage.Content>
+    BackgroundColor="#565E60">
+    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+        <StackLayout HeightRequest="300" ></StackLayout>
+        <Label Text="Welcome 2" />
+    </StackLayout>
 </base:ProjectBaseStackContentView>
