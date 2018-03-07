@@ -71,6 +71,7 @@
 
 							<controls:HREntry Text="{Binding MobileNumber}"
 										  HeightRequest="45"
+											  WidthRequest="*"
 										  HorizontalOptions="FillAndExpand">
 							</controls:HREntry>
 						</StackLayout>
