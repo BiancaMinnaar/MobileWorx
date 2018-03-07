@@ -1,9 +1,9 @@
-﻿using HiRes.Base;
+﻿using CorePCL;
 using Newtonsoft.Json;
 
 namespace HiRes.ViewModel.ReturnModel
 {
-    public class LoginResponseUser : ProjectBaseViewModel
+    public class LoginResponseUser : BaseViewModel
     {
 		public StatusDto Status { get; set; }
 

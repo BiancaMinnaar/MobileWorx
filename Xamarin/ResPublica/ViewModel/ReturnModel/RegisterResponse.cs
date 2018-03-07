@@ -1,8 +1,8 @@
-﻿using HiRes.Base;
+﻿using CorePCL;
 
 namespace HiRes.ViewModel.ReturnModel
 {
-    public class RegisterResponse : ProjectBaseViewModel
+    public class RegisterResponse : BaseViewModel
     {
         
     }
