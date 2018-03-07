@@ -6,6 +6,7 @@ using HiRes.Implementation.ViewModel;
 using HiRes.Interface.Repository;
 using HiRes.Interface.Service;
 using HiRes.Interface.ViewController;
+using HiRes.ViewModel.ReturnModel;
 
 namespace HiRes.Implementation.ViewController
 {
@@ -16,9 +17,8 @@ namespace HiRes.Implementation.ViewController
 
         public override void SetRepositories()
         {
-            _MasterRepo.NetworkInterface = (U, P, A) => ExecuteQueryWithObjectAndNetworkAccessAsync(U, P, A);
-            _MasterRepo.NetworkInterfaceWithTypedParameters = (U, P, C, A) => ExecuteQueryWithTypedParametersAndNetworkAccessAsync(U, P, C, A);
-            _Service = new RegisterService(_MasterRepo.NetworkInterfaceWithTypedParameters);
+            _Service = new RegisterService((U, P, C, A) =>
+                                                           ExecuteQueryWithReturnTypeAndNetworkAccessAsync<RegisterResponse>(U, P, C, A));
             _Reposetory = new RegisterRepository(_MasterRepo, _Service);
         }
 
