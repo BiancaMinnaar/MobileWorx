@@ -17,6 +17,7 @@ namespace BasePCL.DataContracts.Interface
 
         Task ExecuteNetworkRequestAsync(string urlExtension, Dictionary<string, object> paramterCollection, BaseNetworkAccessEnum networkAccess = BaseNetworkAccessEnum.Get);
         Task ExecuteNetworkRequestAsync(string urlExtension, Dictionary<string, ParameterTypedValue> paramterCollection, BaseNetworkAccessEnum networkAccess = BaseNetworkAccessEnum.Get);
-        Task ExecuteNetworkRequestAsync(string urlExtension, Dictionary<string, ParameterTypedValue> paramterCollection, object body, BaseNetworkAccessEnum networkCallType);
+        //Task ExecuteNetworkRequestAsync(string urlExtension, Dictionary<string, ParameterTypedValue> paramterCollection, BaseViewModel body, BaseNetworkAccessEnum networkCallType);
+        Task<T> ExecuteNetworkRequestAsync<T>(string urlExtension, Dictionary<string, ParameterTypedValue> paramterCollection, BaseViewModel body, BaseNetworkAccessEnum networkCallType) where T:BaseViewModel;
     }
 }

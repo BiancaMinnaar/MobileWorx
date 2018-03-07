@@ -163,6 +163,9 @@
     <Reference Include="Plugin.DeviceInfo">
       <HintPath>..\packages\Xam.Plugin.DeviceInfo.3.1.0\lib\Xamarin.iOS10\Plugin.DeviceInfo.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\netstandard2.0\Newtonsoft.Json.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
@@ -186,6 +189,8 @@
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <Compile Include="Injection\RestServiceIOS.cs" />
+    <Compile Include="Injection\IJsonSerializer.cs" />
+    <Compile Include="Injection\NewtonsoftJsonSerializer.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BasePCL\BasePCL.csproj">

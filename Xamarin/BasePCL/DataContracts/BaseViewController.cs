@@ -49,9 +49,17 @@ namespace CorePCL
 		}
 
         protected async Task ExecuteQueryWithTypedParametersAndNetworkAccessAsync(
-            string urlExtension, Dictionary<string, ParameterTypedValue> paramterCollection, object body, BaseNetworkAccessEnum networkAccess = BaseNetworkAccessEnum.Get)
+            string urlExtension, Dictionary<string, ParameterTypedValue> paramterCollection, BaseViewModel body, BaseNetworkAccessEnum networkAccess = BaseNetworkAccessEnum.Get)
         {
-            await _RestService.ExecuteNetworkRequestAsync(urlExtension, paramterCollection, body, networkAccess);
+            throw new NotImplementedException("here");
+        //    await _RestService.ExecuteNetworkRequestAsync(urlExtension, paramterCollection, body, networkAccess);
+        }
+
+        protected async Task<R> ExecuteQueryWithReturnTypeAndNetworkAccessAsync<R>(
+            string urlExtension, Dictionary<string, ParameterTypedValue> paramterCollection, BaseViewModel body, BaseNetworkAccessEnum networkAccess = BaseNetworkAccessEnum.Get)
+            where R: BaseViewModel
+        {
+            return await _RestService.ExecuteNetworkRequestAsync<R>(urlExtension, paramterCollection, body, networkAccess);
         }
     }
 }

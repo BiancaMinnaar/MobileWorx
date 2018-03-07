@@ -113,6 +113,7 @@
     <Compile Include="ViewModel\WelcomeThreeViewModel.cs" />
     <Compile Include="ViewController\IWelcomeThreeViewController.cs" />
     <Compile Include="ViewModel\UserModel.cs" />
+    <Compile Include="ViewModel\ReturnModel\LoginResponseUser.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="App.xaml" />
@@ -133,6 +134,7 @@
   <ItemGroup>
     <Folder Include="Extensions\" />
     <Folder Include="ViewModel\Controls\" />
+    <Folder Include="ViewModel\ReturnModel\" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Plugin.DeviceInfo, Version=3.1.0.0, Culture=neutral, processorArchitecture=MSIL">

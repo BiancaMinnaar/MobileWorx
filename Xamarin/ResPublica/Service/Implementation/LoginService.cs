@@ -1,42 +1,37 @@
 using System;
 using System.Collections.Generic;
-using System.Net.Http;
 using System.Threading.Tasks;
 using CorePCL;
 using HiRes.Base;
 using HiRes.Implementation.ViewModel;
 using HiRes.Interface.Service;
+using HiRes.ViewModel;
 
 namespace HiRes.Implementation.Service
 {
-	public class LoginService : BaseService, ILoginService
+    public class LoginService<T> : BaseService<T>, ILoginService<T>
+        where T : BaseViewModel
 	{
-        public LoginService(Func<string, Dictionary<string, ParameterTypedValue>, object, BaseNetworkAccessEnum, Task> networkInterface)
+        public LoginService(Func<string, Dictionary<string, ParameterTypedValue>, BaseViewModel, BaseNetworkAccessEnum, Task<T>> networkInterface)
 			: base(networkInterface)
 		{
+            _NetworkInterface = networkInterface;
 		}
 
-		public async Task Login(LoginViewModel model)
+        public async Task<T> Login(LoginViewModel model)
 		{
 			string requestURL = "/Login";
 			var httpMethod = BaseNetworkAccessEnum.Post;
-			var parameters = new Dictionary<string, ParameterTypedValue>()
-			{
-				{"X-API-TOKEN", new ParameterTypedValue() {
-						ParameterValue="boguskey_rsl",
-						ParameterType=ParameterTypeEnum.HeaderParameter
-					}
-				}
-			};
+			var userModel = new UserModel()
+            {
+                username = model.UserName,
+                password = model.Password,
+                device = "12",
+                token_type = "app",
+                X_API_KEY = "boguskey_rsl"
+            };
 
-			//parameters["username"] = new ParameterTypedValue(model.UserName);
-			//parameters["password"] = new ParameterTypedValue(model.Password);
-
-			//var deviceId = Plugin.DeviceInfo.CrossDeviceInfo.Current.GenerateAppId(true, "RSL");
-			//parameters["device"] = new ParameterTypedValue(deviceId);
-			//parameters["token_type"] = new ParameterTypedValue("app");
-
-            await _NetworkWithBodyInterface(requestURL, parameters, model.SerializeObject(), httpMethod);
+            return await _NetworkInterface(requestURL, null, userModel, httpMethod);
 		}
 	}
 }
