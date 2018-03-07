@@ -21,67 +21,67 @@ namespace SourceConsole.Templates {
             this.GenerationEnvironment = null;
             
             #line 6 ""
-            this.Write("using System;\nusing System.Threading.Tasks;\nusing ");
+            this.Write("using System;\nusing System.Threading.Tasks;\nusing CorePCL;\nusing ");
             
             #line default
             #line hidden
             
-            #line 8 ""
+            #line 9 ""
             this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.ProjectName ));
             
             #line default
             #line hidden
             
-            #line 8 ""
+            #line 9 ""
             this.Write(".Implementation.ViewModel;\n\nnamespace ");
             
             #line default
             #line hidden
             
-            #line 10 ""
+            #line 11 ""
             this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.ProjectName ));
             
             #line default
             #line hidden
             
-            #line 10 ""
+            #line 11 ""
             this.Write(".Interface.Repository\n{\n    public interface ");
             
             #line default
             #line hidden
             
-            #line 12 ""
+            #line 13 ""
             this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.RepositoryInterfaceName ));
             
             #line default
             #line hidden
             
-            #line 12 ""
-            this.Write("\n    {\n        Task ");
+            #line 13 ""
+            this.Write("<T>\n        where T : BaseViewModel\n    {\n        Task ");
             
             #line default
             #line hidden
             
-            #line 14 ""
+            #line 16 ""
             this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.EventName ));
             
             #line default
             #line hidden
             
-            #line 14 ""
+            #line 16 ""
             this.Write("(");
             
             #line default
             #line hidden
             
-            #line 14 ""
+            #line 16 ""
             this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.ViewModelName ));
             
             #line default
             #line hidden
             
-            #line 14 ""
-            this.Write(" model, Action completeAction);\n    }\n}\n");
+            #line 16 ""
+            this.Write(" model, Action<T> completeAction);\n    }\n}\n");
             
             #line default
             #line hidden

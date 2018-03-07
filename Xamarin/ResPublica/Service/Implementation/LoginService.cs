@@ -15,7 +15,6 @@ namespace HiRes.Implementation.Service
         public LoginService(Func<string, Dictionary<string, ParameterTypedValue>, BaseViewModel, BaseNetworkAccessEnum, Task<T>> networkInterface)
 			: base(networkInterface)
 		{
-            _NetworkInterface = networkInterface;
 		}
 
         public async Task<T> Login(LoginViewModel model)

@@ -177,13 +177,22 @@ namespace SourceConsole.Templates {
             #line hidden
             
             #line 20 ""
-            this.Write(@"Service _Service;
-
-        public override void SetRepositories()
-        {
-            _MasterRepo.NetworkInterface = (U, P, A) => ExecuteQueryWithObjectAndNetworkAccessAsync(U, P, A);
-            _MasterRepo.NetworkInterfaceWithTypedParameters = (U, P, A) => ExecuteQueryWithTypedParametersAndNetworkAccessAsync(U, P, A);
-            _Service = new ");
+            this.Write("Service _Service;\n\n        public override void SetRepositories()\n        {\n     " +
+                    "       _Service = new ");
+            
+            #line default
+            #line hidden
+            
+            #line 24 ""
+            this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.EventName ));
+            
+            #line default
+            #line hidden
+            
+            #line 24 ""
+            this.Write("Service((U, P, C, A) => \n                                                        " +
+                    "   ExecuteQueryWithReturnTypeAndNetworkAccessAsync<LoginResponseUser>(U, P, C, A" +
+                    "));\n            _Reposetory = new ");
             
             #line default
             #line hidden
@@ -195,31 +204,18 @@ namespace SourceConsole.Templates {
             #line hidden
             
             #line 26 ""
-            this.Write("Service(_MasterRepo.NetworkInterfaceWithTypedParameters);\n            _Reposetory" +
-                    " = new ");
-            
-            #line default
-            #line hidden
-            
-            #line 27 ""
-            this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.EventName ));
-            
-            #line default
-            #line hidden
-            
-            #line 27 ""
             this.Write("Repository(_MasterRepo, _Service);\n        }\n\n        public async Task ");
             
             #line default
             #line hidden
             
-            #line 30 ""
+            #line 29 ""
             this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.EventName ));
             
             #line default
             #line hidden
             
-            #line 30 ""
+            #line 29 ""
             this.Write("()\n        {\n            \n        }\n    }\n}");
             
             #line default

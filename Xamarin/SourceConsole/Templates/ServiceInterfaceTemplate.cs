@@ -57,30 +57,30 @@ namespace SourceConsole.Templates {
             #line hidden
             
             #line 11 ""
-            this.Write("\n    {\n        Task ");
+            this.Write("<T>\n        where T : BaseViewModel\n    {\n        Task<T> ");
             
             #line default
             #line hidden
             
-            #line 13 ""
+            #line 14 ""
             this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.EventName ));
             
             #line default
             #line hidden
             
-            #line 13 ""
+            #line 14 ""
             this.Write("(");
             
             #line default
             #line hidden
             
-            #line 13 ""
+            #line 14 ""
             this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.ViewModelName ));
             
             #line default
             #line hidden
             
-            #line 13 ""
+            #line 14 ""
             this.Write(" model);\n    }\n}\n\n");
             
             #line default

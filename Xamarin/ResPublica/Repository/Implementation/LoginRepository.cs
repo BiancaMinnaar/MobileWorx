@@ -25,11 +25,9 @@ namespace HiRes.Implementation.Repository
             completeAction(serviceReturnModel);
         }
 
-
 		public void RegisterView()
         {
             _MasterRepo.PushRegister();
         }
-
     }
 }

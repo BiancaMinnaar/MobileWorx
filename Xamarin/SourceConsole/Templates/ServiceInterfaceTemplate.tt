@@ -8,9 +8,10 @@ using <#= _DataModel.ProjectName #>.Implementation.ViewModel;
 
 namespace <#= _DataModel.ProjectName #>.Interface.Service
 {
-    public interface <#= _DataModel.ServiceInterfaceName #>
+    public interface <#= _DataModel.ServiceInterfaceName #><T>
+        where T : BaseViewModel
     {
-        Task <#= _DataModel.EventName #>(<#= _DataModel.ViewModelName #> model);
+        Task<T> <#= _DataModel.EventName #>(<#= _DataModel.ViewModelName #> model);
     }
 }
 
