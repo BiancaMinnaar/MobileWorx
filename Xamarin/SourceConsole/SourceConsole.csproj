@@ -125,7 +125,6 @@
       <Generator>TextTemplatingFilePreprocessor</Generator>
       <LastGenOutput>ServiceTemplate.cs</LastGenOutput>
     </None>
-    <None Include="Data\ProjectDataModel.xml" />
     <None Include="Data\Project.Config" />
     <None Include="packages.config" />
   </ItemGroup>
