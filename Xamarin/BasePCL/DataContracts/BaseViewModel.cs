@@ -9,7 +9,7 @@ namespace CorePCL
 			return JsonConvert.SerializeObject(this);
 		}
 
-		public string device { get; set; } = Plugin.DeviceInfo.CrossDeviceInfo.Current.GenerateAppId(true);
+        public string device { get; set; } = "";//Plugin.DeviceInfo.CrossDeviceInfo.Current.GenerateAppId(true);
 		public string token_type { get; set; } = "app";
 
 		[JsonProperty("X-API-KEY")]

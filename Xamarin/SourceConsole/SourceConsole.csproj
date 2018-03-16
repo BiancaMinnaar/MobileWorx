@@ -28,6 +28,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
@@ -70,11 +73,20 @@
     <Compile Include="Templates\PartialClasses\ViewTemplatePartial.cs" />
     <Compile Include="Templates\DataModel\TemplateDataModel.cs" />
     <Compile Include="Templates\PartialClasses\ITemplate.cs" />
+    <Compile Include="IGenerationReposetory.cs" />
+    <Compile Include="GenerationReposetory.cs" />
+    <Compile Include="IFileService.cs" />
+    <Compile Include="FileService.cs" />
+    <Compile Include="Templates\DataModel\FileModel.cs" />
+    <Compile Include="IProjectReaderRepository.cs" />
+    <Compile Include="ProjectReaderRepository.cs" />
+    <Compile Include="ProjectModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Templates\" />
     <Folder Include="Templates\PartialClasses\" />
     <Folder Include="Templates\DataModel\" />
+    <Folder Include="Data\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Templates\ViewTemplate.tt">
@@ -113,6 +125,9 @@
       <Generator>TextTemplatingFilePreprocessor</Generator>
       <LastGenOutput>ServiceTemplate.cs</LastGenOutput>
     </None>
+    <None Include="Data\ProjectDataModel.xml" />
+    <None Include="Data\Project.Config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BasePCL\BasePCL.csproj">
