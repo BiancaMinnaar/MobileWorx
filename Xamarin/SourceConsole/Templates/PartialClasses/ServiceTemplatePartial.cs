@@ -17,7 +17,7 @@
         public string GetFileName()
         {
             var repo = new SourceFileMapRepository<ServiceTemplate>();
-            return _DataModel.RepositoryName + repo.GetSourceExtension(this);
+            return _DataModel.ServiceName + "." + repo.GetSourceExtension(this);
         }
     }
 }

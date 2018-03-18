@@ -43,6 +43,22 @@ namespace SourceConsole
             {
                 case SourceEnum.Repository:
                     return readerRepo.GetRepositoryPath();
+                case SourceEnum.RepositoryInterface:
+                    return readerRepo.GetRepositoryInterfacePath();
+                case SourceEnum.Service:
+                    return readerRepo.GetServicePath();
+                case SourceEnum.ServiceInterface:
+                    return readerRepo.GetServiceInterfacePath();
+                case SourceEnum.View:
+                    return readerRepo.GetViewPath();
+                case SourceEnum.ViewCodeBehind:
+                    return readerRepo.GetViewCodeBehindPath();
+                case SourceEnum.ViewController:
+                    return readerRepo.GetViewControllerPath();
+                case SourceEnum.ViewControllerInterface:
+                    return readerRepo.GetViewControllerInterfacePath();
+                case SourceEnum.ViewModel:
+                    return readerRepo.GetViewModelPath();
                 default:
                     throw new NotSupportedException("Your template isn't supported.");
             }
