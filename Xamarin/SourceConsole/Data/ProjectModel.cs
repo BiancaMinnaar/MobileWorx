@@ -15,5 +15,6 @@ namespace SourceConsole
         public string ViewControllerPath {get;set;}
         public string ViewModelPath {get;set;}
         public string ViewPath {get;set;}
+        public string FileListXPath { get; set; }
     }
 }

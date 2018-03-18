@@ -23,6 +23,8 @@ namespace SourceConsole
             repo.WriteTemplateToFile(new RepositoryTemplate(screenData));
             repo.WriteTemplateToFile(new ServiceInterfaceTemplate(screenData));
             repo.WriteTemplateToFile(new ServiceTemplate(screenData));
+
+            readerRepo.InsertFileReferenceInProjectFile();
         }
     }
 }

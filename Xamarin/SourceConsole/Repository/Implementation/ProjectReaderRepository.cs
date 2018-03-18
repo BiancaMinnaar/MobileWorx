@@ -1,69 +1,80 @@
-﻿namespace SourceConsole
+﻿using System.Xml;
+
+namespace SourceConsole
 {
     public class ProjectReaderRepository : IProjectReaderRepository
     {
-        ProjectModel model;
-        IFileService _FileService;
+		IFileService _FileService;
+        ProjectModel _Model;
+        XmlDocument _ProjectFile;
 
         public ProjectReaderRepository(IFileService fileService)
         {
-            model = Newtonsoft.Json.JsonConvert.DeserializeAnonymousType<ProjectModel>(fileService.ReadFromFile("../../Data/Project.Config"), model);
-            _FileService = fileService;
+			_FileService = fileService;
+            _Model = Newtonsoft.Json.JsonConvert.DeserializeAnonymousType<ProjectModel>(_FileService.ReadFromFile("../../Data/Project.Config"), _Model);
+            _ProjectFile = new XmlDocument();
+            _ProjectFile.LoadXml(_FileService.ReadFromFile(_Model.ProjectFileLocation));
         }
 
         public string GetProjectFileLocation()
         {
-            return model.ProjectFileLocation;
+            return _Model.ProjectFileLocation;
         }
 
         public string GetProjectName()
         {
-            return model.ProjectName;
+            return _Model.ProjectName;
         }
 
         public string GetRepositoryInterfacePath()
         {
-            return model.RepositoryInterfacePath;
+            return _Model.RepositoryInterfacePath;
         }
 
         public string GetRepositoryPath()
         {
-            return model.RepositoryPath;
+            return _Model.RepositoryPath;
         }
 
         public string GetServiceInterfacePath()
         {
-            return model.ServiceInterfacePath;
+            return _Model.ServiceInterfacePath;
         }
 
         public string GetServicePath()
         {
-            return model.ServicePath;
+            return _Model.ServicePath;
         }
 
         public string GetViewCodeBehindPath()
         {
-            return model.ViewCodeBehindPath;
+            return _Model.ViewCodeBehindPath;
         }
 
         public string GetViewControllerInterfacePath()
         {
-            return model.ViewControllerInterfacePath;
+            return _Model.ViewControllerInterfacePath;
         }
 
         public string GetViewControllerPath()
         {
-            return model.ViewControllerPath;
+            return _Model.ViewControllerPath;
         }
 
         public string GetViewModelPath()
         {
-            return model.ViewModelPath;
+            return _Model.ViewModelPath;
         }
 
         public string GetViewPath()
         {
-            return model.ViewPath;
+            return _Model.ViewPath;
+        }
+
+        public bool InsertFileReferenceInProjectFile()
+        {
+            var test = _ProjectFile.SelectNodes(_Model.FileListXPath);
+            return false;
         }
     }
 }
