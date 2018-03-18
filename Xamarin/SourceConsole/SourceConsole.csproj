@@ -73,22 +73,24 @@
     <Compile Include="Templates\PartialClasses\ViewTemplatePartial.cs" />
     <Compile Include="Templates\DataModel\TemplateDataModel.cs" />
     <Compile Include="Templates\PartialClasses\ITemplate.cs" />
-    <Compile Include="IGenerationReposetory.cs" />
-    <Compile Include="GenerationReposetory.cs" />
     <Compile Include="IFileService.cs" />
     <Compile Include="FileService.cs" />
     <Compile Include="Templates\DataModel\FileModel.cs" />
-    <Compile Include="IProjectReaderRepository.cs" />
-    <Compile Include="ProjectReaderRepository.cs" />
     <Compile Include="ProjectModel.cs" />
-    <Compile Include="SourceFileMapRepository.cs" />
-    <Compile Include="ISourceFileMapRepository.cs" />
+    <Compile Include="Repository\IProjectReaderRepository.cs" />
+    <Compile Include="Repository\IGenerationReposetory.cs" />
+    <Compile Include="Repository\Implementation\GenerationReposetory.cs" />
+    <Compile Include="Repository\ISourceFileMapRepository.cs" />
+    <Compile Include="Repository\Implementation\ProjectReaderRepository.cs" />
+    <Compile Include="Repository\Implementation\SourceFileMapRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Templates\" />
     <Folder Include="Templates\PartialClasses\" />
     <Folder Include="Templates\DataModel\" />
     <Folder Include="Data\" />
+    <Folder Include="Repository\" />
+    <Folder Include="Repository\Implementation\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Templates\ViewTemplate.tt">
