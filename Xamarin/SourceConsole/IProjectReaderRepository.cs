@@ -13,5 +13,6 @@
         string GetViewControllerPath();
         string GetViewModelPath();
         string GetViewPath();
+        //bool InsertFileReferenceInProjectFile();
     }
 }

@@ -1,5 +1,4 @@
-﻿using System;
-namespace SourceConsole.Templates
+﻿namespace SourceConsole.Templates
 {
     partial class ViewTemplate : ITemplate
     {
@@ -8,6 +7,17 @@ namespace SourceConsole.Templates
         public ViewTemplate(TemplateDataModel dataModel)
         {
             _DataModel = dataModel;
+        }
+
+        public SourceEnum TemplateEnum()
+        {
+            return SourceEnum.View;
+        }
+
+        public string GetFileName()
+        {
+            var repo = new SourceFileMapRepository<ViewTemplate>();
+            return _DataModel.RepositoryName + repo.GetSourceExtension(this);
         }
     }
 }

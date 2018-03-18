@@ -81,6 +81,8 @@
     <Compile Include="IProjectReaderRepository.cs" />
     <Compile Include="ProjectReaderRepository.cs" />
     <Compile Include="ProjectModel.cs" />
+    <Compile Include="SourceFileMapRepository.cs" />
+    <Compile Include="ISourceFileMapRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Templates\" />

@@ -8,5 +8,16 @@
         {
             _DataModel = dataModel;
         }
+
+        public SourceEnum TemplateEnum()
+        {
+            return SourceEnum.RepositoryInterface;
+        }
+
+        public string GetFileName()
+        {
+            var repo = new SourceFileMapRepository<RepositoryInterfaceTemplate>();
+            return _DataModel.RepositoryInterfaceName + repo.GetSourceExtension(this);
+        }
     }
 }

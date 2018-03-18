@@ -1,5 +1,4 @@
-﻿using System;
-namespace SourceConsole.Templates
+﻿namespace SourceConsole.Templates
 {
     partial class ServiceInterfaceTemplate : ITemplate
     {
@@ -8,6 +7,17 @@ namespace SourceConsole.Templates
         public ServiceInterfaceTemplate(TemplateDataModel dataModel)
         {
             _DataModel = dataModel;
+        }
+
+        public SourceEnum TemplateEnum()
+        {
+            return SourceEnum.ServiceInterface;
+        }
+
+        public string GetFileName()
+        {
+            var repo = new SourceFileMapRepository<ServiceInterfaceTemplate>();
+            return _DataModel.RepositoryName + repo.GetSourceExtension(this);
         }
     }
 }

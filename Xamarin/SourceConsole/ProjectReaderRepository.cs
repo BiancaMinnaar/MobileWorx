@@ -1,5 +1,4 @@
-﻿using System;
-namespace SourceConsole
+﻿namespace SourceConsole
 {
     public class ProjectReaderRepository : IProjectReaderRepository
     {
