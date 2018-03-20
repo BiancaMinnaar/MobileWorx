@@ -85,6 +85,26 @@
     </Compile>
     <Compile Include="Templates\ITemplate.cs" />
     <Compile Include="Templates\TemplateEnum.cs" />
+    <Compile Include="Templates\ReturningServiceTemplates\PartialClasses\ViewControllerTemplatePartial.cs" />
+    <Compile Include="Templates\ReturningServiceTemplates\ViewControllerTemplate.cs">
+      <DependentUpon>ViewControllerTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\ReturningServiceTemplates\PartialClasses\RepositoryInterfaceTemplatePartial.cs" />
+    <Compile Include="Templates\ReturningServiceTemplates\PartialClasses\RepositoryTemplatePartial.cs" />
+    <Compile Include="Templates\ReturningServiceTemplates\RepositoryInterfaceTemplate.cs">
+      <DependentUpon>RepositoryInterfaceTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\ReturningServiceTemplates\RepositoryTemplate.cs">
+      <DependentUpon>RepositoryTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\ReturningServiceTemplates\ServiceInterfaceTemplate.cs">
+      <DependentUpon>ServiceInterfaceTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\ReturningServiceTemplates\ServiceTemplate.cs">
+      <DependentUpon>ServiceTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\ReturningServiceTemplates\PartialClasses\ServiceInterfaceTemplatePartial.cs" />
+    <Compile Include="Templates\ReturningServiceTemplates\PartialClasses\ServiceTemplatePartial.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Templates\" />
@@ -97,6 +117,7 @@
     <Folder Include="Templates\ReturningServiceTemplates\" />
     <Folder Include="Templates\NormalTemplates\" />
     <Folder Include="Templates\NormalTemplates\PartialClasses\" />
+    <Folder Include="Templates\ReturningServiceTemplates\PartialClasses\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Data\Project.Config" />
@@ -136,6 +157,26 @@
     <None Include="Templates\NormalTemplates\ViewTemplate.tt">
       <Generator>TextTemplatingFilePreprocessor</Generator>
       <LastGenOutput>ViewTemplate.cs</LastGenOutput>
+    </None>
+    <None Include="Templates\ReturningServiceTemplates\ViewControllerTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>ViewControllerTemplate.cs</LastGenOutput>
+    </None>
+    <None Include="Templates\ReturningServiceTemplates\RepositoryInterfaceTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>RepositoryInterfaceTemplate.cs</LastGenOutput>
+    </None>
+    <None Include="Templates\ReturningServiceTemplates\RepositoryTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>RepositoryTemplate.cs</LastGenOutput>
+    </None>
+    <None Include="Templates\ReturningServiceTemplates\ServiceInterfaceTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>ServiceInterfaceTemplate.cs</LastGenOutput>
+    </None>
+    <None Include="Templates\ReturningServiceTemplates\ServiceTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>ServiceTemplate.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>

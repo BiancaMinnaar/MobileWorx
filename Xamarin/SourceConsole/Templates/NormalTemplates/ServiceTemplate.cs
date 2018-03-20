@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SourceConsole.Templates {
+namespace SourceConsole.Templates.NormalTemplates {
     using System.Linq;
     using System.Text;
     using System.Collections.Generic;
@@ -94,7 +94,7 @@ namespace SourceConsole.Templates {
             #line hidden
             
             #line 17 ""
-            this.Write("<T> : BaseService<T>, ");
+            this.Write(" : BaseService, ");
             
             #line default
             #line hidden
@@ -106,44 +106,44 @@ namespace SourceConsole.Templates {
             #line hidden
             
             #line 17 ""
-            this.Write("<T>\n        where T : BaseViewModel\n    {\n        public ");
+            this.Write("\n    {\n        public ");
             
             #line default
             #line hidden
             
-            #line 20 ""
+            #line 19 ""
             this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.ServiceName ));
             
             #line default
             #line hidden
             
-            #line 20 ""
+            #line 19 ""
             this.Write("(Func<string, Dictionary<string, ParameterTypedValue>, BaseNetworkAccessEnum, Tas" +
-                    "k<T>> networkInterface)\n            :base(networkInterface)\n        {\n        }\n" +
-                    "\n        public async Task ");
+                    "k> networkInterface)\n            :base(networkInterface)\n        {\n        }\n\n  " +
+                    "      public async Task ");
             
             #line default
             #line hidden
             
-            #line 25 ""
+            #line 24 ""
             this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.EventName ));
             
             #line default
             #line hidden
             
-            #line 25 ""
+            #line 24 ""
             this.Write("(");
             
             #line default
             #line hidden
             
-            #line 25 ""
+            #line 24 ""
             this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.ViewModelName ));
             
             #line default
             #line hidden
             
-            #line 25 ""
+            #line 24 ""
             this.Write(@" model)
         {
             string requestURL = ""/path/{Parameter}"";

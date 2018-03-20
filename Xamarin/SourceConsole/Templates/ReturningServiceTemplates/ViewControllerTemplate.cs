@@ -8,20 +8,44 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SourceConsole.Templates.NormalTemplates {
+namespace SourceConsole.Templates.ReturningServiceTemplates {
     using System.Linq;
     using System.Text;
     using System.Collections.Generic;
     using System;
     
     
-    public partial class RepositoryInterfaceTemplate : RepositoryInterfaceTemplateBase {
+    public partial class ViewControllerTemplate : ViewControllerTemplateBase {
         
         public virtual string TransformText() {
             this.GenerationEnvironment = null;
             
             #line 6 ""
-            this.Write("using System;\nusing System.Threading.Tasks;\nusing CorePCL;\nusing ");
+            this.Write("using System.Threading.Tasks;\nusing ");
+            
+            #line default
+            #line hidden
+            
+            #line 7 ""
+            this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.ProjectName ));
+            
+            #line default
+            #line hidden
+            
+            #line 7 ""
+            this.Write(".Base;\nusing ");
+            
+            #line default
+            #line hidden
+            
+            #line 8 ""
+            this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.ProjectName ));
+            
+            #line default
+            #line hidden
+            
+            #line 8 ""
+            this.Write(".Implementation.Repository;\nusing ");
             
             #line default
             #line hidden
@@ -33,7 +57,19 @@ namespace SourceConsole.Templates.NormalTemplates {
             #line hidden
             
             #line 9 ""
-            this.Write(".Implementation.ViewModel;\n\nnamespace ");
+            this.Write(".Implementation.Service;\nusing ");
+            
+            #line default
+            #line hidden
+            
+            #line 10 ""
+            this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.ProjectName ));
+            
+            #line default
+            #line hidden
+            
+            #line 10 ""
+            this.Write(".Implementation.ViewModel;\nusing ");
             
             #line default
             #line hidden
@@ -45,43 +81,142 @@ namespace SourceConsole.Templates.NormalTemplates {
             #line hidden
             
             #line 11 ""
-            this.Write(".Interface.Repository\n{\n    public interface ");
+            this.Write(".Interface.Repository;\nusing ");
+            
+            #line default
+            #line hidden
+            
+            #line 12 ""
+            this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.ProjectName ));
+            
+            #line default
+            #line hidden
+            
+            #line 12 ""
+            this.Write(".Interface.Service;\nusing ");
             
             #line default
             #line hidden
             
             #line 13 ""
-            this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.RepositoryInterfaceName ));
+            this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.ProjectName ));
             
             #line default
             #line hidden
             
             #line 13 ""
-            this.Write("\n    {\n        Task ");
+            this.Write(".Interface.ViewController;\n\nnamespace ");
             
             #line default
             #line hidden
             
             #line 15 ""
-            this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.EventName ));
+            this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.ProjectName ));
             
             #line default
             #line hidden
             
             #line 15 ""
-            this.Write("(");
+            this.Write(".Implementation.ViewController\n{\n    public class ");
             
             #line default
             #line hidden
             
-            #line 15 ""
+            #line 17 ""
+            this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.ViewControllerName ));
+            
+            #line default
+            #line hidden
+            
+            #line 17 ""
+            this.Write(" : ProjectBaseViewController<");
+            
+            #line default
+            #line hidden
+            
+            #line 17 ""
             this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.ViewModelName ));
             
             #line default
             #line hidden
             
-            #line 15 ""
-            this.Write(" model, Action completeAction);\n    }\n}\n");
+            #line 17 ""
+            this.Write(">, I");
+            
+            #line default
+            #line hidden
+            
+            #line 17 ""
+            this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.ViewControllerName ));
+            
+            #line default
+            #line hidden
+            
+            #line 17 ""
+            this.Write("\n    {\n        I");
+            
+            #line default
+            #line hidden
+            
+            #line 19 ""
+            this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.EventName ));
+            
+            #line default
+            #line hidden
+            
+            #line 19 ""
+            this.Write("Repository _Reposetory;\n        I");
+            
+            #line default
+            #line hidden
+            
+            #line 20 ""
+            this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.EventName ));
+            
+            #line default
+            #line hidden
+            
+            #line 20 ""
+            this.Write("Service _Service;\n\n        public override void SetRepositories()\n        {\n     " +
+                    "       _Service = new ");
+            
+            #line default
+            #line hidden
+            
+            #line 24 ""
+            this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.EventName ));
+            
+            #line default
+            #line hidden
+            
+            #line 24 ""
+            this.Write("Service((U, P, C, A) => \n                                                        " +
+                    "   ExecuteQueryWithReturnTypeAndNetworkAccessAsync<LoginResponseUser>(U, P, C, A" +
+                    "));\n            _Reposetory = new ");
+            
+            #line default
+            #line hidden
+            
+            #line 26 ""
+            this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.EventName ));
+            
+            #line default
+            #line hidden
+            
+            #line 26 ""
+            this.Write("Repository(_MasterRepo, _Service);\n        }\n\n        public async Task ");
+            
+            #line default
+            #line hidden
+            
+            #line 29 ""
+            this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.EventName ));
+            
+            #line default
+            #line hidden
+            
+            #line 29 ""
+            this.Write("()\n        {\n            \n        }\n    }\n}");
             
             #line default
             #line hidden
@@ -92,7 +227,7 @@ namespace SourceConsole.Templates.NormalTemplates {
         }
     }
     
-    public class RepositoryInterfaceTemplateBase {
+    public class ViewControllerTemplateBase {
         
         private global::System.Text.StringBuilder builder;
         

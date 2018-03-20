@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SourceConsole.Templates {
+namespace SourceConsole.Templates.NormalTemplates {
     using System.Linq;
     using System.Text;
     using System.Collections.Generic;

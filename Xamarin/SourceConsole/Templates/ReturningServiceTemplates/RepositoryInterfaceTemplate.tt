@@ -10,8 +10,9 @@ using <#= _DataModel.ProjectName #>.Implementation.ViewModel;
 
 namespace <#= _DataModel.ProjectName #>.Interface.Repository
 {
-    public interface <#= _DataModel.RepositoryInterfaceName #>
+    public interface <#= _DataModel.RepositoryInterfaceName #><T>
+        where T : BaseViewModel
     {
-        Task <#= _DataModel.EventName #>(<#= _DataModel.ViewModelName #> model, Action completeAction);
+        Task <#= _DataModel.EventName #>(<#= _DataModel.ViewModelName #> model, Action<T> completeAction);
     }
 }

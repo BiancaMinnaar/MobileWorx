@@ -8,14 +8,14 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SourceConsole.Templates.NormalTemplates {
+namespace SourceConsole.Templates.ReturningServiceTemplates {
     using System.Linq;
     using System.Text;
     using System.Collections.Generic;
     using System;
     
     
-    public partial class RepositoryInterfaceTemplate : RepositoryInterfaceTemplateBase {
+    public partial class RepositoryTemplate : RepositoryTemplateBase {
         
         public virtual string TransformText() {
             this.GenerationEnvironment = null;
@@ -33,7 +33,19 @@ namespace SourceConsole.Templates.NormalTemplates {
             #line hidden
             
             #line 9 ""
-            this.Write(".Implementation.ViewModel;\n\nnamespace ");
+            this.Write(".Base;\nusing ");
+            
+            #line default
+            #line hidden
+            
+            #line 10 ""
+            this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.ProjectName ));
+            
+            #line default
+            #line hidden
+            
+            #line 10 ""
+            this.Write(".Implementation.ViewModel;\nusing ");
             
             #line default
             #line hidden
@@ -45,43 +57,129 @@ namespace SourceConsole.Templates.NormalTemplates {
             #line hidden
             
             #line 11 ""
-            this.Write(".Interface.Repository\n{\n    public interface ");
+            this.Write(".Interface.Repository;\nusing ");
             
             #line default
             #line hidden
             
-            #line 13 ""
+            #line 12 ""
+            this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.ProjectName ));
+            
+            #line default
+            #line hidden
+            
+            #line 12 ""
+            this.Write(".Interface.Service;\n\nnamespace ");
+            
+            #line default
+            #line hidden
+            
+            #line 14 ""
+            this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.ProjectName ));
+            
+            #line default
+            #line hidden
+            
+            #line 14 ""
+            this.Write(".Implementation.Repository\n{\n    public class ");
+            
+            #line default
+            #line hidden
+            
+            #line 16 ""
+            this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.RepositoryName ));
+            
+            #line default
+            #line hidden
+            
+            #line 16 ""
+            this.Write("<T> : ProjectBaseRepository, ");
+            
+            #line default
+            #line hidden
+            
+            #line 16 ""
             this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.RepositoryInterfaceName ));
             
             #line default
             #line hidden
             
-            #line 13 ""
-            this.Write("\n    {\n        Task ");
+            #line 16 ""
+            this.Write("<T>\n        where T : BaseViewModel\n    {\n        ");
             
             #line default
             #line hidden
             
-            #line 15 ""
+            #line 19 ""
+            this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.ServiceInterfaceName ));
+            
+            #line default
+            #line hidden
+            
+            #line 19 ""
+            this.Write(" _Service;\n\n        public ");
+            
+            #line default
+            #line hidden
+            
+            #line 21 ""
+            this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.RepositoryName ));
+            
+            #line default
+            #line hidden
+            
+            #line 21 ""
+            this.Write("(IMasterRepository masterRepository, ");
+            
+            #line default
+            #line hidden
+            
+            #line 21 ""
+            this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.ServiceInterfaceName ));
+            
+            #line default
+            #line hidden
+            
+            #line 21 ""
+            this.Write("<T> service)\n            : base(masterRepository)\n        {\n            _Service " +
+                    "= service;\n        }\n\n        public async Task ");
+            
+            #line default
+            #line hidden
+            
+            #line 27 ""
             this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.EventName ));
             
             #line default
             #line hidden
             
-            #line 15 ""
+            #line 27 ""
             this.Write("(");
             
             #line default
             #line hidden
             
-            #line 15 ""
+            #line 27 ""
             this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.ViewModelName ));
             
             #line default
             #line hidden
             
-            #line 15 ""
-            this.Write(" model, Action completeAction);\n    }\n}\n");
+            #line 27 ""
+            this.Write(" model, Action<T> completeAction)\n        {\n            var serviceReturnModel = " +
+                    "await _Service.");
+            
+            #line default
+            #line hidden
+            
+            #line 29 ""
+            this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.EventName ));
+            
+            #line default
+            #line hidden
+            
+            #line 29 ""
+            this.Write("(model);\n            completeAction(serviceReturnModel);\n        }\n    }\n}");
             
             #line default
             #line hidden
@@ -92,7 +190,7 @@ namespace SourceConsole.Templates.NormalTemplates {
         }
     }
     
-    public class RepositoryInterfaceTemplateBase {
+    public class RepositoryTemplateBase {
         
         private global::System.Text.StringBuilder builder;
         

@@ -1,0 +1,34 @@
+﻿<#@ template language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+using System.Threading.Tasks;
+using <#= _DataModel.ProjectName #>.Base;
+using <#= _DataModel.ProjectName #>.Implementation.Repository;
+using <#= _DataModel.ProjectName #>.Implementation.Service;
+using <#= _DataModel.ProjectName #>.Implementation.ViewModel;
+using <#= _DataModel.ProjectName #>.Interface.Repository;
+using <#= _DataModel.ProjectName #>.Interface.Service;
+using <#= _DataModel.ProjectName #>.Interface.ViewController;
+
+namespace <#= _DataModel.ProjectName #>.Implementation.ViewController
+{
+    public class <#= _DataModel.ViewControllerName #> : ProjectBaseViewController<<#= _DataModel.ViewModelName #>>, I<#= _DataModel.ViewControllerName #>
+    {
+        I<#= _DataModel.EventName #>Repository _Reposetory;
+        I<#= _DataModel.EventName #>Service _Service;
+
+        public override void SetRepositories()
+        {
+            _Service = new <#= _DataModel.EventName #>Service((U, P, C, A) => 
+                                                           ExecuteQueryWithReturnTypeAndNetworkAccessAsync<LoginResponseUser>(U, P, C, A));
+            _Reposetory = new <#= _DataModel.EventName #>Repository(_MasterRepo, _Service);
+        }
+
+        public async Task <#= _DataModel.EventName #>()
+        {
+            
+        }
+    }
+}

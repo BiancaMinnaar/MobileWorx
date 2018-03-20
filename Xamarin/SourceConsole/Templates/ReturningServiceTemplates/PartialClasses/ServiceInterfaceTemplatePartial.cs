@@ -1,4 +1,4 @@
-﻿namespace SourceConsole.Templates.NormalTemplates
+﻿namespace SourceConsole.Templates.ReturningServiceTemplates
 {
     partial class ServiceInterfaceTemplate : ITemplate
     {

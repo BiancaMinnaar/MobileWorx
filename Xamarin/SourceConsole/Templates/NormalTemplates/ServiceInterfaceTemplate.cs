@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SourceConsole.Templates {
+namespace SourceConsole.Templates.NormalTemplates {
     using System.Linq;
     using System.Text;
     using System.Collections.Generic;
@@ -57,30 +57,30 @@ namespace SourceConsole.Templates {
             #line hidden
             
             #line 11 ""
-            this.Write("<T>\n        where T : BaseViewModel\n    {\n        Task<T> ");
+            this.Write("\n    {\n        Task ");
             
             #line default
             #line hidden
             
-            #line 14 ""
+            #line 13 ""
             this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.EventName ));
             
             #line default
             #line hidden
             
-            #line 14 ""
+            #line 13 ""
             this.Write("(");
             
             #line default
             #line hidden
             
-            #line 14 ""
+            #line 13 ""
             this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.ViewModelName ));
             
             #line default
             #line hidden
             
-            #line 14 ""
+            #line 13 ""
             this.Write(" model);\n    }\n}\n\n");
             
             #line default

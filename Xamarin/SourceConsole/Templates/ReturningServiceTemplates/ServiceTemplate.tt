@@ -14,9 +14,10 @@ using <#= _DataModel.ProjectName #>.ViewModel;
 
 namespace <#= _DataModel.ProjectName #>.Implementation.Service
 {
-    public class <#= _DataModel.ServiceName #> : BaseService, <#= _DataModel.ServiceInterfaceName #>
+    public class <#= _DataModel.ServiceName #><T> : BaseService<T>, <#= _DataModel.ServiceInterfaceName #><T>
+        where T : BaseViewModel
     {
-        public <#= _DataModel.ServiceName #>(Func<string, Dictionary<string, ParameterTypedValue>, BaseNetworkAccessEnum, Task> networkInterface)
+        public <#= _DataModel.ServiceName #>(Func<string, Dictionary<string, ParameterTypedValue>, BaseNetworkAccessEnum, Task<T>> networkInterface)
             :base(networkInterface)
         {
         }

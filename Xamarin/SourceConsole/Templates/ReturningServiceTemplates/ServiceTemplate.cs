@@ -8,32 +8,33 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SourceConsole.Templates.NormalTemplates {
+namespace SourceConsole.Templates.ReturningServiceTemplates {
     using System.Linq;
     using System.Text;
     using System.Collections.Generic;
     using System;
     
     
-    public partial class RepositoryInterfaceTemplate : RepositoryInterfaceTemplateBase {
+    public partial class ServiceTemplate : ServiceTemplateBase {
         
         public virtual string TransformText() {
             this.GenerationEnvironment = null;
             
             #line 6 ""
-            this.Write("using System;\nusing System.Threading.Tasks;\nusing CorePCL;\nusing ");
+            this.Write("using System;\nusing System.Collections.Generic;\nusing System.Threading.Tasks;\nusi" +
+                    "ng CorePCL;\nusing ");
             
             #line default
             #line hidden
             
-            #line 9 ""
+            #line 10 ""
             this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.ProjectName ));
             
             #line default
             #line hidden
             
-            #line 9 ""
-            this.Write(".Implementation.ViewModel;\n\nnamespace ");
+            #line 10 ""
+            this.Write(".Base;\nusing ");
             
             #line default
             #line hidden
@@ -45,43 +46,117 @@ namespace SourceConsole.Templates.NormalTemplates {
             #line hidden
             
             #line 11 ""
-            this.Write(".Interface.Repository\n{\n    public interface ");
+            this.Write(".Implementation.ViewModel;\nusing ");
+            
+            #line default
+            #line hidden
+            
+            #line 12 ""
+            this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.ProjectName ));
+            
+            #line default
+            #line hidden
+            
+            #line 12 ""
+            this.Write(".Interface.Service;\nusing ");
             
             #line default
             #line hidden
             
             #line 13 ""
-            this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.RepositoryInterfaceName ));
+            this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.ProjectName ));
             
             #line default
             #line hidden
             
             #line 13 ""
-            this.Write("\n    {\n        Task ");
+            this.Write(".ViewModel;\n\nnamespace ");
             
             #line default
             #line hidden
             
             #line 15 ""
+            this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.ProjectName ));
+            
+            #line default
+            #line hidden
+            
+            #line 15 ""
+            this.Write(".Implementation.Service\n{\n    public class ");
+            
+            #line default
+            #line hidden
+            
+            #line 17 ""
+            this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.ServiceName ));
+            
+            #line default
+            #line hidden
+            
+            #line 17 ""
+            this.Write("<T> : BaseService<T>, ");
+            
+            #line default
+            #line hidden
+            
+            #line 17 ""
+            this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.ServiceInterfaceName ));
+            
+            #line default
+            #line hidden
+            
+            #line 17 ""
+            this.Write("<T>\n        where T : BaseViewModel\n    {\n        public ");
+            
+            #line default
+            #line hidden
+            
+            #line 20 ""
+            this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.ServiceName ));
+            
+            #line default
+            #line hidden
+            
+            #line 20 ""
+            this.Write("(Func<string, Dictionary<string, ParameterTypedValue>, BaseNetworkAccessEnum, Tas" +
+                    "k<T>> networkInterface)\n            :base(networkInterface)\n        {\n        }\n" +
+                    "\n        public async Task ");
+            
+            #line default
+            #line hidden
+            
+            #line 25 ""
             this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.EventName ));
             
             #line default
             #line hidden
             
-            #line 15 ""
+            #line 25 ""
             this.Write("(");
             
             #line default
             #line hidden
             
-            #line 15 ""
+            #line 25 ""
             this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.ViewModelName ));
             
             #line default
             #line hidden
             
-            #line 15 ""
-            this.Write(" model, Action completeAction);\n    }\n}\n");
+            #line 25 ""
+            this.Write(@" model)
+        {
+            string requestURL = ""/path/{Parameter}"";
+            var httpMethod = BaseNetworkAccessEnum.Get;
+            var parameters = new Dictionary<string, ParameterTypedValue>()
+            {
+                //{""Parameter"", model.Property},
+            };
+            await _NetworkInterface(requestURL, parameters, httpMethod);
+        }
+    }
+}
+");
             
             #line default
             #line hidden
@@ -92,7 +167,7 @@ namespace SourceConsole.Templates.NormalTemplates {
         }
     }
     
-    public class RepositoryInterfaceTemplateBase {
+    public class ServiceTemplateBase {
         
         private global::System.Text.StringBuilder builder;
         

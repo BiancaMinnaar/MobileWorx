@@ -8,80 +8,80 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SourceConsole.Templates.NormalTemplates {
+namespace SourceConsole.Templates.ReturningServiceTemplates {
     using System.Linq;
     using System.Text;
     using System.Collections.Generic;
     using System;
     
     
-    public partial class RepositoryInterfaceTemplate : RepositoryInterfaceTemplateBase {
+    public partial class ServiceInterfaceTemplate : ServiceInterfaceTemplateBase {
         
         public virtual string TransformText() {
             this.GenerationEnvironment = null;
             
             #line 6 ""
-            this.Write("using System;\nusing System.Threading.Tasks;\nusing CorePCL;\nusing ");
+            this.Write("using System.Threading.Tasks;\nusing ");
             
             #line default
             #line hidden
             
-            #line 9 ""
+            #line 7 ""
             this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.ProjectName ));
             
             #line default
             #line hidden
             
-            #line 9 ""
+            #line 7 ""
             this.Write(".Implementation.ViewModel;\n\nnamespace ");
             
             #line default
             #line hidden
             
-            #line 11 ""
+            #line 9 ""
             this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.ProjectName ));
             
             #line default
             #line hidden
             
+            #line 9 ""
+            this.Write(".Interface.Service\n{\n    public interface ");
+            
+            #line default
+            #line hidden
+            
             #line 11 ""
-            this.Write(".Interface.Repository\n{\n    public interface ");
+            this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.ServiceInterfaceName ));
             
             #line default
             #line hidden
             
-            #line 13 ""
-            this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.RepositoryInterfaceName ));
+            #line 11 ""
+            this.Write("<T>\n        where T : BaseViewModel\n    {\n        Task<T> ");
             
             #line default
             #line hidden
             
-            #line 13 ""
-            this.Write("\n    {\n        Task ");
-            
-            #line default
-            #line hidden
-            
-            #line 15 ""
+            #line 14 ""
             this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.EventName ));
             
             #line default
             #line hidden
             
-            #line 15 ""
+            #line 14 ""
             this.Write("(");
             
             #line default
             #line hidden
             
-            #line 15 ""
+            #line 14 ""
             this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.ViewModelName ));
             
             #line default
             #line hidden
             
-            #line 15 ""
-            this.Write(" model, Action completeAction);\n    }\n}\n");
+            #line 14 ""
+            this.Write(" model);\n    }\n}\n\n");
             
             #line default
             #line hidden
@@ -92,7 +92,7 @@ namespace SourceConsole.Templates.NormalTemplates {
         }
     }
     
-    public class RepositoryInterfaceTemplateBase {
+    public class ServiceInterfaceTemplateBase {
         
         private global::System.Text.StringBuilder builder;
         

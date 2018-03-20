@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SourceConsole.Templates {
+namespace SourceConsole.Templates.NormalTemplates {
     using System.Linq;
     using System.Text;
     using System.Collections.Generic;
@@ -93,7 +93,7 @@ namespace SourceConsole.Templates {
             #line hidden
             
             #line 16 ""
-            this.Write("<T> : ProjectBaseRepository, ");
+            this.Write(" : ProjectBaseRepository, ");
             
             #line default
             #line hidden
@@ -105,80 +105,80 @@ namespace SourceConsole.Templates {
             #line hidden
             
             #line 16 ""
-            this.Write("<T>\n        where T : BaseViewModel\n    {\n        ");
+            this.Write("\n    {\n        ");
             
             #line default
             #line hidden
             
-            #line 19 ""
+            #line 18 ""
             this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.ServiceInterfaceName ));
             
             #line default
             #line hidden
             
-            #line 19 ""
+            #line 18 ""
             this.Write(" _Service;\n\n        public ");
             
             #line default
             #line hidden
             
-            #line 21 ""
+            #line 20 ""
             this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.RepositoryName ));
             
             #line default
             #line hidden
             
-            #line 21 ""
+            #line 20 ""
             this.Write("(IMasterRepository masterRepository, ");
             
             #line default
             #line hidden
             
-            #line 21 ""
+            #line 20 ""
             this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.ServiceInterfaceName ));
             
             #line default
             #line hidden
             
-            #line 21 ""
-            this.Write("<T> service)\n            : base(masterRepository)\n        {\n            _Service " +
-                    "= service;\n        }\n\n        public async Task ");
+            #line 20 ""
+            this.Write(" service)\n            : base(masterRepository)\n        {\n            _Service = s" +
+                    "ervice;\n        }\n\n        public async Task ");
             
             #line default
             #line hidden
             
-            #line 27 ""
+            #line 26 ""
             this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.EventName ));
             
             #line default
             #line hidden
             
-            #line 27 ""
+            #line 26 ""
             this.Write("(");
             
             #line default
             #line hidden
             
-            #line 27 ""
+            #line 26 ""
             this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.ViewModelName ));
             
             #line default
             #line hidden
             
-            #line 27 ""
-            this.Write(" model, Action<T> completeAction)\n        {\n            var serviceReturnModel = " +
-                    "await _Service.");
+            #line 26 ""
+            this.Write(" model, Action completeAction)\n        {\n            var serviceReturnModel = awa" +
+                    "it _Service.");
             
             #line default
             #line hidden
             
-            #line 29 ""
+            #line 28 ""
             this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.EventName ));
             
             #line default
             #line hidden
             
-            #line 29 ""
+            #line 28 ""
             this.Write("(model);\n            completeAction(serviceReturnModel);\n        }\n    }\n}");
             
             #line default

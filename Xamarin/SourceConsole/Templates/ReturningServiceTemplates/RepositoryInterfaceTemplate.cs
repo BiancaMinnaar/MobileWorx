@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SourceConsole.Templates.NormalTemplates {
+namespace SourceConsole.Templates.ReturningServiceTemplates {
     using System.Linq;
     using System.Text;
     using System.Collections.Generic;
@@ -57,31 +57,31 @@ namespace SourceConsole.Templates.NormalTemplates {
             #line hidden
             
             #line 13 ""
-            this.Write("\n    {\n        Task ");
+            this.Write("<T>\n        where T : BaseViewModel\n    {\n        Task ");
             
             #line default
             #line hidden
             
-            #line 15 ""
+            #line 16 ""
             this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.EventName ));
             
             #line default
             #line hidden
             
-            #line 15 ""
+            #line 16 ""
             this.Write("(");
             
             #line default
             #line hidden
             
-            #line 15 ""
+            #line 16 ""
             this.Write(this.ToStringHelper.ToStringWithCulture( _DataModel.ViewModelName ));
             
             #line default
             #line hidden
             
-            #line 15 ""
-            this.Write(" model, Action completeAction);\n    }\n}\n");
+            #line 16 ""
+            this.Write(" model, Action<T> completeAction);\n    }\n}\n");
             
             #line default
             #line hidden

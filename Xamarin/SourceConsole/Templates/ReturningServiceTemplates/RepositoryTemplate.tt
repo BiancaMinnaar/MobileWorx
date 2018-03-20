@@ -13,17 +13,18 @@ using <#= _DataModel.ProjectName #>.Interface.Service;
 
 namespace <#= _DataModel.ProjectName #>.Implementation.Repository
 {
-    public class <#= _DataModel.RepositoryName #> : ProjectBaseRepository, <#= _DataModel.RepositoryInterfaceName #>
+    public class <#= _DataModel.RepositoryName #><T> : ProjectBaseRepository, <#= _DataModel.RepositoryInterfaceName #><T>
+        where T : BaseViewModel
     {
         <#= _DataModel.ServiceInterfaceName #> _Service;
 
-        public <#= _DataModel.RepositoryName #>(IMasterRepository masterRepository, <#= _DataModel.ServiceInterfaceName #> service)
+        public <#= _DataModel.RepositoryName #>(IMasterRepository masterRepository, <#= _DataModel.ServiceInterfaceName #><T> service)
             : base(masterRepository)
         {
             _Service = service;
         }
 
-        public async Task <#= _DataModel.EventName #>(<#= _DataModel.ViewModelName #> model, Action completeAction)
+        public async Task <#= _DataModel.EventName #>(<#= _DataModel.ViewModelName #> model, Action<T> completeAction)
         {
             var serviceReturnModel = await _Service.<#= _DataModel.EventName #>(model);
             completeAction(serviceReturnModel);
