@@ -92,5 +92,26 @@ namespace SourceConsole
 
             return false;
         }
+
+        public bool InsertXamlFileReferenceInProjectFile(string classPath, string codeBehindFileName)
+        {
+            var namespaceURI = "http://schemas.microsoft.com/developer/msbuild/2003";
+            XmlNamespaceManager xnManager =
+                new XmlNamespaceManager(_ProjectFile.NameTable);
+            xnManager.AddNamespace("tu", namespaceURI);
+            XmlNode xnRoot = _ProjectFile.DocumentElement;
+            var allGroups = xnRoot.SelectNodes("//tu:ItemGroup", xnManager);
+            var mainGroupNode = allGroups[0];
+            var embededGroupNodel = allGroups[1];
+            var viewElement = _ProjectFile.CreateElement("Compile", namespaceURI);
+            viewElement.SetAttribute("Include", classPath);
+            var xamlElement = _ProjectFile.CreateElement("DependentUpon", namespaceURI);
+            xamlElement.InnerText = codeBehindFileName;
+            viewElement.AppendChild(xamlElement);
+            mainGroupNode.AppendChild(viewElement);
+            _ProjectFile.Save(_Model.ProjectFileLocation);
+
+            return false;
+        }
     }
 }

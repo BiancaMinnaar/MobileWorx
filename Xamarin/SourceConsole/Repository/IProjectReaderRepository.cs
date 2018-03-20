@@ -16,5 +16,6 @@ namespace SourceConsole
         string GetViewModelPath();
         string GetViewPath();
         bool InsertFileReferenceInProjectFile(string classPath);
+        bool InsertXamlFileReferenceInProjectFile(string classPath, string codeBehindFileName);
     }
 }

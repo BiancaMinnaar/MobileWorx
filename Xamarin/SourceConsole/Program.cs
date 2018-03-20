@@ -17,9 +17,9 @@ namespace SourceConsole
             repo.WriteTemplateToFile(new ViewModelTemplate(screenData));
             readerRepo.InsertFileReferenceInProjectFile(screenData._ViewModel.FullProjectFileName);
             repo.WriteTemplateToFile(new ViewTemplate(screenData));
-            //readerRepo.InsertFileReferenceInProjectFile(screenData._View.FullProjectFileName);
             repo.WriteTemplateToFile(new ViewCodeBehindTemplate(screenData));
-            readerRepo.InsertFileReferenceInProjectFile(screenData._ViewCodeBehind.FullProjectFileName);
+
+            readerRepo.InsertXamlFileReferenceInProjectFile(screenData._ViewCodeBehind.FullProjectFileName, screenData._View.FileName);
             repo.WriteTemplateToFile(new ViewControllerInterfaceTemplate(screenData));
             readerRepo.InsertFileReferenceInProjectFile(screenData._ViewControllerInterface.FullProjectFileName);
             repo.WriteTemplateToFile(new ViewControllerTemplate(screenData));
