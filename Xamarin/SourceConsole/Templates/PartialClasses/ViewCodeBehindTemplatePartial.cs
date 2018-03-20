@@ -8,7 +8,7 @@
 
         public string FullProjectFileName => _DataModel._ViewCodeBehind.FileName;
 
-        public PartialClasses.TemplateEnum TemplateType => PartialClasses.TemplateEnum.Xaml;
+        public PartialClasses.TemplateEnum TemplateType => PartialClasses.TemplateEnum.Normal;
 
         public ViewCodeBehindTemplate(TemplateDataModel dataModel)
         {

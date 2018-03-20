@@ -44,7 +44,7 @@ namespace SourceConsole
             }
             else
             {
-                _ProjectReader.InsertXamlFileReferenceInProjectFile(template.FullProjectFileName, template.GetFileName());
+                _ProjectReader.InsertXamlFileReferenceInProjectFile(template.FullProjectFileName, template.GetFileName().Split('.')[0] + ".cs");
                 _ProjectReader.InsertXamlEmbededResourceInProjectFile(template.FullProjectFileName);
             }
 
