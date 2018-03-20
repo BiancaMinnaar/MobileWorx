@@ -17,6 +17,7 @@ namespace SourceConsole.Templates
             get { return _View.CodeName; }
             set { _View = new FileModel() { CodeName = value }; }
         }
+        public FileModel _ViewCodeBehind { get; set; }
         public string ViewCodeBehindName
         {
             get { return _View.CodeName; }

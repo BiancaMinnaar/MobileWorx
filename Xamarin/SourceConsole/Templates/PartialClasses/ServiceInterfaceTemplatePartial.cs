@@ -4,6 +4,8 @@
     {
         TemplateDataModel _DataModel;
 
+        public TemplateDataModel GetDataModel => _DataModel;
+
         public ServiceInterfaceTemplate(TemplateDataModel dataModel)
         {
             _DataModel = dataModel;
@@ -17,7 +19,12 @@
         public string GetFileName()
         {
             var repo = new SourceFileMapRepository<ServiceInterfaceTemplate>();
-            return _DataModel.ServiceInterfaceName + "." + repo.GetSourceExtension(this);
+            _DataModel._ServiceInterface = new DataModel.FileModel()
+            {
+                CodeName = _DataModel.RepositoryInterfaceName,
+                Extension = repo.GetSourceExtension(this)
+            };
+            return _DataModel._ServiceInterface.FileName;
         }
     }
 }

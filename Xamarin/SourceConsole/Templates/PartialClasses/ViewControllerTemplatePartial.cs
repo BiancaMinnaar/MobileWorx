@@ -4,6 +4,8 @@
     {
         TemplateDataModel _DataModel;
 
+        public TemplateDataModel GetDataModel => _DataModel;
+
         public ViewControllerTemplate(TemplateDataModel dataModel)
         {
             _DataModel = dataModel;
@@ -17,7 +19,12 @@
         public string GetFileName()
         {
             var repo = new SourceFileMapRepository<ViewControllerTemplate>();
-            return _DataModel.ViewControllerName + "." + repo.GetSourceExtension(this);
+            _DataModel._ViewController = new DataModel.FileModel()
+            {
+                CodeName = _DataModel.RepositoryInterfaceName,
+                Extension = repo.GetSourceExtension(this)
+            };
+            return _DataModel._ViewController.FileName;
         }
     }
 }

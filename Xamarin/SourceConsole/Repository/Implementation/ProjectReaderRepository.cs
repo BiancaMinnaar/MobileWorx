@@ -86,7 +86,7 @@ namespace SourceConsole
             var mainGroupNode = allGroups[0];
             var embededGroupNodel = allGroups[1];
             var viewElement = _ProjectFile.CreateElement("Compile", namespaceURI);
-            viewElement.SetAttribute("Include", model._View.FullFileName);
+            viewElement.SetAttribute("Include", model._View.Extension);
             mainGroupNode.AppendChild(viewElement);
             _ProjectFile.Save(_Model.ProjectFileLocation);
 

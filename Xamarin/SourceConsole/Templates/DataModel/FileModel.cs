@@ -2,7 +2,8 @@
 {
     public class FileModel
     {
-        public string FullFileName { get; set; }
-        public string CodeName { get; set; }
+		public string CodeName { get; set; }
+        public string Extension { get; set; }
+        public string FileName { get { return CodeName + '.' + Extension; }}
     }
 }

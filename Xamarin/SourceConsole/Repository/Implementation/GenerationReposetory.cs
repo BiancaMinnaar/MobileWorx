@@ -7,6 +7,7 @@ namespace SourceConsole
     {
         IFileService _FileService;
         IProjectReaderRepository _ProjectReader;
+        TemplateDataModel _Model;
 
         public GenerationReposetory(IProjectReaderRepository projectReader, IFileService fileService)
         {
@@ -16,12 +17,14 @@ namespace SourceConsole
 
         public TemplateDataModel GetDataModel(string screenName, string projectName)
         {
-            return new TemplateDataModel(screenName, projectName);
+            _Model = new TemplateDataModel(screenName, projectName);
+            return _Model;
         }
 
         public TemplateDataModel GetDataModel(Func<string> screenName)
         {
-            return new TemplateDataModel(screenName(), _ProjectReader.GetProjectName());
+            _Model = new TemplateDataModel(screenName(), _ProjectReader.GetProjectName());
+            return _Model;
         }
 
         public bool WriteTemplateToFile(string fullFilePath, string templateOutput)
