@@ -75,7 +75,7 @@ namespace SourceConsole
             return _Model.ViewPath;
         }
 
-        public bool InsertFileReferenceInProjectFile(TemplateDataModel model)
+        public bool InsertFileReferenceInProjectFile(string classPath)
         {
             var namespaceURI = "http://schemas.microsoft.com/developer/msbuild/2003";
             XmlNamespaceManager xnManager =
@@ -86,7 +86,7 @@ namespace SourceConsole
             var mainGroupNode = allGroups[0];
             var embededGroupNodel = allGroups[1];
             var viewElement = _ProjectFile.CreateElement("Compile", namespaceURI);
-            viewElement.SetAttribute("Include", model._View.FullProjectFileName);
+            viewElement.SetAttribute("Include", classPath);
             mainGroupNode.AppendChild(viewElement);
             _ProjectFile.Save(_Model.ProjectFileLocation);
 

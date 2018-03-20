@@ -15,6 +15,6 @@ namespace SourceConsole
         string GetViewControllerPath();
         string GetViewModelPath();
         string GetViewPath();
-        bool InsertFileReferenceInProjectFile(TemplateDataModel model);
+        bool InsertFileReferenceInProjectFile(string classPath);
     }
 }
