@@ -45,6 +45,7 @@
     <Compile Include="DataContracts\Interface\INetworkInteraction.cs" />
     <Compile Include="Networking\RequestAdditionType.cs" />
     <Compile Include="DataContracts\BaseService.cs" />
+    <Compile Include="DataContracts\CheckAndBalance.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

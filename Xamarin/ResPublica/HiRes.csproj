@@ -35,7 +35,6 @@
     <Compile Include="Repository\IMasterRepository.cs" />
     <Compile Include="Repository\Implementation\MasterRepository.cs" />
     <Compile Include="ViewModel\MasterModel.cs" />
-    <Compile Include="Base\CheckAndBalance.cs" />
     <Compile Include="Base\ProjectBaseContentPage.cs" />
     <Compile Include="Base\ProjectBaseContentScrollView.cs" />
     <Compile Include="Base\ProjectBaseContentView.cs" />
@@ -43,7 +42,6 @@
     <Compile Include="Base\ProjectBaseStackContentView.cs" />
     <Compile Include="Base\ProjectBaseViewController.cs" />
     <Compile Include="Base\ProjectBaseViewModel.cs" />
-    <Compile Include="Base\SVGBindingProperty.cs" />
     <Compile Include="Repository\ILoginRepository.cs" />
     <Compile Include="Repository\Implementation\LoginRepository.cs" />
     <Compile Include="Service\ILoginService.cs" />
@@ -115,6 +113,7 @@
     <Compile Include="ViewModel\ReturnModel\LoginResponseUser.cs" />
     <Compile Include="ViewModel\ReturnModel\RegisterResponse.cs" />
     <Compile Include="ViewModel\ReturnModel\WelcomeResponse.cs" />
+    <Compile Include="Base\SVGBindingProperty.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="App.xaml" />

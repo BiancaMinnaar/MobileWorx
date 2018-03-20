@@ -1,5 +1,5 @@
 ﻿using System;
-namespace HiRes.Base
+namespace CorePCL
 {
 	public class BrokenRule
 	{
