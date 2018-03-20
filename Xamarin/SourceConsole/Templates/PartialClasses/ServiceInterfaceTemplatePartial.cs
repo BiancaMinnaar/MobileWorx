@@ -21,7 +21,7 @@
             var repo = new SourceFileMapRepository<ServiceInterfaceTemplate>();
             _DataModel._ServiceInterface = new DataModel.FileModel()
             {
-                CodeName = _DataModel.RepositoryInterfaceName,
+                CodeName = _DataModel.ServiceInterfaceName,
                 Extension = repo.GetSourceExtension(this),
                 ProjectFilePath = repo.GetSourcePath(this)
             };

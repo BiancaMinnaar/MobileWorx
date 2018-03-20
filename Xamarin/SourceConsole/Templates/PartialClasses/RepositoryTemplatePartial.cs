@@ -21,7 +21,7 @@
             var repo = new SourceFileMapRepository<RepositoryTemplate>();
             _DataModel._Repository = new DataModel.FileModel()
             {
-                CodeName = _DataModel.RepositoryInterfaceName,
+                CodeName = _DataModel.RepositoryName,
                 Extension = repo.GetSourceExtension(this),
                 ProjectFilePath = repo.GetSourcePath(this)
             };

@@ -11,7 +11,10 @@
             get 
             { 
                 var cleanPath = ProjectFilePath.Replace('/', '\\').Split(new string[] {"..\\"}, System.StringSplitOptions.None);
-                return cleanPath[cleanPath.Length-1] + FileName; 
+                var projectIncluded = cleanPath[cleanPath.Length - 1];
+                var firstSlash = projectIncluded.IndexOf('\\');
+                var projectExcluded = cleanPath[cleanPath.Length-1].Substring(firstSlash +1);
+                return projectExcluded + FileName; 
             }
         }
     }
