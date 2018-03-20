@@ -20,6 +20,7 @@ namespace SourceConsole
             repo.WriteTemplateToFile(new ViewCodeBehindTemplate(screenData));
 
             readerRepo.InsertXamlFileReferenceInProjectFile(screenData._ViewCodeBehind.FullProjectFileName, screenData._View.FileName);
+            readerRepo.InsertXamlEmbededResourceInProjectFile(screenData._View.FullProjectFileName);
             repo.WriteTemplateToFile(new ViewControllerInterfaceTemplate(screenData));
             readerRepo.InsertFileReferenceInProjectFile(screenData._ViewControllerInterface.FullProjectFileName);
             repo.WriteTemplateToFile(new ViewControllerTemplate(screenData));

@@ -113,5 +113,22 @@ namespace SourceConsole
 
             return false;
         }
+
+        public bool InsertXamlEmbededResourceInProjectFile(string classPath)
+        {
+            var namespaceURI = "http://schemas.microsoft.com/developer/msbuild/2003";
+            XmlNamespaceManager xnManager =
+                new XmlNamespaceManager(_ProjectFile.NameTable);
+            xnManager.AddNamespace("tu", namespaceURI);
+            XmlNode xnRoot = _ProjectFile.DocumentElement;
+            var allGroups = xnRoot.SelectNodes("//tu:ItemGroup", xnManager);
+            var embededGroupNodel = allGroups[1];
+            var embededResource = _ProjectFile.CreateElement("EmbeddedResource", namespaceURI);
+            embededResource.SetAttribute("Include", classPath);
+            embededGroupNodel.AppendChild(embededResource);
+            _ProjectFile.Save(_Model.ProjectFileLocation);
+
+            return false;
+        }
     }
 }

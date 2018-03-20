@@ -17,5 +17,6 @@ namespace SourceConsole
         string GetViewPath();
         bool InsertFileReferenceInProjectFile(string classPath);
         bool InsertXamlFileReferenceInProjectFile(string classPath, string codeBehindFileName);
+        bool InsertXamlEmbededResourceInProjectFile(string classPath);
     }
 }
