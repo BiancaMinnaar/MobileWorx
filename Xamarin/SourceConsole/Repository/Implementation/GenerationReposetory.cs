@@ -37,7 +37,18 @@ namespace SourceConsole
             var templateOutput = template.TransformText();
             var templateEnum = template.TemplateEnum();
             var fullName = new SourceFileMapRepository<T>().GetSourcePath(template) + template.GetFileName();
-            return _FileService.WriteFileToDisk(fullName, templateOutput);
+            var hasWritten = _FileService.WriteFileToDisk(fullName, templateOutput);
+            if (template.TemplateType == 0)
+            {
+				_ProjectReader.InsertFileReferenceInProjectFile(template.FullProjectFileName);
+            }
+            else
+            {
+                _ProjectReader.InsertXamlFileReferenceInProjectFile(template.FullProjectFileName, template.GetFileName());
+                _ProjectReader.InsertXamlEmbededResourceInProjectFile(template.FullProjectFileName);
+            }
+
+            return true;
         }
     }
 }

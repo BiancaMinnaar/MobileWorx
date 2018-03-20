@@ -6,6 +6,10 @@
 
         public TemplateDataModel GetDataModel => _DataModel;
 
+        public string FullProjectFileName => _DataModel._RepositoryInterface.FileName;
+
+        public PartialClasses.TemplateEnum TemplateType => PartialClasses.TemplateEnum.Normal;
+
         public RepositoryInterfaceTemplate(TemplateDataModel dataModel)
         {
             _DataModel = dataModel;

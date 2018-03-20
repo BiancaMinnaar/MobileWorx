@@ -6,6 +6,10 @@
 
         public TemplateDataModel GetDataModel => _DataModel;
 
+        public string FullProjectFileName => _DataModel._View.FileName;
+
+        public PartialClasses.TemplateEnum TemplateType => PartialClasses.TemplateEnum.Normal;
+
         public ViewTemplate(TemplateDataModel dataModel)
         {
             _DataModel = dataModel;

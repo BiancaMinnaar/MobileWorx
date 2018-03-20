@@ -84,6 +84,7 @@
     <Compile Include="Service\IFileService.cs" />
     <Compile Include="Service\Implementation\FileService.cs" />
     <Compile Include="Data\ProjectModel.cs" />
+    <Compile Include="Templates\PartialClasses\TemplateEnum.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Templates\" />

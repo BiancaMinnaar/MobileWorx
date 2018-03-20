@@ -6,6 +6,10 @@
 
         public TemplateDataModel GetDataModel => _DataModel;
 
+        public string FullProjectFileName => _DataModel._ViewCodeBehind.FileName;
+
+        public PartialClasses.TemplateEnum TemplateType => PartialClasses.TemplateEnum.Xaml;
+
         public ViewCodeBehindTemplate(TemplateDataModel dataModel)
         {
             _DataModel = dataModel;
