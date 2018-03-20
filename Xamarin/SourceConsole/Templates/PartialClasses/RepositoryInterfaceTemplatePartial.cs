@@ -22,7 +22,8 @@
             _DataModel._RepositoryInterface = new DataModel.FileModel()
             {
                 CodeName = _DataModel.RepositoryInterfaceName,
-                Extension = repo.GetSourceExtension(this)
+                Extension = repo.GetSourceExtension(this),
+                ProjectFilePath = repo.GetSourcePath(this)
             };
             return _DataModel._RepositoryInterface.FileName;
         }
