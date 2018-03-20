@@ -38,14 +38,24 @@ namespace SourceConsole
             var templateEnum = template.TemplateEnum();
             var fullName = new SourceFileMapRepository<T>().GetSourcePath(template) + template.GetFileName();
             var hasWritten = _FileService.WriteFileToDisk(fullName, templateOutput);
+            switch((int)template.TemplateType)
+            {
+                case 0:
+					_ProjectReader.InsertFileReferenceInProjectFile(template.FullProjectFileName);
+                    break;
+                case 1:
+					_ProjectReader.InsertXamlFileReferenceInProjectFile(template.FullProjectFileName, template.GetFileName());
+					_ProjectReader.InsertXamlEmbededResourceInProjectFile(template.FullProjectFileName);
+                    break;
+                default:
+                    break;
+            }
+
             if (template.TemplateType == 0)
             {
-				_ProjectReader.InsertFileReferenceInProjectFile(template.FullProjectFileName);
             }
             else
             {
-                _ProjectReader.InsertXamlFileReferenceInProjectFile(template.FullProjectFileName, template.GetFileName().Split('.')[0] + ".cs");
-                _ProjectReader.InsertXamlEmbededResourceInProjectFile(template.FullProjectFileName);
             }
 
             return true;

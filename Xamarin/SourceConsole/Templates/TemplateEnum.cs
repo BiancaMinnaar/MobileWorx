@@ -3,6 +3,7 @@
     public enum TemplateEnum
     {
         Normal,
-        Xaml
+        Xaml,
+        CodeBehind
     }
 }
