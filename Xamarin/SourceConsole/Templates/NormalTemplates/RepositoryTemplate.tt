@@ -25,8 +25,8 @@ namespace <#= _DataModel.ProjectName #>.Implementation.Repository
 
         public async Task <#= _DataModel.EventName #>(<#= _DataModel.ViewModelName #> model, Action completeAction)
         {
-            var serviceReturnModel = await _Service.<#= _DataModel.EventName #>(model);
-            completeAction(serviceReturnModel);
+            await _Service.<#= _DataModel.EventName #>(model);
+            completeAction();
         }
     }
 }

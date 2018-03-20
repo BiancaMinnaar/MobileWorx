@@ -166,8 +166,7 @@ namespace SourceConsole.Templates.NormalTemplates {
             #line hidden
             
             #line 26 ""
-            this.Write(" model, Action completeAction)\n        {\n            var serviceReturnModel = awa" +
-                    "it _Service.");
+            this.Write(" model, Action completeAction)\n        {\n            await _Service.");
             
             #line default
             #line hidden
@@ -179,7 +178,7 @@ namespace SourceConsole.Templates.NormalTemplates {
             #line hidden
             
             #line 28 ""
-            this.Write("(model);\n            completeAction(serviceReturnModel);\n        }\n    }\n}");
+            this.Write("(model);\n            completeAction();\n        }\n    }\n}");
             
             #line default
             #line hidden

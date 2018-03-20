@@ -190,9 +190,9 @@ namespace SourceConsole.Templates.NormalTemplates {
             #line hidden
             
             #line 24 ""
-            this.Write("Service((U, P, C, A) => \n                                                        " +
-                    "   ExecuteQueryWithReturnTypeAndNetworkAccessAsync<LoginResponseUser>(U, P, C, A" +
-                    "));\n            _Reposetory = new ");
+            this.Write("Service((U, C, A) => \n                                                           " +
+                    "ExecuteQueryWithTypedParametersAndNetworkAccessAsync(U, C, A));\n            _Rep" +
+                    "osetory = new ");
             
             #line default
             #line hidden

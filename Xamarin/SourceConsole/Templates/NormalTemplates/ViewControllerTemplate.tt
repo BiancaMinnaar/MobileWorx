@@ -21,8 +21,8 @@ namespace <#= _DataModel.ProjectName #>.Implementation.ViewController
 
         public override void SetRepositories()
         {
-            _Service = new <#= _DataModel.EventName #>Service((U, P, C, A) => 
-                                                           ExecuteQueryWithReturnTypeAndNetworkAccessAsync<LoginResponseUser>(U, P, C, A));
+            _Service = new <#= _DataModel.EventName #>Service((U, C, A) => 
+                                                           ExecuteQueryWithTypedParametersAndNetworkAccessAsync(U, C, A));
             _Reposetory = new <#= _DataModel.EventName #>Repository(_MasterRepo, _Service);
         }
 
