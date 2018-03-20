@@ -44,6 +44,7 @@
     <Compile Include="DataContracts\Interface\ICrypto.cs" />
     <Compile Include="DataContracts\Interface\INetworkInteraction.cs" />
     <Compile Include="Networking\RequestAdditionType.cs" />
+    <Compile Include="DataContracts\BaseService.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using CorePCL;
 
-namespace HiRes.Base
+namespace CorePCL
 {
     public class BaseService<T>
         where T:BaseViewModel

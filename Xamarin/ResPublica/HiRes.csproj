@@ -35,7 +35,6 @@
     <Compile Include="Repository\IMasterRepository.cs" />
     <Compile Include="Repository\Implementation\MasterRepository.cs" />
     <Compile Include="ViewModel\MasterModel.cs" />
-    <Compile Include="Base\BaseService.cs" />
     <Compile Include="Base\CheckAndBalance.cs" />
     <Compile Include="Base\ProjectBaseContentPage.cs" />
     <Compile Include="Base\ProjectBaseContentScrollView.cs" />
