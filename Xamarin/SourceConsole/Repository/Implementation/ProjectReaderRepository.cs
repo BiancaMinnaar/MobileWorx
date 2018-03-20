@@ -1,4 +1,5 @@
 ﻿using System.Xml;
+using SourceConsole.Templates;
 
 namespace SourceConsole
 {
@@ -13,7 +14,10 @@ namespace SourceConsole
 			_FileService = fileService;
             _Model = Newtonsoft.Json.JsonConvert.DeserializeAnonymousType<ProjectModel>(_FileService.ReadFromFile("../../Data/Project.Config"), _Model);
             _ProjectFile = new XmlDocument();
-            _ProjectFile.LoadXml(_FileService.ReadFromFile(_Model.ProjectFileLocation));
+            _ProjectFile.Load(_Model.ProjectFileLocation);
+            XmlNamespaceManager xnManager =
+                new XmlNamespaceManager(_ProjectFile.NameTable);
+            xnManager.AddNamespace("tu", "http://schemas.microsoft.com/developer/msbuild/2003");
         }
 
         public string GetProjectFileLocation()
@@ -71,9 +75,21 @@ namespace SourceConsole
             return _Model.ViewPath;
         }
 
-        public bool InsertFileReferenceInProjectFile()
+        public bool InsertFileReferenceInProjectFile(TemplateDataModel model)
         {
-            var test = _ProjectFile.SelectNodes(_Model.FileListXPath);
+            var namespaceURI = "http://schemas.microsoft.com/developer/msbuild/2003";
+            XmlNamespaceManager xnManager =
+                new XmlNamespaceManager(_ProjectFile.NameTable);
+            xnManager.AddNamespace("tu", namespaceURI);
+            XmlNode xnRoot = _ProjectFile.DocumentElement;
+            var allGroups = xnRoot.SelectNodes("//tu:ItemGroup", xnManager);
+            var mainGroupNode = allGroups[0];
+            var embededGroupNodel = allGroups[1];
+            var viewElement = _ProjectFile.CreateElement("Compile", namespaceURI);
+            viewElement.SetAttribute("Include", model._View.FullFileName);
+            mainGroupNode.AppendChild(viewElement);
+            _ProjectFile.Save(_Model.ProjectFileLocation);
+
             return false;
         }
     }
