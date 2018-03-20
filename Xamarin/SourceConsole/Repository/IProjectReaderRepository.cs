@@ -1,4 +1,6 @@
-﻿namespace SourceConsole
+﻿using SourceConsole.Templates;
+
+namespace SourceConsole
 {
     public interface IProjectReaderRepository
     {
@@ -13,6 +15,6 @@
         string GetViewControllerPath();
         string GetViewModelPath();
         string GetViewPath();
-        bool InsertFileReferenceInProjectFile();
+        bool InsertFileReferenceInProjectFile(TemplateDataModel model);
     }
 }
