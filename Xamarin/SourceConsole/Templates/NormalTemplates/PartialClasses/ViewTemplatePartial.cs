@@ -6,7 +6,7 @@
 
         public TemplateDataModel GetDataModel => _DataModel;
 
-        public string FullProjectFileName => _DataModel._View.FileName;
+        public string FullProjectFileName => _DataModel._View.FullProjectFileName;
 
         public PartialClasses.TemplateEnum TemplateType => PartialClasses.TemplateEnum.Xaml;
 

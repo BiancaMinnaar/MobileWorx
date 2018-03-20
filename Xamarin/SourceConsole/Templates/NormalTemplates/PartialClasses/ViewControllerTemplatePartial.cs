@@ -8,7 +8,7 @@
 
         public PartialClasses.TemplateEnum TemplateType => PartialClasses.TemplateEnum.Normal;
 
-        public string FullProjectFileName => _DataModel._ViewController.FileName;
+        public string FullProjectFileName => _DataModel._ViewController.FullProjectFileName;
 
         public ViewControllerTemplate(TemplateDataModel dataModel)
         {

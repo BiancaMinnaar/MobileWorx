@@ -6,7 +6,7 @@
 
         public TemplateDataModel GetDataModel => _DataModel;
 
-        public string FullProjectFileName => _DataModel._ServiceInterface.FileName;
+        public string FullProjectFileName => _DataModel._ServiceInterface.FullProjectFileName;
 
         public PartialClasses.TemplateEnum TemplateType => PartialClasses.TemplateEnum.Normal;
 
