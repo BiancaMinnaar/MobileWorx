@@ -25,24 +25,14 @@ namespace HiRes.Base
 			if (EqualityComparer<U>.Default.Equals(backingStore, value))
 				return;
 
-			if (onChanging != null)
-				onChanging(value);
-
+			onChanging?.Invoke(value);
 			OnPropertyChanging(propertyName);
-
 			backingStore = value;
-
-			if (onChanged != null)
-				onChanged();
-
+			onChanged?.Invoke();
 			OnPropertyChanged(propertyName);
 		}
 
-		#region INotifyPropertyChanging implementation
-
 		public event PropertyChangingEventHandler PropertyChanging;
-
-		#endregion
 
 		public void OnPropertyChanging(string propertyName)
 		{
@@ -52,12 +42,8 @@ namespace HiRes.Base
 			PropertyChanging(this, new PropertyChangingEventArgs(propertyName));
 		}
 
-		#region INotifyPropertyChanged implementation
-
 		public event PropertyChangedEventHandler PropertyChanged;
 		public event EventHandler<DataErrorsChangedEventArgs> ErrorsChanged;
-
-		#endregion
 
 		public void OnPropertyChanged(string propertyName)
 		{
@@ -69,7 +55,7 @@ namespace HiRes.Base
 
 		public IEnumerable GetErrors(string propertyName)
 		{
-			return null; // throw new NotImplementedException();
+			return null;
 		}
 	}
 }

@@ -24,14 +24,6 @@ namespace HiRes.Base
 			BrokenRules = new List<BrokenRule>();
 			base.NetworkInteractionSucceeded += (sender, e) =>
 			{
-				//if (e.CanResponseDeserialise)
-				//{
-				//    base.OutputObject = DeserializeObject(e.NetworkResponseContent);
-				//} 
-				//else 
-				//{
-				//    HasSpecificResponse = true;
-				//}
 				base._RawBytes = e.RawBytes;
 				base._ResponseContent = e.NetworkResponseContent;
 			};
@@ -101,14 +93,11 @@ namespace HiRes.Base
 
 				UserDialogs.Instance.Toast(message, TimeSpan.FromSeconds(5));
 
-				// ShowError.Toast(toastOptions);
-
 			}
 			catch (Exception ex)
 			{
 				Debug.WriteLine(ex.Message);
 			}
-			///	new ToastConfig(message).SetDuration(TimeSpan.FromSeconds(5)).SetBackgroundColor(System.Drawing.Color.FromArgb(193, 57, 43)));
 		}
 
 		public void ShowError(string message)
@@ -127,7 +116,6 @@ namespace HiRes.Base
 			{
 				Debug.WriteLine(ex.Message);
 			}
-			///	new ToastConfig(message).SetDuration(TimeSpan.FromSeconds(5)).SetBackgroundColor(System.Drawing.Color.FromArgb(193, 57, 43)));
 		}
 
 		/// <summary>

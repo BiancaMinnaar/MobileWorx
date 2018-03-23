@@ -4,8 +4,7 @@ namespace HiRes.Base
 {
     public class SVGBindingProperty
     {
-		private Assembly _svgAssembly;
-
+		Assembly _svgAssembly;
 		public Assembly SvgAssembly
 		{
 			get
@@ -19,7 +18,6 @@ namespace HiRes.Base
 		}
 
         public string SVGFullName { get; set; }
-
         public double Width { get; set; }
         public double Height { get; set; }
     }

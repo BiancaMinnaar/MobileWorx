@@ -1,7 +1,6 @@
 ﻿using HiRes.Implementation.Repository;
 using Xamarin.Forms;
 
-
 namespace HiRes.Base
 {
     public abstract class ProjectBaseContentPage<T, M> : ContentPage

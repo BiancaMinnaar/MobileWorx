@@ -47,64 +47,64 @@
     <Compile Include="Service\IFileService.cs" />
     <Compile Include="Service\Implementation\FileService.cs" />
     <Compile Include="Data\ProjectModel.cs" />
-    <Compile Include="Templates\NormalTemplates\PartialClasses\RepositoryInterfaceTemplatePartial.cs" />
-    <Compile Include="Templates\NormalTemplates\PartialClasses\RepositoryTemplatePartial.cs" />
-    <Compile Include="Templates\NormalTemplates\PartialClasses\ServiceInterfaceTemplatePartial.cs" />
-    <Compile Include="Templates\NormalTemplates\PartialClasses\ServiceTemplatePartial.cs" />
-    <Compile Include="Templates\NormalTemplates\PartialClasses\ViewCodeBehindTemplatePartial.cs" />
-    <Compile Include="Templates\NormalTemplates\PartialClasses\ViewControllerInterfacePartial.cs" />
-    <Compile Include="Templates\NormalTemplates\PartialClasses\ViewControllerTemplatePartial.cs" />
-    <Compile Include="Templates\NormalTemplates\PartialClasses\ViewModelTemplatePartial.cs" />
-    <Compile Include="Templates\NormalTemplates\PartialClasses\ViewTemplatePartial.cs" />
-    <Compile Include="Templates\NormalTemplates\RepositoryInterfaceTemplate.cs">
-      <DependentUpon>RepositoryInterfaceTemplate.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Templates\NormalTemplates\RepositoryTemplate.cs">
-      <DependentUpon>RepositoryTemplate.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Templates\NormalTemplates\ServiceInterfaceTemplate.cs">
-      <DependentUpon>ServiceInterfaceTemplate.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Templates\NormalTemplates\ServiceTemplate.cs">
-      <DependentUpon>ServiceTemplate.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Templates\NormalTemplates\ViewCodeBehindTemplate.cs">
-      <DependentUpon>ViewCodeBehindTemplate.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Templates\NormalTemplates\ViewControllerInterfaceTemplate.cs">
-      <DependentUpon>ViewControllerInterfaceTemplate.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Templates\NormalTemplates\ViewControllerTemplate.cs">
-      <DependentUpon>ViewControllerTemplate.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Templates\NormalTemplates\ViewModelTemplate.cs">
-      <DependentUpon>ViewModelTemplate.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Templates\NormalTemplates\ViewTemplate.cs">
-      <DependentUpon>ViewTemplate.tt</DependentUpon>
-    </Compile>
     <Compile Include="Templates\ITemplate.cs" />
     <Compile Include="Templates\TemplateEnum.cs" />
-    <Compile Include="Templates\ReturningServiceTemplates\PartialClasses\ViewControllerTemplatePartial.cs" />
-    <Compile Include="Templates\ReturningServiceTemplates\ViewControllerTemplate.cs">
-      <DependentUpon>ViewControllerTemplate.tt</DependentUpon>
+    <Compile Include="Templates\Scafholding\NormalTemplates\PartialClasses\RepositoryInterfaceTemplatePartial.cs" />
+    <Compile Include="Templates\Scafholding\NormalTemplates\PartialClasses\RepositoryTemplatePartial.cs" />
+    <Compile Include="Templates\Scafholding\NormalTemplates\PartialClasses\ServiceInterfaceTemplatePartial.cs" />
+    <Compile Include="Templates\Scafholding\NormalTemplates\PartialClasses\ServiceTemplatePartial.cs" />
+    <Compile Include="Templates\Scafholding\NormalTemplates\PartialClasses\ViewCodeBehindTemplatePartial.cs" />
+    <Compile Include="Templates\Scafholding\NormalTemplates\PartialClasses\ViewControllerInterfacePartial.cs" />
+    <Compile Include="Templates\Scafholding\NormalTemplates\PartialClasses\ViewControllerTemplatePartial.cs" />
+    <Compile Include="Templates\Scafholding\NormalTemplates\PartialClasses\ViewModelTemplatePartial.cs" />
+    <Compile Include="Templates\Scafholding\NormalTemplates\PartialClasses\ViewTemplatePartial.cs" />
+    <Compile Include="Templates\Scafholding\NormalTemplates\RepositoryInterfaceTemplate.cs">
+      <DependentUpon>..\..\NormalTemplates\RepositoryInterfaceTemplate.tt</DependentUpon>
     </Compile>
-    <Compile Include="Templates\ReturningServiceTemplates\PartialClasses\RepositoryInterfaceTemplatePartial.cs" />
-    <Compile Include="Templates\ReturningServiceTemplates\PartialClasses\RepositoryTemplatePartial.cs" />
-    <Compile Include="Templates\ReturningServiceTemplates\RepositoryInterfaceTemplate.cs">
-      <DependentUpon>RepositoryInterfaceTemplate.tt</DependentUpon>
+    <Compile Include="Templates\Scafholding\NormalTemplates\RepositoryTemplate.cs">
+      <DependentUpon>..\..\NormalTemplates\RepositoryTemplate.tt</DependentUpon>
     </Compile>
-    <Compile Include="Templates\ReturningServiceTemplates\RepositoryTemplate.cs">
-      <DependentUpon>RepositoryTemplate.tt</DependentUpon>
+    <Compile Include="Templates\Scafholding\NormalTemplates\ServiceInterfaceTemplate.cs">
+      <DependentUpon>..\..\NormalTemplates\ServiceInterfaceTemplate.tt</DependentUpon>
     </Compile>
-    <Compile Include="Templates\ReturningServiceTemplates\ServiceInterfaceTemplate.cs">
-      <DependentUpon>ServiceInterfaceTemplate.tt</DependentUpon>
+    <Compile Include="Templates\Scafholding\NormalTemplates\ServiceTemplate.cs">
+      <DependentUpon>..\..\NormalTemplates\ServiceTemplate.tt</DependentUpon>
     </Compile>
-    <Compile Include="Templates\ReturningServiceTemplates\ServiceTemplate.cs">
-      <DependentUpon>ServiceTemplate.tt</DependentUpon>
+    <Compile Include="Templates\Scafholding\NormalTemplates\ViewCodeBehindTemplate.cs">
+      <DependentUpon>..\..\NormalTemplates\ViewCodeBehindTemplate.tt</DependentUpon>
     </Compile>
-    <Compile Include="Templates\ReturningServiceTemplates\PartialClasses\ServiceInterfaceTemplatePartial.cs" />
-    <Compile Include="Templates\ReturningServiceTemplates\PartialClasses\ServiceTemplatePartial.cs" />
+    <Compile Include="Templates\Scafholding\NormalTemplates\ViewControllerInterfaceTemplate.cs">
+      <DependentUpon>..\..\NormalTemplates\ViewControllerInterfaceTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Scafholding\NormalTemplates\ViewControllerTemplate.cs">
+      <DependentUpon>..\..\NormalTemplates\ViewControllerTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Scafholding\NormalTemplates\ViewModelTemplate.cs">
+      <DependentUpon>..\..\NormalTemplates\ViewModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Scafholding\NormalTemplates\ViewTemplate.cs">
+      <DependentUpon>..\..\NormalTemplates\ViewTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Scafholding\ReturningServiceTemplates\PartialClasses\RepositoryInterfaceTemplatePartial.cs" />
+    <Compile Include="Templates\Scafholding\ReturningServiceTemplates\PartialClasses\RepositoryTemplatePartial.cs" />
+    <Compile Include="Templates\Scafholding\ReturningServiceTemplates\PartialClasses\ServiceInterfaceTemplatePartial.cs" />
+    <Compile Include="Templates\Scafholding\ReturningServiceTemplates\PartialClasses\ServiceTemplatePartial.cs" />
+    <Compile Include="Templates\Scafholding\ReturningServiceTemplates\PartialClasses\ViewControllerTemplatePartial.cs" />
+    <Compile Include="Templates\Scafholding\ReturningServiceTemplates\RepositoryInterfaceTemplate.cs">
+      <DependentUpon>..\..\ReturningServiceTemplates\RepositoryInterfaceTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Scafholding\ReturningServiceTemplates\RepositoryTemplate.cs">
+      <DependentUpon>..\..\ReturningServiceTemplates\RepositoryTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Scafholding\ReturningServiceTemplates\ServiceInterfaceTemplate.cs">
+      <DependentUpon>..\..\ReturningServiceTemplates\ServiceInterfaceTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Scafholding\ReturningServiceTemplates\ServiceTemplate.cs">
+      <DependentUpon>..\..\ReturningServiceTemplates\ServiceTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Scafholding\ReturningServiceTemplates\ViewControllerTemplate.cs">
+      <DependentUpon>..\..\ReturningServiceTemplates\ViewControllerTemplate.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Templates\" />
@@ -114,69 +114,69 @@
     <Folder Include="Repository\Implementation\" />
     <Folder Include="Service\" />
     <Folder Include="Service\Implementation\" />
-    <Folder Include="Templates\ReturningServiceTemplates\" />
-    <Folder Include="Templates\NormalTemplates\" />
-    <Folder Include="Templates\NormalTemplates\PartialClasses\" />
-    <Folder Include="Templates\ReturningServiceTemplates\PartialClasses\" />
+    <Folder Include="Templates\Scafholding\" />
+    <Folder Include="Templates\Scafholding\NormalTemplates\" />
+    <Folder Include="Templates\Scafholding\ReturningServiceTemplates\" />
+    <Folder Include="Templates\Framework\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Data\Project.Config" />
     <None Include="packages.config" />
-    <None Include="Templates\NormalTemplates\RepositoryInterfaceTemplate.tt">
+    <None Include="Templates\Scafholding\NormalTemplates\RepositoryInterfaceTemplate.tt">
       <Generator>TextTemplatingFilePreprocessor</Generator>
       <LastGenOutput>RepositoryInterfaceTemplate.cs</LastGenOutput>
     </None>
-    <None Include="Templates\NormalTemplates\RepositoryTemplate.tt">
+    <None Include="Templates\Scafholding\NormalTemplates\RepositoryTemplate.tt">
       <Generator>TextTemplatingFilePreprocessor</Generator>
       <LastGenOutput>RepositoryTemplate.cs</LastGenOutput>
     </None>
-    <None Include="Templates\NormalTemplates\ServiceInterfaceTemplate.tt">
+    <None Include="Templates\Scafholding\NormalTemplates\ServiceInterfaceTemplate.tt">
       <Generator>TextTemplatingFilePreprocessor</Generator>
       <LastGenOutput>ServiceInterfaceTemplate.cs</LastGenOutput>
     </None>
-    <None Include="Templates\NormalTemplates\ServiceTemplate.tt">
+    <None Include="Templates\Scafholding\NormalTemplates\ServiceTemplate.tt">
       <Generator>TextTemplatingFilePreprocessor</Generator>
       <LastGenOutput>ServiceTemplate.cs</LastGenOutput>
     </None>
-    <None Include="Templates\NormalTemplates\ViewCodeBehindTemplate.tt">
+    <None Include="Templates\Scafholding\NormalTemplates\ViewCodeBehindTemplate.tt">
       <Generator>TextTemplatingFilePreprocessor</Generator>
       <LastGenOutput>ViewCodeBehindTemplate.cs</LastGenOutput>
     </None>
-    <None Include="Templates\NormalTemplates\ViewControllerInterfaceTemplate.tt">
+    <None Include="Templates\Scafholding\NormalTemplates\ViewControllerInterfaceTemplate.tt">
       <Generator>TextTemplatingFilePreprocessor</Generator>
       <LastGenOutput>ViewControllerInterfaceTemplate.cs</LastGenOutput>
     </None>
-    <None Include="Templates\NormalTemplates\ViewControllerTemplate.tt">
+    <None Include="Templates\Scafholding\NormalTemplates\ViewControllerTemplate.tt">
       <Generator>TextTemplatingFilePreprocessor</Generator>
       <LastGenOutput>ViewControllerTemplate.cs</LastGenOutput>
     </None>
-    <None Include="Templates\NormalTemplates\ViewModelTemplate.tt">
+    <None Include="Templates\Scafholding\NormalTemplates\ViewModelTemplate.tt">
       <Generator>TextTemplatingFilePreprocessor</Generator>
       <LastGenOutput>ViewModelTemplate.cs</LastGenOutput>
     </None>
-    <None Include="Templates\NormalTemplates\ViewTemplate.tt">
+    <None Include="Templates\Scafholding\NormalTemplates\ViewTemplate.tt">
       <Generator>TextTemplatingFilePreprocessor</Generator>
       <LastGenOutput>ViewTemplate.cs</LastGenOutput>
     </None>
-    <None Include="Templates\ReturningServiceTemplates\ViewControllerTemplate.tt">
-      <Generator>TextTemplatingFilePreprocessor</Generator>
-      <LastGenOutput>ViewControllerTemplate.cs</LastGenOutput>
-    </None>
-    <None Include="Templates\ReturningServiceTemplates\RepositoryInterfaceTemplate.tt">
+    <None Include="Templates\Scafholding\ReturningServiceTemplates\RepositoryInterfaceTemplate.tt">
       <Generator>TextTemplatingFilePreprocessor</Generator>
       <LastGenOutput>RepositoryInterfaceTemplate.cs</LastGenOutput>
     </None>
-    <None Include="Templates\ReturningServiceTemplates\RepositoryTemplate.tt">
+    <None Include="Templates\Scafholding\ReturningServiceTemplates\RepositoryTemplate.tt">
       <Generator>TextTemplatingFilePreprocessor</Generator>
       <LastGenOutput>RepositoryTemplate.cs</LastGenOutput>
     </None>
-    <None Include="Templates\ReturningServiceTemplates\ServiceInterfaceTemplate.tt">
+    <None Include="Templates\Scafholding\ReturningServiceTemplates\ServiceInterfaceTemplate.tt">
       <Generator>TextTemplatingFilePreprocessor</Generator>
       <LastGenOutput>ServiceInterfaceTemplate.cs</LastGenOutput>
     </None>
-    <None Include="Templates\ReturningServiceTemplates\ServiceTemplate.tt">
+    <None Include="Templates\Scafholding\ReturningServiceTemplates\ServiceTemplate.tt">
       <Generator>TextTemplatingFilePreprocessor</Generator>
       <LastGenOutput>ServiceTemplate.cs</LastGenOutput>
+    </None>
+    <None Include="Templates\Scafholding\ReturningServiceTemplates\ViewControllerTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>ViewControllerTemplate.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>

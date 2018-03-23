@@ -12,6 +12,7 @@ namespace HiRes.Base
         protected ProjectBaseStackContentView()
         {
             _ViewController = new T();
+            SetSVGCollection();
             _ViewController._MasterRepo = MasterRepository.MasterRepo;
             _ViewController.SetRepositories();
         }
