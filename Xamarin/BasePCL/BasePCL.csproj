@@ -39,13 +39,14 @@
     <Compile Include="DataContracts\BaseViewController.cs" />
     <Compile Include="DataContracts\BaseViewModel.cs" />
     <Compile Include="DataContracts\NetworkCallEventArgs.cs" />
-    <Compile Include="Networking\IRestService.cs" />
     <Compile Include="Networking\RestService.cs" />
     <Compile Include="DataContracts\Interface\ICrypto.cs" />
-    <Compile Include="DataContracts\Interface\INetworkInteraction.cs" />
     <Compile Include="Networking\RequestAdditionType.cs" />
     <Compile Include="DataContracts\BaseService.cs" />
     <Compile Include="DataContracts\CheckAndBalance.cs" />
+    <Compile Include="Networking\INetworkResponse.cs" />
+    <Compile Include="Networking\INetworkRequest.cs" />
+    <Compile Include="Networking\INetworkInteraction.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

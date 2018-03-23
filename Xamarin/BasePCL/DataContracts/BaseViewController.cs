@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using BasePCL.DataContracts.Interface;
-using Xamarin.Forms;
 
 namespace CorePCL
 {
@@ -16,18 +14,15 @@ namespace CorePCL
         public event EventHandler NetworkCallInitialised;
         public event EventHandler NetworkCallCompleted;
 
-        protected INetworkInteraction _RestService;
+        protected BasePCL.Networking.RestService _RestService;
         public string _ResponseContent;
         public byte[] _RawBytes { get; set; }
 
         public T InputObject { get; set; }
 
-      
-
         public BaseViewController()
         {
-            _RestService = DependencyService.Get<INetworkInteraction>();
-
+            _RestService = new BasePCL.Networking.RestService();
             _RestService.NetworkInteractionSucceeded += (sender, e) => NetworkInteractionSucceeded(sender, e);
             _RestService.NetworkInteractionFailed += (sender, e) => NetworkInteractionFailed(sender, e);
             _RestService.NetworkCallInitialised += (sender, e) => NetworkCallInitialised(sender, e);

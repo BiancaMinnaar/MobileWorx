@@ -19,7 +19,7 @@ namespace HiRes.Implementation.ViewController
         ILoginRepository<LoginResponseUser> _Repository;
         ILoginService<LoginResponseUser> _Service;
 
-		public LoginViewController()
+        public LoginViewController() 
 		{
 			BrokenRules.Add(new BrokenRule()
 			{

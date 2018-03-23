@@ -19,13 +19,12 @@ namespace HiRes.Implementation.Service
 
         public async Task<T> Login(LoginViewModel model)
 		{
-			string requestURL = "/Login";
+			string requestURL = "login";
 			var httpMethod = BaseNetworkAccessEnum.Post;
 			var userModel = new UserModel()
             {
                 username = model.Username,
-                password = model.Password,
-                X_API_KEY = "boguskey_rsl"
+                password = model.Password
             };
 
             return await _NetworkInterface(requestURL, null, userModel, httpMethod);

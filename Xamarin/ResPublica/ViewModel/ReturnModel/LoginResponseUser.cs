@@ -5,14 +5,11 @@ namespace HiRes.ViewModel.ReturnModel
 {
     public class LoginResponseUser : BaseViewModel
     {
-		public StatusDto Status { get; set; }
-
-		[JsonProperty("user_id")]
+		[JsonProperty("username")]
+		public string UserName { get; set; }
+        [JsonProperty("userId")]
         public int UserID { get; set; }
-        [JsonProperty("student_manager_id")]
-        public int StudentManagerID { get; set; }
-        [JsonProperty("token")]
-        public string Token { get; set; }
+		public StatusDto Status { get; set; }
     }
 
 	public class StatusDto

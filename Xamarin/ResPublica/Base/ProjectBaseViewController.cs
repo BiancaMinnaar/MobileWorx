@@ -17,9 +17,7 @@ namespace HiRes.Base
 		public bool HasSpecificResponse { get; set; }
 
 		protected ProjectBaseViewController()
-			: base()
-		{
-
+        {
 			_MasterRepo = MasterRepository.MasterRepo;
 
 			HasSpecificResponse = false;
