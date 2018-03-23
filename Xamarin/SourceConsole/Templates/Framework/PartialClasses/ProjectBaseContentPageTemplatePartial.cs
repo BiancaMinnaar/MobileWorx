@@ -22,7 +22,7 @@ namespace SourceConsole.Templates.Framework
             var repo = new SourceFileMapRepository<ProjectBaseContentPageTemplate>();
             _DataModel._RepositoryInterface = new DataModel.FileModel()
             {
-                CodeName = _DataModel.RepositoryInterfaceName,
+                CodeName = _DataModel.ProjectBaseContentPageName,
                 Extension = repo.GetSourceExtension(this),
                 ProjectFilePath = repo.GetSourcePath(this)
             };
