@@ -209,8 +209,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Injection\RestServiceDroid.cs" />
     <Compile Include="SplashActivity.cs" />
-    <Compile Include="Injection\IJsonSerializer.cs" />
-    <Compile Include="Injection\NewtonsoftJsonSerializer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
