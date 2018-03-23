@@ -5,6 +5,7 @@ namespace SourceConsole
 {
     public enum SourceEnum
     {
+        PBContentPage,
         RepositoryInterface,
         Repository,
         ServiceInterface,
@@ -41,6 +42,8 @@ namespace SourceConsole
         {
             switch(template.TemplateEnum())
             {
+                case SourceEnum.PBContentPage:
+                    return readerRepo.GetBaseFolderPath();
                 case SourceEnum.Repository:
                     return readerRepo.GetRepositoryPath();
                 case SourceEnum.RepositoryInterface:

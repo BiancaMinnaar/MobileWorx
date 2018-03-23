@@ -1,5 +1,4 @@
 ﻿using System.Xml;
-using SourceConsole.Templates;
 
 namespace SourceConsole
 {
@@ -73,6 +72,11 @@ namespace SourceConsole
         public string GetViewPath()
         {
             return _Model.ViewPath;
+        }
+
+        public string GetBaseFolderPath()
+        {
+            return _Model.BaseFolderPath;
         }
 
         public bool InsertFileReferenceInProjectFile(string classPath)
