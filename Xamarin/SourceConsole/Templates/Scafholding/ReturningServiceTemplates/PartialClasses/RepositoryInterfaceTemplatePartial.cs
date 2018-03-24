@@ -3,11 +3,8 @@
     partial class RepositoryInterfaceTemplate : ITemplate
     {
         TemplateDataModel _DataModel;
-
         public TemplateDataModel GetDataModel => _DataModel;
-
         public string FullProjectFileName => _DataModel._RepositoryInterface.FullProjectFileName;
-
         public PartialClasses.TemplateEnum TemplateType => PartialClasses.TemplateEnum.Normal;
 
         public RepositoryInterfaceTemplate(TemplateDataModel dataModel)
@@ -15,10 +12,7 @@
             _DataModel = dataModel;
         }
 
-        public SourceEnum TemplateEnum()
-        {
-            return SourceEnum.RepositoryInterface;
-        }
+        public SourceEnum TemplateEnum => SourceEnum.RepositoryInterface;
 
         public string GetFileName()
         {

@@ -35,7 +35,7 @@ namespace SourceConsole
         public bool WriteTemplateToFile<T>(T template) where T : ITemplate
         {
             var templateOutput = template.TransformText();
-            var templateEnum = template.TemplateEnum();
+            var templateEnum = template.TemplateEnum;
             var fullName = new SourceFileMapRepository<T>().GetSourcePath(template) + template.GetFileName();
             var hasWritten = _FileService.WriteFileToDisk(fullName, templateOutput);
             switch((int)template.TemplateType)

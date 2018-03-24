@@ -6,7 +6,7 @@
         TemplateDataModel GetDataModel { get; }
 		string FullProjectFileName { get; }
         string TransformText();
-        SourceEnum TemplateEnum();
+        SourceEnum TemplateEnum { get; }
         string GetFileName();
     }
 }

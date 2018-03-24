@@ -24,12 +24,12 @@ namespace SourceConsole
 
         public SourceEnum GetSourceEnumFromTempate(T template)
         {
-            return template.TemplateEnum();
+            return template.TemplateEnum;
         }
 
         public string GetSourceExtension(T template)
         {
-            switch(template.TemplateEnum())
+            switch(template.TemplateEnum)
             {
                 case SourceEnum.View:
                                return "xaml";
@@ -40,7 +40,7 @@ namespace SourceConsole
 
         public string GetSourcePath(T template)
         {
-            switch(template.TemplateEnum())
+            switch(template.TemplateEnum)
             {
                 case SourceEnum.PBContentPage:
                     return readerRepo.GetBaseFolderPath();

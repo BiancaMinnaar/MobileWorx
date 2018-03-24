@@ -15,10 +15,7 @@
             _DataModel = dataModel;
         }
 
-        public SourceEnum TemplateEnum()
-        {
-            return SourceEnum.Repository;
-        }
+        public SourceEnum TemplateEnum => SourceEnum.Repository;
 
         public string GetFileName()
         {

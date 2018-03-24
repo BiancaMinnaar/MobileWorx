@@ -5,11 +5,9 @@ namespace SourceConsole.Templates.Framework
     partial class ProjectBaseContentPageTemplate : ITemplate
     {
         TemplateDataModel _DataModel;
-
+		public TemplateDataModel GetDataModel => _DataModel;
         public TemplateEnum TemplateType => PartialClasses.TemplateEnum.Normal;
-
-        public TemplateDataModel GetDataModel => _DataModel;
-
+        public SourceEnum TemplateEnum => SourceEnum.PBContentPage;
         public string FullProjectFileName => _DataModel._RepositoryInterface.FullProjectFileName;
 
         public ProjectBaseContentPageTemplate(TemplateDataModel dataModel)
@@ -27,11 +25,6 @@ namespace SourceConsole.Templates.Framework
                 ProjectFilePath = repo.GetSourcePath(this)
             };
             return _DataModel._ProjectBaseContentPage.FileName;
-        }
-
-        public SourceEnum TemplateEnum()
-        {
-            return SourceEnum.PBContentPage;
         }
     }
 }
