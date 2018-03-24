@@ -1,6 +1,4 @@
-﻿using SourceConsole.Templates;
-
-namespace SourceConsole
+﻿namespace SourceConsole
 {
     public interface IProjectReaderRepository
     {

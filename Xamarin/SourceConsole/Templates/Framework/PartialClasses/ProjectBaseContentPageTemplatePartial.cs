@@ -20,13 +20,13 @@ namespace SourceConsole.Templates.Framework
         public string GetFileName()
         {
             var repo = new SourceFileMapRepository<ProjectBaseContentPageTemplate>();
-            _DataModel._RepositoryInterface = new DataModel.FileModel()
+            _DataModel._ProjectBaseContentPage = new DataModel.FileModel()
             {
                 CodeName = _DataModel.ProjectBaseContentPageName,
                 Extension = repo.GetSourceExtension(this),
                 ProjectFilePath = repo.GetSourcePath(this)
             };
-            return _DataModel._RepositoryInterface.FileName;
+            return _DataModel._ProjectBaseContentPage.FileName;
         }
 
         public SourceEnum TemplateEnum()

@@ -4,6 +4,7 @@
     {
         Normal,
         Xaml,
-        CodeBehind
+        CodeBehind,
+        Regenerate
     }
 }
