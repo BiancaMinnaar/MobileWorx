@@ -1,11 +1,7 @@
-﻿using CorePCL;
-
-namespace SourceConsole
+﻿namespace SourceConsole
 {
-    public class ProjectModel : BaseViewModel
+    public class ProjectModel : Data.GenericTemplateModel
     {
-        public string ProjectName { get; set; }
-        public string ProjectFileLocation { get; set; }
         public string RepositoryInterfacePath {get;set;}
         public string RepositoryPath {get;set;}
         public string ServiceInterfacePath {get;set;}
@@ -15,7 +11,5 @@ namespace SourceConsole
         public string ViewControllerPath {get;set;}
         public string ViewModelPath {get;set;}
         public string ViewPath {get;set;}
-        public string FileListXPath { get; set; }
-        public string BaseFolderPath { get; set; }
     }
 }

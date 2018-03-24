@@ -109,6 +109,7 @@
       <DependentUpon>ProjectBaseContentPageTemplate.tt</DependentUpon>
     </Compile>
     <Compile Include="Templates\Framework\PartialClasses\ProjectBaseContentPageTemplatePartial.cs" />
+    <Compile Include="Data\GenericTemplateModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Templates\" />
